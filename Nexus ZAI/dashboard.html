@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Nexus Business Platform</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-['Inter'] bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                    <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="font-bold text-xl">Nexus</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Home</a>
+                <a href="features.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Features</a>
+                <a href="pricing.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Pricing</a>
+                <a href="dashboard.html" class="font-medium text-indigo-600">Dashboard</a>
+            </div>
+            
+            <div class="flex space-x-3">
+                <button class="px-4 py-2 text-gray-600 font-medium hover:text-indigo-600 transition">Log in</button>
+                <button class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Get Started</button>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Dashboard Container -->
+    <div class="flex h-screen pt-16">
+        <!-- Sidebar -->
+        <div class="w-64 bg-white border-r border-gray-200 flex flex-col">
+            <div class="p-4 border-b border-gray-200">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                        <span class="text-sm font-medium text-indigo-800">JD</span>
+                    </div>
+                    <div>
+                        <p class="font-medium">John Doe</p>
+                        <p class="text-sm text-gray-600">john@example.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex-1 overflow-y-auto">
+                <div class="p-4">
+                    <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Apps</h3>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="#" class="dashboard-app-link flex items-center p-3 rounded-lg hover:bg-gray-100 transition" data-app="crm">
+                                <i data-lucide="users" class="w-5 h-5 text-gray-600 mr-3"></i>
+                                <span>CRM</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="dashboard-app-link flex items-center p-3 rounded-lg hover:bg-gray-100 transition" data-app="projects">
+                                <i data-lucide="clipboard-list" class="w-5 h-5 text-gray-600 mr-3"></i>
+                                <span>Projects</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="dashboard-app-link flex items-center p-3 rounded-lg hover:bg-gray-100 transition" data-app="chat">
+                                <i data-lucide="message-circle" class="w-5 h-5 text-gray-600 mr-3"></i>
+                                <span>Chat</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="dashboard-app-link flex items-center p-3 rounded-lg hover:bg-gray-100 transition" data-app="analytics">
+                                <i data-lucide="bar-chart-3" class="w-5 h-5 text-gray-600 mr-3"></i>
+                                <span>Analytics</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="dashboard-app-link flex items-center p-3 rounded-lg hover:bg-gray-100 transition" data-app="docs">
+                                <i data-lucide="file-text" class="w-5 h-5 text-gray-600 mr-3"></i>
+                                <span>Docs</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="p-4 border-t border-gray-200">
+                    <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Settings</h3>
+                    <ul class="space-y-1">
+                        <li>
+                            <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-100 transition">
+                                <i data-lucide="settings" class="w-5 h-5 text-gray-600 mr-3"></i>
+                                <span>Account Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-100 transition">
+                                <i data-lucide="help-circle" class="w-5 h-5 text-gray-600 mr-3"></i>
+                                <span>Help & Support</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-100 transition">
+                                <i data-lucide="log-out" class="w-5 h-5 text-gray-600 mr-3"></i>
+                                <span>Log Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex-1 overflow-y-auto">
+            <!-- Dashboard Home -->
+            <div id="dashboard-home" class="dashboard-content p-6">
+                <div class="mb-8">
+                    <h1 class="text-2xl font-bold mb-2">Welcome back, John!</h1>
+                    <p class="text-gray-600">Here's what's happening with your business today.</p>
+                </div>
+                
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center">
+                                <i data-lucide="users" class="w-6 h-6 text-indigo-600"></i>
+                            </div>
+                            <span class="text-sm font-medium text-green-600">+12.5%</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-1">1,248</h3>
+                        <p class="text-gray-600 text-sm">Total Customers</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center">
+                                <i data-lucide="dollar-sign" class="w-6 h-6 text-green-600"></i>
+                            </div>
+                            <span class="text-sm font-medium text-green-600">+8.2%</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-1">$45,678</h3>
+                        <p class="text-gray-600 text-sm">Revenue</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center">
+                                <i data-lucide="clipboard-list" class="w-6 h-6 text-blue-600"></i>
+                            </div>
+                            <span class="text-sm font-medium text-red-600">-3.1%</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-1">24</h3>
+                        <p class="text-gray-600 text-sm">Active Projects</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center">
+                                <i data-lucide="message-circle" class="w-6 h-6 text-purple-600"></i>
+                            </div>
+                            <span class="text-sm font-medium text-green-600">+5.4%</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-1">18</h3>
+                        <p class="text-gray-600 text-sm">Unread Messages</p>
+                    </div>
+                </div>
+                
+                <!-- App Tiles -->
+                <div class="mb-8">
+                    <h2 class="text-xl font-bold mb-4">Your Apps</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition cursor-pointer dashboard-app-tile" data-app="crm">
+                            <div class="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mb-4">
+                                <i data-lucide="users" class="w-6 h-6 text-indigo-600"></i>
+                            </div>
+                            <h3 class="font-semibold mb-1">CRM</h3>
+                            <p class="text-sm text-gray-600">Manage contacts</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition cursor-pointer dashboard-app-tile" data-app="projects">
+                            <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center mb-4">
+                                <i data-lucide="clipboard-list" class="w-6 h-6 text-blue-600"></i>
+                            </div>
+                            <h3 class="font-semibold mb-1">Projects</h3>
+                            <p class="text-sm text-gray-600">Track tasks</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition cursor-pointer dashboard-app-tile" data-app="chat">
+                            <div class="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center mb-4">
+                                <i data-lucide="message-circle" class="w-6 h-6 text-purple-600"></i>
+                            </div>
+                            <h3 class="font-semibold mb-1">Chat</h3>
+                            <p class="text-sm text-gray-600">Team messaging</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition cursor-pointer dashboard-app-tile" data-app="analytics">
+                            <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center mb-4">
+                                <i data-lucide="bar-chart-3" class="w-6 h-6 text-green-600"></i>
+                            </div>
+                            <h3 class="font-semibold mb-1">Analytics</h3>
+                            <p class="text-sm text-gray-600">Data insights</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition cursor-pointer dashboard-app-tile" data-app="docs">
+                            <div class="w-12 h-12 rounded-lg bg-yellow-100 flex items-center justify-center mb-4">
+                                <i data-lucide="file-text" class="w-6 h-6 text-yellow-600"></i>
+                            </div>
+                            <h3 class="font-semibold mb-1">Docs</h3>
+                            <p class="text-sm text-gray-600">File management</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recent Activity -->
+                <div>
+                    <h2 class="text-xl font-bold mb-4">Recent Activity</h2>
+                    <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <div class="divide-y divide-gray-200">
+                            <div class="p-4 flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i data-lucide="user-plus" class="w-5 h-5 text-indigo-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">New customer added</p>
+                                    <p class="text-sm text-gray-600">Sarah Johnson from Acme Inc. was added to your CRM</p>
+                                    <p class="text-xs text-gray-500 mt-1">2 hours ago</p>
+                                </div>
+                            </div>
+                            
+                            <div class="p-4 flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Project completed</p>
+                                    <p class="text-sm text-gray-600">Website redesign project has been marked as complete</p>
+                                    <p class="text-xs text-gray-500 mt-1">Yesterday</p>
+                                </div>
+                            </div>
+                            
+                            <div class="p-4 flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i data-lucide="dollar-sign" class="w-5 h-5 text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">New deal won</p>
+                                    <p class="text-sm text-gray-600">You closed a deal worth $12,500 with TechCorp</p>
+                                    <p class="text-xs text-gray-500 mt-1">2 days ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CRM Content -->
+            <div id="crm-content" class="dashboard-content hidden p-6">
+                <div class="mb-8 flex justify-between items-center">
+                    <div>
+                        <h1 class="text-2xl font-bold mb-2">Customer Relationship Management</h1>
+                        <p class="text-gray-600">Manage your contacts and deals</p>
+                    </div>
+                    <button class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition flex items-center">
+                        <i data-lucide="plus" class="w-4 h-4 mr-2"></i>
+                        Add Contact
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <h3 class="font-semibold mb-4">Deals by Stage</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-600">Lead</span>
+                                    <span class="font-medium">$24,500</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-indigo-600 h-2 rounded-full" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-600">Qualified</span>
+                                    <span class="font-medium">$18,200</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-indigo-600 h-2 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-600">Proposal</span>
+                                    <span class="font-medium">$32,800</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-indigo-600 h-2 rounded-full" style="width: 50%"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-600">Negotiation</span>
+                                    <span class="font-medium">$15,600</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-indigo-600 h-2 rounded-full" style="width: 25%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-2 bg-white rounded-xl shadow-sm p-6">
+                        <h3 class="font-semibold mb-4">Recent Contacts</h3>
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead>
+                                    <tr class="text-left text-sm text-gray-500 border-b">
+                                        <th class="pb-3">Name</th>
+                                        <th class="pb-3">Company</th>
+                                        <th class="pb-3">Email</th>
+                                        <th class="pb-3">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b hover:bg-gray-50">
+                                        <td class="py-3">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
+                                                    <span class="text-xs font-medium text-indigo-800">SJ</span>
+                                                </div>
+                                                Sarah Johnson
+                                            </div>
+                                        </td>
+                                        <td class="py-3">Acme Inc.</td>
+                                        <td class="py-3">sarah@acme.com</td>
+                                        <td class="py-3"><span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Active</span></td>
+                                    </tr>
+                                    <tr class="border-b hover:bg-gray-50">
+                                        <td class="py-3">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
+                                                    <span class="text-xs font-medium text-indigo-800">MR</span>
+                                                </div>
+                                                Michael Rodriguez
+                                            </div>
+                                        </td>
+                                        <td class="py-3">TechCorp</td>
+                                        <td class="py-3">michael@techcorp.com</td>
+                                        <td class="py-3"><span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Active</span></td>
+                                    </tr>
+                                    <tr class="border-b hover:bg-gray-50">
+                                        <td class="py-3">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
+                                                    <span class="text-xs font-medium text-indigo-800">EW</span>
+                                                </div>
+                                                Emily Wilson
+                                            </div>
+                                        </td>
+                                        <td class="py-3">Global Solutions</td>
+                                        <td class="py-3">emily@globalsolutions.com</td>
+                                        <td class="py-3"><span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">Prospect</span></td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="py-3">
+                                            <div class="flex items-center">
+                                                <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-2">
+                                                    <span class="text-xs font-medium text-indigo-800">DT</span>
+                                                </div>
+                                                David Thompson
+                                            </div>
+                                        </td>
+                                        <td class="py-3">Innovate Ltd</td>
+                                        <td class="py-3">david@innovate.com</td>
+                                        <td class="py-3"><span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Active</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <h3 class="font-semibold mb-4">Upcoming Activities</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5 text-blue-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Call with Sarah Johnson</p>
+                                <p class="text-sm text-gray-600">Discuss proposal requirements</p>
+                                <p class="text-xs text-gray-500 mt-1">Today, 2:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5 text-green-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Follow up with Michael Rodriguez</p>
+                                <p class="text-sm text-gray-600">Send contract for review</p>
+                                <p class="text-xs text-gray-500 mt-1">Tomorrow, 10:00 AM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                <i data-lucide="calendar" class="w-5 h-5 text-purple-600"></i>
+                            </div>
+                            <div>
+                                <p class="font-medium">Meeting with Global Solutions</p>
+                                <p class="text-sm text-gray-600">Product demo and Q&A session</p>
+                                <p class="text-xs text-gray-500 mt-1">Jun 15, 3:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Projects Content -->
+            <div id="projects-content" class="dashboard-content hidden p-6">
+                <div class="mb-8 flex justify-between items-center">
+                    <div>
+                        <h1 class="text-2xl font-bold mb-2">Project Management</h1>
+                        <p class="text-gray-600">Track tasks and progress</p>
+                    </div>
+                    <button class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition flex items-center">
+                        <i data-lucide="plus" class="w-4 h-4 mr-2"></i>
+                        New Project
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-semibold">Website Redesign</h3>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">On Track</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Complete redesign of company website with new branding</p>
+                        
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-gray-600">Progress</span>
+                                <span class="font-medium">65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center text-sm">
+                            <div class="flex -space-x-2">
+                                <div class="w-6 h-6 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                    <span class="text-xs font-medium text-indigo-800">JD</span>
+                                </div>
+                                <div class="w-6 h-6 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                    <span class="text-xs font-medium text-indigo-800">AS</span>
+                                </div>
+                                <div class="w-6 h-6 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                    <span class="text-xs font-medium text-indigo-800">MK</span>
+                                </div>
+                            </div>
+                            <div class="text-gray-600">
+                                Due: <span class="font-medium">Jun 15</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-semibold">Mobile App Development</h3>
+                            <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">At Risk</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Develop native mobile apps for iOS and Android platforms</p>
+                        
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-gray-600">Progress</span>
+                                <span class="font-medium">40%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 40%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center text-sm">
+                            <div class="flex -space-x-2">
+                                <div class="w-6 h-6 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                    <span class="text-xs font-medium text-indigo-800">TP</span>
+                                </div>
+                                <div class="w-6 h-6 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                    <span class="text-xs font-medium text-indigo-800">LW</span>
+                                </div>
+                            </div>
+                            <div class="text-gray-600">
+                                Due: <span class="font-medium">Jul 30</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="font-semibold">Marketing Campaign</h3>
+                            <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">On Track</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-4">Q3 marketing campaign for new product launch</p>
+                        
+                        <div class="mb-4">
+                            <div class="flex justify-between text-sm mb-1">
+                                <span class="text-gray-600">Progress</span>
+                                <span class="font-medium">25%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-indigo-600 h-2 rounded-full" style="width: 25%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between items-center text-sm">
+                            <div class="flex -space-x-2">
+                                <div class="w-6 h-6 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                    <span class="text-xs font-medium text-indigo-800">SJ</span>
+                                </div>
+                                <div class="w-6 h-6 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                    <span class="text-xs font-medium text-indigo-800">RB</span>
+                                </div>
+                                <div class="w-6 h-6 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                    <span class="text-xs font-medium text-indigo-800">KL</span>
+                                </div>
+                            </div>
+                            <div class="text-gray-600">
+                                Due: <span class="font-medium">Aug 15</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <h3 class="font-semibold mb-4">Task Board</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                        <div>
+                            <h4 class="font-medium text-gray-700 mb-3">To Do</h4>
+                            <div class="space-y-3">
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <p class="font-medium text-sm mb-1">Create wireframes</p>
+                                    <p class="text-xs text-gray-600 mb-2">Website Redesign</p>
+                                    <div class="flex justify-between items-center">
+                                        <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center">
+                                            <span class="text-xs font-medium text-indigo-800">AS</span>
+                                        </div>
+                                        <span class="text-xs text-gray-500">Today</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-gray-50 rounded-lg p-3">
+                                    <p class="font-medium text-sm mb-1">Research competitors</p>
+                                    <p class="text-xs text-gray-600 mb-2">Marketing Campaign</p>
+                                    <div class="flex justify-between items-center">
+                                        <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center">
+                                            <span class="text-xs font-medium text-indigo-800">SJ</span>
+                                        </div>
+                                        <span class="text-xs text-gray-500">Tomorrow</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-medium text-gray-700 mb-3">In Progress</h4>
+                            <div class="space-y-3">
+                                <div class="bg-blue-50 rounded-lg p-3">
+                                    <p class="font-medium text-sm mb-1">Design mockups</p>
+                                    <p class="text-xs text-gray-600 mb-2">Website Redesign</p>
+                                    <div class="flex justify-between items-center">
+                                        <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center">
+                                            <span class="text-xs font-medium text-indigo-800">MK</span>
+                                        </div>
+                                        <span class="text-xs text-gray-500">Jun 10</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-blue-50 rounded-lg p-3">
+                                    <p class="font-medium text-sm mb-1">API development</p>
+                                    <p class="text-xs text-gray-600 mb-2">Mobile App</p>
+                                    <div class="flex justify-between items-center">
+                                        <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center">
+                                            <span class="text-xs font-medium text-indigo-800">TP</span>
+                                        </div>
+                                        <span class="text-xs text-gray-500">Jun 12</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-medium text-gray-700 mb-3">Review</h4>
+                            <div class="space-y-3">
+                                <div class="bg-yellow-50 rounded-lg p-3">
+                                    <p class="font-medium text-sm mb-1">Content strategy</p>
+                                    <p class="text-xs text-gray-600 mb-2">Marketing Campaign</p>
+                                    <div class="flex justify-between items-center">
+                                        <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center">
+                                            <span class="text-xs font-medium text-indigo-800">RB</span>
+                                        </div>
+                                        <span class="text-xs text-gray-500">Jun 8</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-medium text-gray-700 mb-3">Done</h4>
+                            <div class="space-y-3">
+                                <div class="bg-green-50 rounded-lg p-3">
+                                    <p class="font-medium text-sm mb-1">Project kickoff</p>
+                                    <p class="text-xs text-gray-600 mb-2">Website Redesign</p>
+                                    <div class="flex justify-between items-center">
+                                        <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center">
+                                            <span class="text-xs font-medium text-indigo-800">JD</span>
+                                        </div>
+                                        <span class="text-xs text-gray-500">Jun 1</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-green-50 rounded-lg p-3">
+                                    <p class="font-medium text-sm mb-1">Market research</p>
+                                    <p class="text-xs text-gray-600 mb-2">Mobile App</p>
+                                    <div class="flex justify-between items-center">
+                                        <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center">
+                                            <span class="text-xs font-medium text-indigo-800">LW</span>
+                                        </div>
+                                        <span class="text-xs text-gray-500">May 28</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chat Content -->
+            <div id="chat-content" class="dashboard-content hidden p-6">
+                <div class="mb-8">
+                    <h1 class="text-2xl font-bold mb-2">Team Chat</h1>
+                    <p class="text-gray-600">Real-time messaging with your team</p>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+                    <div class="lg:col-span-1 bg-white rounded-xl shadow-sm">
+                        <div class="p-4 border-b border-gray-200">
+                            <div class="relative">
+                                <input type="text" placeholder="Search conversations..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                                <i data-lucide="search" class="w-5 h-5 text-gray-400 absolute left-3 top-2.5"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="overflow-y-auto" style="max-height: 500px;">
+                            <div class="p-3 hover:bg-gray-50 cursor-pointer border-b border-gray-100">
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                        <i data-lucide="hash" class="w-5 h-5 text-indigo-600"></i>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex justify-between">
+                                            <h3 class="font-medium truncate">Marketing Team</h3>
+                                            <span class="text-xs text-gray-500">10:30 AM</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600 truncate">John: Hey team, the new campaign designs are ready...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="p-3 hover:bg-gray-50 cursor-pointer border-b border-gray-100 bg-indigo-50">
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                        <i data-lucide="hash" class="w-5 h-5 text-indigo-600"></i>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex justify-between">
+                                            <h3 class="font-medium truncate">General</h3>
+                                            <span class="text-xs text-gray-500">Yesterday</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600 truncate">Sarah: Company meeting tomorrow at 10 AM</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="p-3 hover:bg-gray-50 cursor-pointer border-b border-gray-100">
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                        <i data-lucide="hash" class="w-5 h-5 text-indigo-600"></i>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex justify-between">
+                                            <h3 class="font-medium truncate">Development</h3>
+                                            <span class="text-xs text-gray-500">Jun 5</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600 truncate">Mike: API documentation has been updated</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="p-3 hover:bg-gray-50 cursor-pointer border-b border-gray-100">
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                        <span class="text-xs font-medium text-indigo-800">AS</span>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex justify-between">
+                                            <h3 class="font-medium truncate">Alex Smith</h3>
+                                            <span class="text-xs text-gray-500">Jun 4</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600 truncate">Can you review the proposal when you get a chance?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="p-3 hover:bg-gray-50 cursor-pointer border-b border-gray-100">
+                                <div class="flex items-start">
+                                    <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                        <span class="text-xs font-medium text-indigo-800">MK</span>
+                                    </div>
+                                    <div class="flex-1 min-w-0">
+                                        <div class="flex justify-between">
+                                            <h3 class="font-medium truncate">Mary Kim</h3>
+                                            <span class="text-xs text-gray-500">Jun 3</span>
+                                        </div>
+                                        <p class="text-sm text-gray-600 truncate">Design mockups are ready for review</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:col-span-3 bg-white rounded-xl shadow-sm flex flex-col">
+                        <div class="p-4 border-b border-gray-200 flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                                <i data-lucide="hash" class="w-5 h-5 text-indigo-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-medium">General</h3>
+                                <p class="text-xs text-gray-600">5 members, 3 online</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex-1 p-4 overflow-y-auto" style="max-height: 400px;">
+                            <div class="mb-6">
+                                <div class="flex items-start mb-4">
+                                    <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                        <span class="text-xs font-medium text-indigo-800">SJ</span>
+                                    </div>
+                                    <div>
+                                        <div class="bg-gray-100 rounded-lg p-3">
+                                            <p class="font-medium text-sm mb-1">Sarah Johnson</p>
+                                            <p>Hey everyone, just a reminder that we have our quarterly review meeting tomorrow at 10 AM in the main conference room.</p>
+                                        </div>
+                                        <p class="text-xs text-gray-500 mt-1">Yesterday, 3:45 PM</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start mb-4">
+                                    <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                        <span class="text-xs font-medium text-indigo-800">JD</span>
+                                    </div>
+                                    <div>
+                                        <div class="bg-gray-100 rounded-lg p-3">
+                                            <p class="font-medium text-sm mb-1">John Doe</p>
+                                            <p>Thanks for the reminder, Sarah. I'll be there with the updated sales report.</p>
+                                        </div>
+                                        <p class="text-xs text-gray-500 mt-1">Yesterday, 3:47 PM</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start mb-4">
+                                    <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                        <span class="text-xs font-medium text-indigo-800">MR</span>
+                                    </div>
+                                    <div>
+                                        <div class="bg-gray-100 rounded-lg p-3">
+                                            <p class="font-medium text-sm mb-1">Michael Rodriguez</p>
+                                            <p>Will the marketing team be presenting their Q3 strategy as well?</p>
+                                        </div>
+                                        <p class="text-xs text-gray-500 mt-1">Yesterday, 3:50 PM</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start mb-4">
+                                    <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                        <span class="text-xs font-medium text-indigo-800">SJ</span>
+                                    </div>
+                                    <div>
+                                        <div class="bg-gray-100 rounded-lg p-3">
+                                            <p class="font-medium text-sm mb-1">Sarah Johnson</p>
+                                            <p>Yes, they'll have a 30-minute slot to present their plans.</p>
+                                        </div>
+                                        <p class="text-xs text-gray-500 mt-1">Yesterday, 3:52 PM</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start mb-4">
+                                    <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                        <span class="text-xs font-medium text-indigo-800">AS</span>
+                                    </div>
+                                    <div>
+                                        <div class="bg-gray-100 rounded-lg p-3">
+                                            <p class="font-medium text-sm mb-1">Alex Smith</p>
+                                            <p>Perfect, I'll make sure to have the development update ready as well.</p>
+                                        </div>
+                                        <p class="text-xs text-gray-500 mt-1">Yesterday, 4:05 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="border-t border-gray-200 p-3">
+                            <div class="flex items-center">
+                                <button class="p-2 text-gray-500 hover:text-gray-700 mr-1">
+                                    <i data-lucide="paperclip" class="w-5 h-5"></i>
+                                </button>
+                                <input type="text" placeholder="Type a message..." class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                                <button class="ml-2 p-2 text-gray-500 hover:text-gray-700">
+                                    <i data-lucide="smile" class="w-5 h-5"></i>
+                                </button>
+                                <button class="ml-2 w-10 h-10 rounded-lg bg-indigo-600 text-white flex items-center justify-center hover:bg-indigo-700">
+                                    <i data-lucide="send" class="w-5 h-5"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Analytics Content -->
+            <div id="analytics-content" class="dashboard-content hidden p-6">
+                <div class="mb-8">
+                    <h1 class="text-2xl font-bold mb-2">Analytics</h1>
+                    <p class="text-gray-600">Data insights and reports</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="font-semibold">Revenue Overview</h3>
+                            <div class="flex space-x-2">
+                                <button class="px-3 py-1 text-sm bg-indigo-100 text-indigo-700 rounded-lg">Month</button>
+                                <button class="px-3 py-1 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Quarter</button>
+                                <button class="px-3 py-1 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Year</button>
+                            </div>
+                        </div>
+                        
+                        <div class="h-64">
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="font-semibold">Customer Acquisition</h3>
+                            <div class="flex space-x-2">
+                                <button class="px-3 py-1 text-sm bg-indigo-100 text-indigo-700 rounded-lg">Month</button>
+                                <button class="px-3 py-1 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Quarter</button>
+                                <button class="px-3 py-1 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Year</button>
+                            </div>
+                        </div>
+                        
+                        <div class="h-64">
+                            <canvas id="acquisitionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-semibold">Conversion Rate</h3>
+                            <span class="text-sm font-medium text-green-600">+2.1%</span>
+                        </div>
+                        <div class="text-3xl font-bold mb-2">4.8%</div>
+                        <div class="h-32">
+                            <canvas id="conversionChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-semibold">Customer Retention</h3>
+                            <span class="text-sm font-medium text-green-600">+3.5%</span>
+                        </div>
+                        <div class="text-3xl font-bold mb-2">87.2%</div>
+                        <div class="h-32">
+                            <canvas id="retentionChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-sm p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="font-semibold">Average Deal Size</h3>
+                            <span class="text-sm font-medium text-red-600">-1.2%</span>
+                        </div>
+                        <div class="text-3xl font-bold mb-2">$8,450</div>
+                        <div class="h-32">
+                            <canvas id="dealSizeChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <h3 class="font-semibold mb-4">Top Performing Products</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="text-left text-sm text-gray-500 border-b">
+                                    <th class="pb-3">Product</th>
+                                    <th class="pb-3">Sales</th>
+                                    <th class="pb-3">Revenue</th>
+                                    <th class="pb-3">Growth</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-3 font-medium">Professional Plan</td>
+                                    <td class="py-3">1,245</td>
+                                    <td class="py-3">$98,355</td>
+                                    <td class="py-3"><span class="text-green-600 flex items-center"><i data-lucide="trending-up" class="w-4 h-4 mr-1"></i> 12.5%</span></td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-3 font-medium">Basic Plan</td>
+                                    <td class="py-3">2,156</td>
+                                    <td class="py-3">$62,524</td>
+                                    <td class="py-3"><span class="text-green-600 flex items-center"><i data-lucide="trending-up" class="w-4 h-4 mr-1"></i> 8.3%</span></td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-3 font-medium">Enterprise Plan</td>
+                                    <td class="py-3">48</td>
+                                    <td class="py-3">$86,400</td>
+                                    <td class="py-3"><span class="text-green-600 flex items-center"><i data-lucide="trending-up" class="w-4 h-4 mr-1"></i> 5.7%</span></td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="py-3 font-medium">Add-on Services</td>
+                                    <td class="py-3">387</td>
+                                    <td class="py-3">$19,350</td>
+                                    <td class="py-3"><span class="text-red-600 flex items-center"><i data-lucide="trending-down" class="w-4 h-4 mr-1"></i> 2.1%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Docs Content -->
+            <div id="docs-content" class="dashboard-content hidden p-6">
+                <div class="mb-8 flex justify-between items-center">
+                    <div>
+                        <h1 class="text-2xl font-bold mb-2">Document Management</h1>
+                        <p class="text-gray-600">Create, collaborate, and organize your files</p>
+                    </div>
+                    <button class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition flex items-center">
+                        <i data-lucide="plus" class="w-4 h-4 mr-2"></i>
+                        New Document
+                    </button>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                    <div class="md:col-span-1 bg-white rounded-xl shadow-sm p-6">
+                        <h3 class="font-semibold mb-4">Folders</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <i data-lucide="folder" class="w-5 h-5 text-blue-500 mr-3"></i>
+                                <span>Marketing</span>
+                            </div>
+                            <div class="flex items-center p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <i data-lucide="folder" class="w-5 h-5 text-blue-500 mr-3"></i>
+                                <span>Sales</span>
+                            </div>
+                            <div class="flex items-center p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <i data-lucide="folder" class="w-5 h-5 text-blue-500 mr-3"></i>
+                                <span>HR</span>
+                            </div>
+                            <div class="flex items-center p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <i data-lucide="folder" class="w-5 h-5 text-blue-500 mr-3"></i>
+                                <span>Development</span>
+                            </div>
+                            <div class="flex items-center p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <i data-lucide="folder" class="w-5 h-5 text-blue-500 mr-3"></i>
+                                <span>Finance</span>
+                            </div>
+                            <div class="flex items-center p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
+                                <i data-lucide="folder-plus" class="w-5 h-5 text-gray-500 mr-3"></i>
+                                <span class="text-gray-500">New Folder</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:col-span-3 bg-white rounded-xl shadow-sm p-6">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="font-semibold">Recent Documents</h3>
+                            <div class="flex space-x-2">
+                                <button class="p-2 rounded-lg hover:bg-gray-100">
+                                    <i data-lucide="search" class="w-5 h-5 text-gray-600"></i>
+                                </button>
+                                <button class="p-2 rounded-lg hover:bg-gray-100">
+                                    <i data-lucide="filter" class="w-5 h-5 text-gray-600"></i>
+                                </button>
+                                <button class="p-2 rounded-lg hover:bg-gray-100">
+                                    <i data-lucide="more-vertical" class="w-5 h-5 text-gray-600"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                                <div class="flex justify-between items-start mb-3">
+                                    <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
+                                        <i data-lucide="file-text" class="w-5 h-5 text-blue-600"></i>
+                                    </div>
+                                    <button class="p-1 rounded hover:bg-gray-100">
+                                        <i data-lucide="more-horizontal" class="w-4 h-4 text-gray-500"></i>
+                                    </button>
+                                </div>
+                                <h4 class="font-medium mb-1">Q3 Marketing Strategy</h4>
+                                <p class="text-sm text-gray-600 mb-3">Marketing plan for the third quarter focusing on new customer acquisition</p>
+                                <div class="flex justify-between items-center text-sm">
+                                    <div class="flex -space-x-2">
+                                        <div class="w-6 h-6 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                            <span class="text-xs font-medium text-indigo-800">JD</span>
+                                        </div>
+                                        <div class="w-6 h-6 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                            <span class="text-xs font-medium text-indigo-800">AS</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-gray-500">2 hours ago</span>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                                <div class="flex justify-between items-start mb-3">
+                                    <div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center">
+                                        <i data-lucide="file-spreadsheet" class="w-5 h-5 text-green-600"></i>
+                                    </div>
+                                    <button class="p-1 rounded hover:bg-gray-100">
+                                        <i data-lucide="more-horizontal" class="w-4 h-4 text-gray-500"></i>
+                                    </button>
+                                </div>
+                                <h4 class="font-medium mb-1">Sales Report Q2 2023</h4>
+                                <p class="text-sm text-gray-600 mb-3">Comprehensive sales report for the second quarter with analysis</p>
+                                <div class="flex justify-between items-center text-sm">
+                                    <div class="flex -space-x-2">
+                                        <div class="w-6 h-6 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                            <span class="text-xs font-medium text-indigo-800">MR</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-gray-500">Yesterday</span>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                                <div class="flex justify-between items-start mb-3">
+                                    <div class="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center">
+                                        <i data-lucide="file-presentation" class="w-5 h-5 text-red-600"></i>
+                                    </div>
+                                    <button class="p-1 rounded hover:bg-gray-100">
+                                        <i data-lucide="more-horizontal" class="w-4 h-4 text-gray-500"></i>
+                                    </button>
+                                </div>
+                                <h4 class="font-medium mb-1">Product Roadmap 2023</h4>
+                                <p class="text-sm text-gray-600 mb-3">Strategic product development plan for the rest of the year</p>
+                                <div class="flex justify-between items-center text-sm">
+                                    <div class="flex -space-x-2">
+                                        <div class="w-6 h-6 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                            <span class="text-xs font-medium text-indigo-800">TP</span>
+                                        </div>
+                                        <div class="w-6 h-6 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                            <span class="text-xs font-medium text-indigo-800">LW</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-gray-500">Jun 5</span>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                                <div class="flex justify-between items-start mb-3">
+                                    <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center">
+                                        <i data-lucide="file-image" class="w-5 h-5 text-purple-600"></i>
+                                    </div>
+                                    <button class="p-1 rounded hover:bg-gray-100">
+                                        <i data-lucide="more-horizontal" class="w-4 h-4 text-gray-500"></i>
+                                    </button>
+                                </div>
+                                <h4 class="font-medium mb-1">Brand Guidelines</h4>
+                                <p class="text-sm text-gray-600 mb-3">Company brand identity guidelines and usage instructions</p>
+                                <div class="flex justify-between items-center text-sm">
+                                    <div class="flex -space-x-2">
+                                        <div class="w-6 h-6 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                            <span class="text-xs font-medium text-indigo-800">MK</span>
+                                        </div>
+                                    </div>
+                                    <span class="text-gray-500">Jun 3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm p-6">
+                    <h3 class="font-semibold mb-4">Shared with Me</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="text-left text-sm text-gray-500 border-b">
+                                    <th class="pb-3">Name</th>
+                                    <th class="pb-3">Owner</th>
+                                    <th class="pb-3">Last Modified</th>
+                                    <th class="pb-3">File Size</th>
+                                    <th class="pb-3"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-3">
+                                        <div class="flex items-center">
+                                            <div class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center mr-3">
+                                                <i data-lucide="file-text" class="w-4 h-4 text-blue-600"></i>
+                                            </div>
+                                            <span>Project Proposal Template</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-3">Sarah Johnson</td>
+                                    <td class="py-3">Jun 6, 2023</td>
+                                    <td class="py-3">1.2 MB</td>
+                                    <td class="py-3">
+                                        <button class="p-1 rounded hover:bg-gray-100">
+                                            <i data-lucide="download" class="w-4 h-4 text-gray-600"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="py-3">
+                                        <div class="flex items-center">
+                                            <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center mr-3">
+                                                <i data-lucide="file-spreadsheet" class="w-4 h-4 text-green-600"></i>
+                                            </div>
+                                            <span>Budget Tracker</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-3">Michael Rodriguez</td>
+                                    <td class="py-3">Jun 4, 2023</td>
+                                    <td class="py-3">856 KB</td>
+                                    <td class="py-3">
+                                        <button class="p-1 rounded hover:bg-gray-100">
+                                            <i data-lucide="download" class="w-4 h-4 text-gray-600"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="py-3">
+                                        <div class="flex items-center">
+                                            <div class="w-8 h-8 rounded-lg bg-red-100 flex items-center justify-center mr-3">
+                                                <i data-lucide="file-presentation" class="w-4 h-4 text-red-600"></i>
+                                            </div>
+                                            <span>Company Overview</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-3">Alex Smith</td>
+                                    <td class="py-3">May 30, 2023</td>
+                                    <td class="py-3">4.7 MB</td>
+                                    <td class="py-3">
+                                        <button class="p-1 rounded hover:bg-gray-100">
+                                            <i data-lucide="download" class="w-4 h-4 text-gray-600"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+    
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

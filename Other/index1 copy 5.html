@@ -1,0 +1,759 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABION Industries - African-Rooted, Globally Scaled Tech Solutions</title>
+    <meta name="description" content="ABION Industries builds custom business automations, entertainment platforms, and B2B solutions. We design, implement, and maintain systems that scale your business.">
+    <meta name="keywords" content="business automation, African tech, NEXUS automation, custom integrations, workflow automation">
+    <link rel="canonical" href="https://abionindustries.com/">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            overflow-x: hidden;
+        }
+
+        .skip-nav {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 1000;
+        }
+
+        .skip-nav:focus {
+            top: 6px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 100;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #6366f1;
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #6366f1;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #1a1a1a 0%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #6b7280;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .secondary-button {
+            background: white;
+            color: #374151;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .secondary-button:hover {
+            border-color: #6366f1;
+            color: #6366f1;
+            transform: translateY(-2px);
+        }
+
+        /* Problems Section */
+        .problems {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: #1a1a1a;
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .problem-card {
+            background: #fef2f2;
+            padding: 2rem;
+            border-radius: 20px;
+            border-left: 4px solid #ef4444;
+            transition: transform 0.3s ease;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .problem-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #dc2626;
+        }
+
+        /* Solutions Section */
+        .solutions {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .solution-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .solution-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #1a1a1a;
+        }
+
+        .solution-content p {
+            font-size: 1.1rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+
+        .disclaimer {
+            background: #fef3c7;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid #f59e0b;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .disclaimer p {
+            font-size: 0.95rem;
+            color: #92400e;
+            margin: 0;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .step-timeline {
+            font-size: 0.9rem;
+            color: #6366f1;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 2rem;
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #a855f7;
+        }
+
+        /* Tech Stack Section */
+        .tech-stack {
+            padding: 4rem 2rem;
+            background: #f8fafc;
+            text-align: center;
+        }
+
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .tech-item {
+            background: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            font-weight: 600;
+            color: #374151;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            text-align: center;
+            color: white;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .final-cta .cta-button {
+            background: white;
+            color: #6366f1;
+            font-size: 1.1rem;
+            padding: 1rem 2rem;
+        }
+
+        .final-cta .cta-button:hover {
+            background: #f9fafb;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 3rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #a855f7;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 6rem 1rem 3rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .problems-grid,
+            .process-steps,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+    </style>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "ABION Industries Ltd",
+        "url": "https://abionindustries.com",
+        "logo": "https://abionindustries.com/logo.png",
+        "description": "African-rooted, globally scaled tech and culture conglomerate specializing in business automation, entertainment, finance, and education solutions.",
+        "foundingDate": "2025",
+        "sameAs": [
+            "https://linkedin.com/company/abion-industries",
+            "https://twitter.com/abionindustries"
+        ]
+    }
+    </script>
+</head><a href="#main-content" class="skip-nav">Skip to main content</a>
+
+<body>
+    
+    <header>
+        <nav>
+            <a href="/" class="logo">ABION</a>
+            <ul class="nav-links">
+                <li><a href="/products/nexus.html">NEXUS</a></li>
+                <li><a href="/pricing.html">Pricing</a></li>
+                <li><a href="/products/nexus-features.html">Features</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="#" class="cta-button" data-cta="book-call">Book a Call</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <!-- filename: nexus-value-page.html -->
+<nav aria-label="Main navigation">
+  <a class="skip" href="#main">Skip to main content</a>
+  <div class="nav-inner">
+    <div class="brand">ABION</div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="/pricing">Pricing</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+  <header class="hero">
+    <h1>NEXUS — Stop wasting time on repeat work. Start running your business.</h1>
+    <p class="subhead">
+      For business leaders tired of manual tasks and missed opportunities: get predictable processes that free your team to sell, ship and grow — without hiring more people.
+    </p>
+    <div class="cta-row">
+      <a class="btn primary" href="/contact" data-cta="book-call">Book a Free Consultation</a>
+      <a class="btn ghost" href="#pricing" data-cta="view-pricing">View Pricing</a>
+    </div>
+    <p class="micro">No fluff. Real improvements in operations, speed, and clarity.</p>
+  </header>
+
+  <section class="value-problem">
+    <h2>Problems we solve</h2>
+    <ul class="problem-list">
+      <li><strong>Your team is stuck in busywork.</strong> People spend hours copying data, chasing approvals, and repeating the same tasks every day.</li>
+      <li><strong>Data lives in silos.</strong> Sales, finance and operations don’t speak to each other — so decisions are slow and mistakes are common.</li>
+      <li><strong>Errors cost money and reputation.</strong> Missed invoices, lost leads, and manual reconciliation create leakage you rarely notice until it’s late.</li>
+    </ul>
+  </section>
+
+  <section class="value-solution">
+    <h2>What NEXUS gets you (outcomes, not features)</h2>
+    <div class="outcomes-grid">
+      <div class="outcome">
+        <h3>More time for revenue</h3>
+        <p>Free up your team from repeat tasks so they focus on selling, serving customers and building products that grow revenue.</p>
+      </div>
+      <div class="outcome">
+        <h3>Fewer mistakes, cleaner books</h3>
+        <p>Reduce manual errors in billing, reporting and inventory so finance closes faster and audits are smoother.</p>
+      </div>
+      <div class="outcome">
+        <h3>Faster delivery & happier customers</h3>
+        <p>Orders, bookings and service requests move quicker — clients get what they expect, on time.</p>
+      </div>
+      <div class="outcome">
+        <h3>Better visibility & decisions</h3>
+        <p>Get clear, timely summaries of the business so leadership can act fast and confidently.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <h2>How we work (short)</h2>
+    <ol class="steps">
+      <li><strong>Audit:</strong> We do a short paid audit and show where time and money leak — with a clear improvement plan.</li>
+      <li><strong>Build & Deploy:</strong> We implement the agreed solutions for you, connect your systems, and hand everything over with documentation.</li>
+      <li><strong>Maintain or Handover:</strong> You choose — we keep it running for you, or we hand it to your team with training and runbooks.</li>
+    </ol>
+    <p class="guarantee">Pilot promise: If the audit does not identify at least one high-impact improvement, we’ll refund the audit fee — no questions.</p>
+  </section>
+
+  <section class="benefit-tiles">
+    <h2>Where NEXUS helps most</h2>
+    <ul>
+      <li><strong>Sales & CRM:</strong> faster lead follow-up and fewer lost opportunities.</li>
+      <li><strong>Billing & Finance:</strong> quicker invoicing, simplified reconciliation.</li>
+      <li><strong>Operations & Fulfilment:</strong> reliable order flow and fewer delays.</li>
+      <li><strong>Education & Training:</strong> seamless onboarding and certificate delivery.</li>
+      <li><strong>Entertainment:</strong> release coordination, ticket flows and royalty tracking.</li>
+      <li><strong>Events:</strong> ticket-to-check-in workflows and sponsor deliverables.</li>
+    </ul>
+  </section>
+
+  <section id="pricing" class="pricing">
+    <h2>Transparent, value-based pricing</h2>
+    <p class="pricing-intro">Choose the investment that matches the outcome you need. Each plan is structured around the value it delivers — time saved, revenue preserved, and headaches removed.</p>
+
+    <div class="pricing-grid">
+      <article class="plan">
+        <h3>Starter</h3>
+        <div class="price">$299 <span class="muted">one-time</span></div>
+        <ul>
+          <li>Up to 5 core process improvements</li>
+          <li>Essential integrations and reporting</li>
+          <li>30 days of support</li>
+          <li>Ideal to reclaim team hours and stop manual errors</li>
+        </ul>
+        <a class="btn" href="/contact?plan=starter" data-cta="get-started">Get Started</a>
+      </article>
+
+      <article class="plan">
+        <h3>Professional</h3>
+        <div class="price">$699 <span class="muted">one-time</span></div>
+        <ul>
+          <li>Up to 15 process improvements across teams</li>
+          <li>Advanced integrations, dashboards & weekly health checks</li>
+          <li>90 days of priority support</li>
+          <li>For teams ready to replace repetitive hires with dependable systems</li>
+        </ul>
+        <a class="btn" href="/contact?plan=pro" data-cta="get-started">Get Started</a>
+      </article>
+
+      <article class="plan">
+        <h3>Enterprise</h3>
+        <div class="price">Custom</div>
+        <ul>
+          <li>Whole-organization scope</li>
+          <li>Dedicated consultant, 24/7 support and SLA</li>
+          <li>Real-time reporting and compliance controls</li>
+          <li>Built for companies that need full operational transformation</li>
+        </ul>
+        <a class="btn" href="/contact?plan=enterprise" data-cta="contact-sales">Contact Sales</a>
+      </article>
+    </div>
+
+    <p class="pricing-note">Prices shown are investments in outcomes. We recommend the Starter plan for early validation; many clients upgrade after seeing measurable gains. A 5% processing buffer is suggested for international payments.</p>
+  </section>
+
+  <section class="testimonials-faq">
+    <h2>Proof & questions</h2>
+
+    <div class="testimonials">
+      <blockquote>
+        <p>"[CLIENT] — 'We cut the time we spent reconciling invoices in half and can focus on growth now.'"</p>
+      </blockquote>
+      <blockquote>
+        <p>"[CLIENT] — 'Releases and ticketing finally work without firefighting every week.'"</p>
+      </blockquote>
+    </div>
+
+    <div class="faq">
+      <h3>Frequently Asked Questions</h3>
+      <dl>
+        <dt>What do you deliver at the end?</dt>
+        <dd>We deliver documented, tested processes that remove manual steps and a clear handover package (documentation, links, and an admin session). If you choose managed care, we continue to keep things running.</dd>
+
+        <dt>How long does setup take?</dt>
+        <dd>Most Starter engagements complete within 1–3 weeks depending on scope and access to systems.</dd>
+
+        <dt>Who owns the work?</dt>
+        <dd>Ownership and credentials are agreed up front — we can transfer full ownership to you on handover, or manage the solution on your behalf under a maintenance agreement.</dd>
+
+        <dt>Is my data safe?</dt>
+        <dd>Yes. We follow industry-standard security practices and can meet additional compliance requirements for enterprise clients.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <h2>Ready to stop doing busywork?</h2>
+    <p>Book a short consultation and we’ll show three quick opportunities to reclaim time and reduce errors — plus a simple plan to fix them.</p>
+    <a class="btn primary" href="/contact" data-cta="book-call">Book a Free Consultation</a>
+    <p class="small-note">Audit guarantee: if we don’t find at least one high-impact improvement during the audit, we’ll refund your audit fee.</p>
+  </section>
+
+  <footer class="site-footer">
+    <div class="brand-block">
+      <strong>ABION Industries</strong>
+      <p>Empowering businesses through practical, outcome-driven systems.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="/products">Products</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/about">About Us</a>
+      <a href="/contact">Contact Us</a>
+    </nav>
+    <small>© 2025 ABION Industries. All rights reserved. | <a href="/legal/privacy">Privacy Policy</a> | <a href="/legal/terms">Terms of Service</a></small>
+  </footer>
+</main>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ABION Tech</h3>
+                <ul>
+                    <li><a href="/products/nexus.html">NEXUS Automations</a></li>
+                    <li><a href="/products/nexus-features.html">Features & Solutions</a></li>
+                    <li><a href="/pricing.html">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>ABION Entertainment</h3>
+                <ul>
+                    <li><a href="#">Afromation</a></li>
+                    <li><a href="#">TEA Productions</a></li>
+                    <li><a href="#">Pyramid Studios</a></li>
+                    <li><a href="#">TUB Studios</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Other Ventures</h3>
+                <ul>
+                    <li><a href="#">ABION Finance</a></li>
+                    <li><a href="#">ABION Education (NAS)</a></li>
+                    <li><a href="#">B2B Solutions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="/contact.html">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ABION Industries Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.problem-card, .step, .feature').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
