@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - Nexus Business Platform</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-['Inter'] bg-gray-50 text-gray-900">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                    <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="font-bold text-xl">Nexus</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Home</a>
+                <a href="features.html" class="font-medium text-indigo-600">Features</a>
+                <a href="pricing.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Pricing</a>
+                <a href="dashboard.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Dashboard</a>
+            </div>
+            
+            <div class="flex space-x-3">
+                <button class="px-4 py-2 text-gray-600 font-medium hover:text-indigo-600 transition">Log in</button>
+                <button class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Get Started</button>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="py-16 bg-gradient-to-br from-indigo-50 to-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-4">Powerful Features for Modern Business</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">Explore the comprehensive suite of tools that make Nexus the all-in-one solution for your business needs.</p>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <!-- CRM Feature -->
+            <div id="crm" class="mb-20 scroll-mt-24">
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="lg:w-1/2">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="users" class="w-8 h-8 text-indigo-600"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold mb-4">CRM</h2>
+                        <p class="text-gray-600 mb-6">Manage your customer relationships with our comprehensive CRM system. Track contacts, deals, and interactions all in one place.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-medium">Contact Management</h3>
+                                    <p class="text-gray-600 text-sm">Store and organize all customer information with custom fields and tags.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-medium">Deal Pipeline</h3>
+                                    <p class="text-gray-600 text-sm">Visualize your sales process with customizable stages and probability tracking.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-medium">Activity Tracking</h3>
+                                    <p class="text-gray-600 text-sm">Log calls, emails, meetings, and notes to maintain complete customer history.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="CRM Dashboard" class="w-full h-64 object-cover">
+                            <div class="p-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                                        <i data-lucide="user" class="w-5 h-5 text-indigo-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">John Smith</h4>
+                                        <p class="text-sm text-gray-600">Acme Corporation</p>
+                                    </div>
+                                </div>
+                                <div class="space-y-3">
+                                    <div>
+                                        <div class="flex justify-between text-sm mb-1">
+                                            <span class="text-gray-600">Deal Value</span>
+                                            <span class="font-medium">$24,500</span>
+                                        </div>
+                                        <div class="w-full bg-gray-200 rounded-full h-2">
+                                            <div class="bg-indigo-600 h-2 rounded-full" style="width: 75%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between text-sm">
+                                        <span class="text-gray-600">Stage</span>
+                                        <span class="font-medium">Proposal</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Projects Feature -->
+            <div id="projects" class="mb-20 scroll-mt-24">
+                <div class="flex flex-col lg:flex-row-reverse gap-12 items-center">
+                    <div class="lg:w-1/2">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="clipboard-list" class="w-8 h-8 text-indigo-600"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold mb-4">Projects</h2>
+                        <p class="text-gray-600 mb-6">Plan, track, and deliver projects on time with our intuitive project management tools.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-medium">Task Management</h3>
+                                    <p class="text-gray-600 text-sm">Create, assign, and track tasks with due dates, priorities, and dependencies.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-medium">Kanban Boards</h3>
+                                    <p class="text-gray-600 text-sm">Visualize workflow with customizable boards and drag-and-drop functionality.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-medium">Gantt Charts</h3>
+                                    <p class="text-gray-600 text-sm">Plan project timelines and visualize dependencies with interactive Gantt charts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2">
+                        <div class="bg-white rounded-xl shadow-lg p-6">
+                            <div class="flex justify-between items-center mb-6">
+                                <h3 class="font-bold text-lg">Website Redesign</h3>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">On Track</span>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-gray-600">Progress</span>
+                                    <span class="font-medium">65%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-indigo-600 h-2.5 rounded-full" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <div class="w-5 h-5 rounded border border-gray-300 mr-3 flex items-center justify-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-500"></i>
+                                    </div>
+                                    <span class="text-gray-600 line-through">Research competitors</span>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <div class="w-5 h-5 rounded border border-gray-300 mr-3 flex items-center justify-center">
+                                        <i data-lucide="check" class="w-4 h-4 text-green-500"></i>
+                                    </div>
+                                    <span class="text-gray-600 line-through">Create wireframes</span>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <div class="w-5 h-5 rounded border border-gray-300 mr-3 flex items-center justify-center bg-indigo-600">
+                                        <i data-lucide="minus" class="w-3 h-3 text-white"></i>
+                                    </div>
+                                    <span>Design mockups</span>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <div class="w-5 h-5 rounded border border-gray-300 mr-3"></div>
+                                    <span class="text-gray-600">Develop frontend</span>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 pt-4 border-t border-gray-200 flex justify-between items-center">
+                                <div class="flex -space-x-2">
+                                    <div class="w-8 h-8 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                        <span class="text-xs font-medium text-indigo-800">JD</span>
+                                    </div>
+                                    <div class="w-8 h-8 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                        <span class="text-xs font-medium text-indigo-800">AS</span>
+                                    </div>
+                                    <div class="w-8 h-8 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                        <span class="text-xs font-medium text-indigo-800">MK</span>
+                                    </div>
+                                </div>
+                                <div class="text-sm text-gray-600">
+                                    Due: <span class="font-medium">Jun 15</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chat Feature -->
+            <div id="chat" class="mb-20 scroll-mt-24">
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="lg:w-1/2">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="message-circle" class="w-8 h-8 text-indigo-600"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold mb-4">Chat</h2>
+                        <p class="text-gray-600 mb-6">Keep your team connected with real-time messaging, file sharing, and video calls.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-medium">Team Channels</h3>
+                                    <p class="text-gray-600 text-sm">Create channels for teams, projects, or topics to keep conversations organized.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-medium">Direct Messages</h3>
+                                    <p class="text-gray-600 text-sm">Have private conversations with individuals or small groups.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-medium">File Sharing</h3>
+                                    <p class="text-gray-600 text-sm">Share documents, images, and other files directly in conversations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                            <div class="bg-indigo-600 text-white p-4 flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center mr-3">
+                                    <i data-lucide="hash" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium">Marketing Team</h3>
+                                    <p class="text-xs text-indigo-200">5 members, 3 online</p>
+                                </div>
+                            </div>
+                            
+                            <div class="p-4 h-80 overflow-y-auto">
+                                <div class="mb-6">
+                                    <div class="flex items-start mb-4">
+                                        <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                            <span class="text-xs font-medium text-indigo-800">JD</span>
+                                        </div>
+                                        <div>
+                                            <div class="bg-gray-100 rounded-lg p-3">
+                                                <p class="font-medium text-sm mb-1">John Doe</p>
+                                                <p>Hey team, the new campaign designs are ready for review!</p>
+                                            </div>
+                                            <p class="text-xs text-gray-500 mt-1">10:30 AM</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start mb-4">
+                                        <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                            <span class="text-xs font-medium text-indigo-800">AS</span>
+                                        </div>
+                                        <div>
+                                            <div class="bg-gray-100 rounded-lg p-3">
+                                                <p class="font-medium text-sm mb-1">Alex Smith</p>
+                                                <p>Great! I'll take a look this afternoon. Can you share the files?</p>
+                                            </div>
+                                            <p class="text-xs text-gray-500 mt-1">10:32 AM</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start mb-4">
+                                        <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3 flex-shrink-0">
+                                            <span class="text-xs font-medium text-indigo-800">JD</span>
+                                        </div>
+                                        <div>
+                                            <div class="bg-gray-100 rounded-lg p-3">
+                                                <p class="font-medium text-sm mb-1">John Doe</p>
+                                                <p>Sure, I've uploaded them to the project folder.</p>
+                                                <div class="mt-2 flex items-center text-sm text-indigo-600">
+                                                    <i data-lucide="file" class="w-4 h-4 mr-1"></i>
+                                                    <span>campaign-designs.zip</span>
+                                                </div>
+                                            </div>
+                                            <p class="text-xs text-gray-500 mt-1">10:33 AM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border-t border-gray-200 p-3">
+                                <div class="flex items-center">
+                                    <input type="text" placeholder="Type a message..." class="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                                    <button class="ml-2 w-10 h-10 rounded-lg bg-indigo-600 text-white flex items-center justify-center hover:bg-indigo-700">
+                                        <i data-lucide="send" class="w-5 h-5"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Analytics Feature -->
+            <div id="analytics" class="mb-20 scroll-mt-24">
+                <div class="flex flex-col lg:flex-row-reverse gap-12 items-center">
+                    <div class="lg:w-1/2">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="bar-chart-3" class="w-8 h-8 text-indigo-600"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold mb-4">Analytics</h2>
+                        <p class="text-gray-600 mb-6">Gain valuable insights from your data with powerful analytics and customizable reports.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-medium">Custom Dashboards</h3>
+                                    <p class="text-gray-600 text-sm">Build personalized dashboards with drag-and-drop widgets for the metrics that matter most.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-medium">Data Visualization</h3>
+                                    <p class="text-gray-600 text-sm">Transform raw data into meaningful charts, graphs, and visual reports.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-medium">Scheduled Reports</h3>
+                                    <p class="text-gray-600 text-sm">Automate report generation and delivery to stakeholders on a regular schedule.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2">
+                        <div class="bg-white rounded-xl shadow-lg p-6">
+                            <div class="flex justify-between items-center mb-6">
+                                <h3 class="font-bold text-lg">Revenue Overview</h3>
+                                <div class="flex space-x-2">
+                                    <button class="px-3 py-1 text-sm bg-indigo-100 text-indigo-700 rounded-lg">Month</button>
+                                    <button class="px-3 py-1 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Quarter</button>
+                                    <button class="px-3 py-1 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">Year</button>
+                                </div>
+                            </div>
+                            
+                            <div class="h-64 mb-6">
+                                <canvas id="revenueChart"></canvas>
+                            </div>
+                            
+                            <div class="grid grid-cols-3 gap-4">
+                                <div class="bg-indigo-50 rounded-lg p-4">
+                                    <p class="text-sm text-indigo-600 mb-1">Total Revenue</p>
+                                    <p class="text-xl font-bold">$124,560</p>
+                                    <div class="flex items-center mt-1">
+                                        <i data-lucide="trending-up" class="w-4 h-4 text-green-500 mr-1"></i>
+                                        <span class="text-sm text-green-500">12.5%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-indigo-50 rounded-lg p-4">
+                                    <p class="text-sm text-indigo-600 mb-1">New Customers</p>
+                                    <p class="text-xl font-bold">324</p>
+                                    <div class="flex items-center mt-1">
+                                        <i data-lucide="trending-up" class="w-4 h-4 text-green-500 mr-1"></i>
+                                        <span class="text-sm text-green-500">8.2%</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="bg-indigo-50 rounded-lg p-4">
+                                    <p class="text-sm text-indigo-600 mb-1">Conversion</p>
+                                    <p class="text-xl font-bold">4.8%</p>
+                                    <div class="flex items-center mt-1">
+                                        <i data-lucide="trending-down" class="w-4 h-4 text-red-500 mr-1"></i>
+                                        <span class="text-sm text-red-500">1.3%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Docs Feature -->
+            <div id="docs" class="scroll-mt-24">
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="lg:w-1/2">
+                        <div class="w-16 h-16 bg-indigo-100 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="file-text" class="w-8 h-8 text-indigo-600"></i>
+                        </div>
+                        <h2 class="text-3xl font-bold mb-4">Docs</h2>
+                        <p class="text-gray-600 mb-6">Create, collaborate on, and manage documents with our powerful document management system.</p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-medium">Rich Document Editor</h3>
+                                    <p class="text-gray-600 text-sm">Create professional documents with formatting options, tables, and media embedding.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-medium">Real-time Collaboration</h3>
+                                    <p class="text-gray-600 text-sm">Work together with your team in real-time with comments, suggestions, and version history.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0"></i>
+                                <div>
+                                    <h3 class="font-medium">File Organization</h3>
+                                    <p class="text-gray-600 text-sm">Organize documents in folders with tags, permissions, and powerful search capabilities.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                            <div class="p-6 border-b border-gray-200">
+                                <div class="flex justify-between items-center">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mr-3">
+                                            <i data-lucide="file-text" class="w-5 h-5 text-blue-600"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-medium">Q3 Marketing Strategy</h3>
+                                            <p class="text-sm text-gray-600">Last edited 2 hours ago</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex space-x-2">
+                                        <button class="p-2 rounded-lg hover:bg-gray-100">
+                                            <i data-lucide="share" class="w-5 h-5 text-gray-600"></i>
+                                        </button>
+                                        <button class="p-2 rounded-lg hover:bg-gray-100">
+                                            <i data-lucide="more-vertical" class="w-5 h-5 text-gray-600"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="p-6">
+                                <div class="prose max-w-none">
+                                    <h1 class="text-2xl font-bold mb-4">Q3 Marketing Strategy</h1>
+                                    <p class="mb-4">This document outlines our marketing strategy for the third quarter, focusing on new customer acquisition and retention initiatives.</p>
+                                    
+                                    <h2 class="text-xl font-semibold mb-3 mt-6">Key Objectives</h2>
+                                    <ul class="list-disc pl-5 mb-4">
+                                        <li>Increase new customer sign-ups by 25%</li>
+                                        <li>Improve customer retention rate to 85%</li>
+                                        <li>Launch new product campaign in mid-August</li>
+                                    </ul>
+                                    
+                                    <h2 class="text-xl font-semibold mb-3 mt-6">Target Audience</h2>
+                                    <p class="mb-4">Our primary focus will be on small to medium businesses in the technology sector, with annual revenues between $1M and $10M.</p>
+                                    
+                                    <div class="bg-gray-100 rounded-lg p-4 my-4">
+                                        <div class="flex items-center mb-2">
+                                            <i data-lucide="message-square" class="w-4 h-4 text-gray-500 mr-2"></i>
+                                            <span class="font-medium text-sm">Comments (3)</span>
+                                        </div>
+                                        <div class="text-sm text-gray-600">
+                                            <p class="mb-2"><span class="font-medium">Sarah:</span> Should we consider expanding to the healthcare sector as well?</p>
+                                            <p><span class="font-medium">Mike:</span> Let's focus on tech for this quarter and evaluate expansion opportunities for Q4.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-4 flex justify-between items-center">
+                                <div class="flex -space-x-2">
+                                    <div class="w-8 h-8 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                        <span class="text-xs font-medium text-indigo-800">JD</span>
+                                    </div>
+                                    <div class="w-8 h-8 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                        <span class="text-xs font-medium text-indigo-800">AS</span>
+                                    </div>
+                                    <div class="w-8 h-8 rounded-full bg-indigo-100 border-2 border-white flex items-center justify-center">
+                                        <span class="text-xs font-medium text-indigo-800">MK</span>
+                                    </div>
+                                </div>
+                                <button class="text-sm text-indigo-600 font-medium hover:text-indigo-800">Add Comment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-indigo-600">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to transform your business?</h2>
+            <p class="text-indigo-100 max-w-2xl mx-auto mb-8">Get started with Nexus today and see the difference an integrated platform can make.</p>
+            <a href="pricing.html" class="px-8 py-3 bg-white text-indigo-600 font-medium rounded-lg hover:bg-gray-100 transition">View Pricing Plans</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 text-gray-400">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-6 md:mb-0">
+                    <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                        <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+                    </div>
+                    <span class="font-bold text-xl text-white">Nexus</span>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-white transition">Terms</a>
+                    <a href="#" class="hover:text-white transition">Privacy</a>
+                    <a href="#" class="hover:text-white transition">Contact</a>
+                </div>
+                
+                <div class="flex space-x-4 mt-6 md:mt-0">
+                    <a href="#" class="hover:text-white transition">
+                        <i data-lucide="twitter" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-sm">
+                <p>&copy; 2023 Nexus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+        
+        // Initialize Revenue Chart
+        const ctx = document.getElementById('revenueChart').getContext('2d');
+        const revenueChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Revenue',
+                    data: [65000, 72000, 68000, 85000, 92000, 98000],
+                    backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                    borderColor: 'rgba(99, 102, 241, 1)',
+                    borderWidth: 2,
+                    tension: 0.3,
+                    pointBackgroundColor: 'rgba(99, 102, 241, 1)',
+                    pointRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value.toLocaleString();
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
