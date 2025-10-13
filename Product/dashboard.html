@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Nexus Automation</title>
+    <title>Dashboard - Nexus Business Platform</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -38,7 +38,7 @@
             </div>
             
             <div class="flex space-x-3">
-                <button href="login.html" class="px-4 py-2 text-gray-600 font-medium hover:text-indigo-600 transition">Log in</button>
+                <button class="px-4 py-2 text-gray-600 font-medium hover:text-indigo-600 transition">Log in</button>
                 <button class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Get Started</button>
             </div>
             
@@ -67,56 +67,36 @@
             
             <div class="flex-1 overflow-y-auto">
                 <div class="p-4">
-                    <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Automation Modules</h3>
+                    <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Apps</h3>
                     <ul class="space-y-1">
                         <li>
                             <a href="#" class="dashboard-app-link flex items-center p-3 rounded-lg hover:bg-gray-100 transition" data-app="crm">
                                 <i data-lucide="users" class="w-5 h-5 text-gray-600 mr-3"></i>
-                                <span>CRM Automation</span>
+                                <span>CRM</span>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="dashboard-app-link flex items-center p-3 rounded-lg hover:bg-gray-100 transition" data-app="projects">
                                 <i data-lucide="clipboard-list" class="w-5 h-5 text-gray-600 mr-3"></i>
-                                <span>Project Automation</span>
+                                <span>Projects</span>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="dashboard-app-link flex items-center p-3 rounded-lg hover:bg-gray-100 transition" data-app="chat">
                                 <i data-lucide="message-circle" class="w-5 h-5 text-gray-600 mr-3"></i>
-                                <span>Communication Automation</span>
+                                <span>Chat</span>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="dashboard-app-link flex items-center p-3 rounded-lg hover:bg-gray-100 transition" data-app="analytics">
                                 <i data-lucide="bar-chart-3" class="w-5 h-5 text-gray-600 mr-3"></i>
-                                <span>Analytics Automation</span>
+                                <span>Analytics</span>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="dashboard-app-link flex items-center p-3 rounded-lg hover:bg-gray-100 transition" data-app="docs">
                                 <i data-lucide="file-text" class="w-5 h-5 text-gray-600 mr-3"></i>
-                                <span>Document Automation</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="p-4 border-t border-gray-200">
-                    <h3 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Add-Ons</h3>
-                    <ul class="space-y-1">
-                        <li>
-                            <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-100 transition">
-                                <i data-lucide="monitor" class="w-5 h-5 text-gray-600 mr-3"></i>
-                                <span>Dashboard Access</span>
-                                <span class="ml-auto text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded">$19/mo</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-100 transition">
-                                <i data-lucide="brain" class="w-5 h-5 text-gray-600 mr-3"></i>
-                                <span>AI Monitoring</span>
-                                <span class="ml-auto text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded">$99/mo</span>
+                                <span>Docs</span>
                             </a>
                         </li>
                     </ul>
@@ -153,8 +133,8 @@
             <!-- Dashboard Home -->
             <div id="dashboard-home" class="dashboard-content p-6">
                 <div class="mb-8">
-                    <h1 class="text-2xl font-bold mb-2">Your Automation Results</h1>
-                    <p class="text-gray-600">Here's how your Nexus automations are performing and delivering value to your business.</p>
+                    <h1 class="text-2xl font-bold mb-2">Welcome back, John!</h1>
+                    <p class="text-gray-600">Here's what's happening with your business today.</p>
                 </div>
                 
                 <!-- Stats Cards -->
@@ -162,58 +142,58 @@
                     <div class="bg-white rounded-xl shadow-sm p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center">
-                                <i data-lucide="clock" class="w-6 h-6 text-indigo-600"></i>
+                                <i data-lucide="users" class="w-6 h-6 text-indigo-600"></i>
                             </div>
-                            <span class="text-sm font-medium text-green-600">+62%</span>
+                            <span class="text-sm font-medium text-green-600">+12.5%</span>
                         </div>
-                        <h3 class="text-2xl font-bold mb-1">18 hrs</h3>
-                        <p class="text-gray-600 text-sm">Time Saved Weekly</p>
+                        <h3 class="text-2xl font-bold mb-1">1,248</h3>
+                        <p class="text-gray-600 text-sm">Total Customers</p>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-sm p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center">
-                                <i data-lucide="trending-up" class="w-6 h-6 text-green-600"></i>
+                                <i data-lucide="dollar-sign" class="w-6 h-6 text-green-600"></i>
                             </div>
-                            <span class="text-sm font-medium text-green-600">+24%</span>
+                            <span class="text-sm font-medium text-green-600">+8.2%</span>
                         </div>
                         <h3 class="text-2xl font-bold mb-1">$45,678</h3>
-                        <p class="text-gray-600 text-sm">Revenue Increase</p>
+                        <p class="text-gray-600 text-sm">Revenue</p>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-sm p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center">
-                                <i data-lucide="check-circle" class="w-6 h-6 text-blue-600"></i>
+                                <i data-lucide="clipboard-list" class="w-6 h-6 text-blue-600"></i>
                             </div>
-                            <span class="text-sm font-medium text-green-600">+78%</span>
+                            <span class="text-sm font-medium text-red-600">-3.1%</span>
                         </div>
                         <h3 class="text-2xl font-bold mb-1">24</h3>
-                        <p class="text-gray-600 text-sm">Tasks Automated</p>
+                        <p class="text-gray-600 text-sm">Active Projects</p>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-sm p-6">
                         <div class="flex items-center justify-between mb-4">
                             <div class="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center">
-                                <i data-lucide="users" class="w-6 h-6 text-purple-600"></i>
+                                <i data-lucide="message-circle" class="w-6 h-6 text-purple-600"></i>
                             </div>
-                            <span class="text-sm font-medium text-green-600">+15%</span>
+                            <span class="text-sm font-medium text-green-600">+5.4%</span>
                         </div>
-                        <h3 class="text-2xl font-bold mb-1">32</h3>
-                        <p class="text-gray-600 text-sm">New Customers</p>
+                        <h3 class="text-2xl font-bold mb-1">18</h3>
+                        <p class="text-gray-600 text-sm">Unread Messages</p>
                     </div>
                 </div>
                 
-                <!-- Automation Modules -->
+                <!-- App Tiles -->
                 <div class="mb-8">
-                    <h2 class="text-xl font-bold mb-4">Your Active Automations</h2>
+                    <h2 class="text-xl font-bold mb-4">Your Apps</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                         <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition cursor-pointer dashboard-app-tile" data-app="crm">
                             <div class="w-12 h-12 rounded-lg bg-indigo-100 flex items-center justify-center mb-4">
                                 <i data-lucide="users" class="w-6 h-6 text-indigo-600"></i>
                             </div>
                             <h3 class="font-semibold mb-1">CRM</h3>
-                            <p class="text-sm text-gray-600">+18% conversions</p>
+                            <p class="text-sm text-gray-600">Manage contacts</p>
                         </div>
                         
                         <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition cursor-pointer dashboard-app-tile" data-app="projects">
@@ -221,15 +201,15 @@
                                 <i data-lucide="clipboard-list" class="w-6 h-6 text-blue-600"></i>
                             </div>
                             <h3 class="font-semibold mb-1">Projects</h3>
-                            <p class="text-sm text-gray-600">40% faster delivery</p>
+                            <p class="text-sm text-gray-600">Track tasks</p>
                         </div>
                         
                         <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition cursor-pointer dashboard-app-tile" data-app="chat">
                             <div class="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center mb-4">
                                 <i data-lucide="message-circle" class="w-6 h-6 text-purple-600"></i>
                             </div>
-                            <h3 class="font-semibold mb-1">Communication</h3>
-                            <p class="text-sm text-gray-600">65% fewer missed messages</p>
+                            <h3 class="font-semibold mb-1">Chat</h3>
+                            <p class="text-sm text-gray-600">Team messaging</p>
                         </div>
                         
                         <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition cursor-pointer dashboard-app-tile" data-app="analytics">
@@ -237,22 +217,22 @@
                                 <i data-lucide="bar-chart-3" class="w-6 h-6 text-green-600"></i>
                             </div>
                             <h3 class="font-semibold mb-1">Analytics</h3>
-                            <p class="text-sm text-gray-600">Real-time insights</p>
+                            <p class="text-sm text-gray-600">Data insights</p>
                         </div>
                         
                         <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition cursor-pointer dashboard-app-tile" data-app="docs">
                             <div class="w-12 h-12 rounded-lg bg-yellow-100 flex items-center justify-center mb-4">
                                 <i data-lucide="file-text" class="w-6 h-6 text-yellow-600"></i>
                             </div>
-                            <h3 class="font-semibold mb-1">Documents</h3>
-                            <p class="text-sm text-gray-600">100% organized</p>
+                            <h3 class="font-semibold mb-1">Docs</h3>
+                            <p class="text-sm text-gray-600">File management</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Recent Automation Activity -->
+                <!-- Recent Activity -->
                 <div>
-                    <h2 class="text-xl font-bold mb-4">Recent Automation Activity</h2>
+                    <h2 class="text-xl font-bold mb-4">Recent Activity</h2>
                     <div class="bg-white rounded-xl shadow-sm overflow-hidden">
                         <div class="divide-y divide-gray-200">
                             <div class="p-4 flex items-start">
@@ -260,8 +240,8 @@
                                     <i data-lucide="user-plus" class="w-5 h-5 text-indigo-600"></i>
                                 </div>
                                 <div>
-                                    <p class="font-medium">New customer automatically added to CRM</p>
-                                    <p class="text-sm text-gray-600">Sarah Johnson from Acme Inc. was captured and added to your sales pipeline</p>
+                                    <p class="font-medium">New customer added</p>
+                                    <p class="text-sm text-gray-600">Sarah Johnson from Acme Inc. was added to your CRM</p>
                                     <p class="text-xs text-gray-500 mt-1">2 hours ago</p>
                                 </div>
                             </div>
@@ -271,8 +251,8 @@
                                     <i data-lucide="check-circle" class="w-5 h-5 text-blue-600"></i>
                                 </div>
                                 <div>
-                                    <p class="font-medium">Project automatically marked complete</p>
-                                    <p class="text-sm text-gray-600">Website redesign project moved to final stage and notification sent to stakeholders</p>
+                                    <p class="font-medium">Project completed</p>
+                                    <p class="text-sm text-gray-600">Website redesign project has been marked as complete</p>
                                     <p class="text-xs text-gray-500 mt-1">Yesterday</p>
                                 </div>
                             </div>
@@ -282,29 +262,11 @@
                                     <i data-lucide="dollar-sign" class="w-5 h-5 text-green-600"></i>
                                 </div>
                                 <div>
-                                    <p class="font-medium">Deal automatically closed and invoiced</p>
-                                    <p class="text-sm text-gray-600">$12,500 deal with TechCorp moved to closed stage and invoice generated</p>
+                                    <p class="font-medium">New deal won</p>
+                                    <p class="text-sm text-gray-600">You closed a deal worth $12,500 with TechCorp</p>
                                     <p class="text-xs text-gray-500 mt-1">2 days ago</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Optional Add-Ons Banner -->
-                <div class="mt-8 bg-indigo-50 rounded-xl p-6">
-                    <div class="flex flex-col md:flex-row items-center justify-between">
-                        <div class="mb-4 md:mb-0">
-                            <h3 class="font-bold text-lg text-indigo-800 mb-2">Enhance Your Automation Experience</h3>
-                            <p class="text-indigo-700">Unlock advanced monitoring and management with our optional add-ons</p>
-                        </div>
-                        <div class="flex space-x-3">
-                            <button class="px-4 py-2 bg-white text-indigo-600 font-medium rounded-lg hover:bg-indigo-50 transition">
-                                Learn More
-                            </button>
-                            <button class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">
-                                Add to Plan
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -314,12 +276,12 @@
             <div id="crm-content" class="dashboard-content hidden p-6">
                 <div class="mb-8 flex justify-between items-center">
                     <div>
-                        <h1 class="text-2xl font-bold mb-2">CRM Automation Results</h1>
-                        <p class="text-gray-600">Your automated customer relationship management is delivering these outcomes:</p>
+                        <h1 class="text-2xl font-bold mb-2">Customer Relationship Management</h1>
+                        <p class="text-gray-600">Manage your contacts and deals</p>
                     </div>
                     <button class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition flex items-center">
                         <i data-lucide="plus" class="w-4 h-4 mr-2"></i>
-                        Add New Rule
+                        Add Contact
                     </button>
                 </div>
                 
@@ -367,25 +329,18 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="mt-6 pt-4 border-t border-gray-200">
-                            <div class="flex items-center text-green-600">
-                                <i data-lucide="trending-up" class="w-4 h-4 mr-2"></i>
-                                <span class="text-sm font-medium">18% increase in conversion rate</span>
-                            </div>
-                        </div>
                     </div>
                     
                     <div class="lg:col-span-2 bg-white rounded-xl shadow-sm p-6">
-                        <h3 class="font-semibold mb-4">Automated Contact Management</h3>
+                        <h3 class="font-semibold mb-4">Recent Contacts</h3>
                         <div class="overflow-x-auto">
                             <table class="w-full">
                                 <thead>
                                     <tr class="text-left text-sm text-gray-500 border-b">
                                         <th class="pb-3">Name</th>
                                         <th class="pb-3">Company</th>
-                                        <th class="pb-3">Automation Status</th>
-                                        <th class="pb-3">Last Action</th>
+                                        <th class="pb-3">Email</th>
+                                        <th class="pb-3">Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -399,8 +354,8 @@
                                             </div>
                                         </td>
                                         <td class="py-3">Acme Inc.</td>
-                                        <td class="py-3"><span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Follow-up scheduled</span></td>
-                                        <td class="py-3">Added to pipeline</td>
+                                        <td class="py-3">sarah@acme.com</td>
+                                        <td class="py-3"><span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Active</span></td>
                                     </tr>
                                     <tr class="border-b hover:bg-gray-50">
                                         <td class="py-3">
@@ -412,8 +367,8 @@
                                             </div>
                                         </td>
                                         <td class="py-3">TechCorp</td>
-                                        <td class="py-3"><span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">Proposal sent</span></td>
-                                        <td class="py-3">Moved to next stage</td>
+                                        <td class="py-3">michael@techcorp.com</td>
+                                        <td class="py-3"><span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Active</span></td>
                                     </tr>
                                     <tr class="border-b hover:bg-gray-50">
                                         <td class="py-3">
@@ -425,8 +380,8 @@
                                             </div>
                                         </td>
                                         <td class="py-3">Global Solutions</td>
-                                        <td class="py-3"><span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">Nurturing sequence</span></td>
-                                        <td class="py-3">Initial email sent</td>
+                                        <td class="py-3">emily@globalsolutions.com</td>
+                                        <td class="py-3"><span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">Prospect</span></td>
                                     </tr>
                                     <tr class="hover:bg-gray-50">
                                         <td class="py-3">
@@ -438,8 +393,8 @@
                                             </div>
                                         </td>
                                         <td class="py-3">Innovate Ltd</td>
-                                        <td class="py-3"><span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Closed-won</span></td>
-                                        <td class="py-3">Invoice generated</td>
+                                        <td class="py-3">david@innovate.com</td>
+                                        <td class="py-3"><span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Active</span></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -448,19 +403,16 @@
                 </div>
                 
                 <div class="bg-white rounded-xl shadow-sm p-6">
-                    <h3 class="font-semibold mb-4">Automation Rules Active</h3>
+                    <h3 class="font-semibold mb-4">Upcoming Activities</h3>
                     <div class="space-y-4">
                         <div class="flex items-start">
                             <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3 flex-shrink-0">
                                 <i data-lucide="phone" class="w-5 h-5 text-blue-600"></i>
                             </div>
-                            <div class="flex-1">
-                                <p class="font-medium">New lead follow-up sequence</p>
-                                <p class="text-sm text-gray-600">Automatically schedule call and send personalized email when new lead is added</p>
-                                <div class="flex items-center mt-2">
-                                    <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full mr-2">Active</span>
-                                    <span class="text-xs text-gray-500">Executed 24 times this week</span>
-                                </div>
+                            <div>
+                                <p class="font-medium">Call with Sarah Johnson</p>
+                                <p class="text-sm text-gray-600">Discuss proposal requirements</p>
+                                <p class="text-xs text-gray-500 mt-1">Today, 2:00 PM</p>
                             </div>
                         </div>
                         
@@ -468,13 +420,10 @@
                             <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3 flex-shrink-0">
                                 <i data-lucide="mail" class="w-5 h-5 text-green-600"></i>
                             </div>
-                            <div class="flex-1">
-                                <p class="font-medium">Deal stage advancement</p>
-                                <p class="text-sm text-gray-600">Automatically move deals to next stage and notify team when criteria met</p>
-                                <div class="flex items-center mt-2">
-                                    <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full mr-2">Active</span>
-                                    <span class="text-xs text-gray-500">Executed 12 times this week</span>
-                                </div>
+                            <div>
+                                <p class="font-medium">Follow up with Michael Rodriguez</p>
+                                <p class="text-sm text-gray-600">Send contract for review</p>
+                                <p class="text-xs text-gray-500 mt-1">Tomorrow, 10:00 AM</p>
                             </div>
                         </div>
                         
@@ -482,13 +431,10 @@
                             <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-3 flex-shrink-0">
                                 <i data-lucide="calendar" class="w-5 h-5 text-purple-600"></i>
                             </div>
-                            <div class="flex-1">
-                                <p class="font-medium">Inactive lead re-engagement</p>
-                                <p class="text-sm text-gray-600">Automatically send re-engagement email after 14 days of inactivity</p>
-                                <div class="flex items-center mt-2">
-                                    <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full mr-2">Active</span>
-                                    <span class="text-xs text-gray-500">Executed 8 times this week</span>
-                                </div>
+                            <div>
+                                <p class="font-medium">Meeting with Global Solutions</p>
+                                <p class="text-sm text-gray-600">Product demo and Q&A session</p>
+                                <p class="text-xs text-gray-500 mt-1">Jun 15, 3:00 PM</p>
                             </div>
                         </div>
                     </div>
@@ -499,12 +445,12 @@
             <div id="projects-content" class="dashboard-content hidden p-6">
                 <div class="mb-8 flex justify-between items-center">
                     <div>
-                        <h1 class="text-2xl font-bold mb-2">Project Automation Results</h1>
-                        <p class="text-gray-600">Your automated project management is delivering these outcomes:</p>
+                        <h1 class="text-2xl font-bold mb-2">Project Management</h1>
+                        <p class="text-gray-600">Track tasks and progress</p>
                     </div>
                     <button class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition flex items-center">
                         <i data-lucide="plus" class="w-4 h-4 mr-2"></i>
-                        New Workflow
+                        New Project
                     </button>
                 </div>
                 
@@ -542,13 +488,6 @@
                                 Due: <span class="font-medium">Jun 15</span>
                             </div>
                         </div>
-                        
-                        <div class="mt-4 pt-4 border-t border-gray-200">
-                            <div class="flex items-center text-green-600">
-                                <i data-lucide="trending-up" class="w-4 h-4 mr-2"></i>
-                                <span class="text-sm font-medium">40% faster completion</span>
-                            </div>
-                        </div>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-sm p-6">
@@ -579,13 +518,6 @@
                             </div>
                             <div class="text-gray-600">
                                 Due: <span class="font-medium">Jul 30</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-4 pt-4 border-t border-gray-200">
-                            <div class="flex items-center text-yellow-600">
-                                <i data-lucide="alert-triangle" class="w-4 h-4 mr-2"></i>
-                                <span class="text-sm font-medium">Needs attention</span>
                             </div>
                         </div>
                     </div>
@@ -623,18 +555,11 @@
                                 Due: <span class="font-medium">Aug 15</span>
                             </div>
                         </div>
-                        
-                        <div class="mt-4 pt-4 border-t border-gray-200">
-                            <div class="flex items-center text-green-600">
-                                <i data-lucide="trending-up" class="w-4 h-4 mr-2"></i>
-                                <span class="text-sm font-medium">35% time saved</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 
                 <div class="bg-white rounded-xl shadow-sm p-6">
-                    <h3 class="font-semibold mb-4">Automated Task Management</h3>
+                    <h3 class="font-semibold mb-4">Task Board</h3>
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                         <div>
                             <h4 class="font-medium text-gray-700 mb-3">To Do</h4>
@@ -646,7 +571,7 @@
                                         <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center">
                                             <span class="text-xs font-medium text-indigo-800">AS</span>
                                         </div>
-                                        <span class="text-xs text-gray-500">Auto-assigned</span>
+                                        <span class="text-xs text-gray-500">Today</span>
                                     </div>
                                 </div>
                                 
@@ -657,7 +582,7 @@
                                         <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center">
                                             <span class="text-xs font-medium text-indigo-800">SJ</span>
                                         </div>
-                                        <span class="text-xs text-gray-500">Auto-assigned</span>
+                                        <span class="text-xs text-gray-500">Tomorrow</span>
                                     </div>
                                 </div>
                             </div>
@@ -673,7 +598,7 @@
                                         <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center">
                                             <span class="text-xs font-medium text-indigo-800">MK</span>
                                         </div>
-                                        <span class="text-xs text-gray-500">Auto-notified</span>
+                                        <span class="text-xs text-gray-500">Jun 10</span>
                                     </div>
                                 </div>
                                 
@@ -684,7 +609,7 @@
                                         <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center">
                                             <span class="text-xs font-medium text-indigo-800">TP</span>
                                         </div>
-                                        <span class="text-xs text-gray-500">Auto-notified</span>
+                                        <span class="text-xs text-gray-500">Jun 12</span>
                                     </div>
                                 </div>
                             </div>
@@ -700,7 +625,7 @@
                                         <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center">
                                             <span class="text-xs font-medium text-indigo-800">RB</span>
                                         </div>
-                                        <span class="text-xs text-gray-500">Auto-assigned</span>
+                                        <span class="text-xs text-gray-500">Jun 8</span>
                                     </div>
                                 </div>
                             </div>
@@ -716,7 +641,7 @@
                                         <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center">
                                             <span class="text-xs font-medium text-indigo-800">JD</span>
                                         </div>
-                                        <span class="text-xs text-gray-500">Auto-archived</span>
+                                        <span class="text-xs text-gray-500">Jun 1</span>
                                     </div>
                                 </div>
                                 
@@ -727,17 +652,10 @@
                                         <div class="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center">
                                             <span class="text-xs font-medium text-indigo-800">LW</span>
                                         </div>
-                                        <span class="text-xs text-gray-500">Auto-archived</span>
+                                        <span class="text-xs text-gray-500">May 28</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-6 pt-4 border-t border-gray-200">
-                        <div class="flex items-center text-green-600">
-                            <i data-lucide="check-circle" class="w-4 h-4 mr-2"></i>
-                            <span class="text-sm font-medium">78% of tasks managed automatically</span>
                         </div>
                     </div>
                 </div>
@@ -746,8 +664,8 @@
             <!-- Chat Content -->
             <div id="chat-content" class="dashboard-content hidden p-6">
                 <div class="mb-8">
-                    <h1 class="text-2xl font-bold mb-2">Communication Automation Results</h1>
-                    <p class="text-gray-600">Your automated team communication is delivering these outcomes:</p>
+                    <h1 class="text-2xl font-bold mb-2">Team Chat</h1>
+                    <p class="text-gray-600">Real-time messaging with your team</p>
                 </div>
                 
                 <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
@@ -770,7 +688,7 @@
                                             <h3 class="font-medium truncate">Marketing Team</h3>
                                             <span class="text-xs text-gray-500">10:30 AM</span>
                                         </div>
-                                        <p class="text-sm text-gray-600 truncate">Automated summary: 3 new campaigns, 2 pending approvals</p>
+                                        <p class="text-sm text-gray-600 truncate">John: Hey team, the new campaign designs are ready...</p>
                                     </div>
                                 </div>
                             </div>
@@ -785,7 +703,7 @@
                                             <h3 class="font-medium truncate">General</h3>
                                             <span class="text-xs text-gray-500">Yesterday</span>
                                         </div>
-                                        <p class="text-sm text-gray-600 truncate">Automated reminder: Company meeting tomorrow at 10 AM</p>
+                                        <p class="text-sm text-gray-600 truncate">Sarah: Company meeting tomorrow at 10 AM</p>
                                     </div>
                                 </div>
                             </div>
@@ -800,7 +718,7 @@
                                             <h3 class="font-medium truncate">Development</h3>
                                             <span class="text-xs text-gray-500">Jun 5</span>
                                         </div>
-                                        <p class="text-sm text-gray-600 truncate">Automated alert: API documentation has been updated</p>
+                                        <p class="text-sm text-gray-600 truncate">Mike: API documentation has been updated</p>
                                     </div>
                                 </div>
                             </div>
@@ -815,7 +733,7 @@
                                             <h3 class="font-medium truncate">Alex Smith</h3>
                                             <span class="text-xs text-gray-500">Jun 4</span>
                                         </div>
-                                        <p class="text-sm text-gray-600 truncate">Automated follow-up: Proposal review reminder</p>
+                                        <p class="text-sm text-gray-600 truncate">Can you review the proposal when you get a chance?</p>
                                     </div>
                                 </div>
                             </div>
@@ -830,16 +748,9 @@
                                             <h3 class="font-medium truncate">Mary Kim</h3>
                                             <span class="text-xs text-gray-500">Jun 3</span>
                                         </div>
-                                        <p class="text-sm text-gray-600 truncate">Automated notification: Design mockups ready for review</p>
+                                        <p class="text-sm text-gray-600 truncate">Design mockups are ready for review</p>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        
-                        <div class="p-4 border-t border-gray-200">
-                            <div class="flex items-center text-green-600">
-                                <i data-lucide="trending-up" class="w-4 h-4 mr-2"></i>
-                                <span class="text-sm font-medium">65% fewer missed messages</span>
                             </div>
                         </div>
                     </div>
@@ -852,9 +763,6 @@
                             <div>
                                 <h3 class="font-medium">General</h3>
                                 <p class="text-xs text-gray-600">5 members, 3 online</p>
-                            </div>
-                            <div class="ml-auto">
-                                <span class="text-xs bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full">Automated summaries active</span>
                             </div>
                         </div>
                         
@@ -870,19 +778,6 @@
                                             <p>Hey everyone, just a reminder that we have our quarterly review meeting tomorrow at 10 AM in the main conference room.</p>
                                         </div>
                                         <p class="text-xs text-gray-500 mt-1">Yesterday, 3:45 PM</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start mb-4">
-                                    <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3 flex-shrink-0">
-                                        <span class="text-xs font-medium text-indigo-800">BOT</span>
-                                    </div>
-                                    <div>
-                                        <div class="bg-indigo-50 rounded-lg p-3">
-                                            <p class="font-medium text-sm mb-1 text-indigo-700">Nexus Automation</p>
-                                            <p>Meeting reminder scheduled. All team members will be notified 1 hour before the meeting.</p>
-                                        </div>
-                                        <p class="text-xs text-gray-500 mt-1">Yesterday, 3:46 PM</p>
                                     </div>
                                 </div>
                                 
@@ -927,19 +822,6 @@
                                 
                                 <div class="flex items-start mb-4">
                                     <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3 flex-shrink-0">
-                                        <span class="text-xs font-medium text-indigo-800">BOT</span>
-                                    </div>
-                                    <div>
-                                        <div class="bg-indigo-50 rounded-lg p-3">
-                                            <p class="font-medium text-sm mb-1 text-indigo-700">Nexus Automation</p>
-                                            <p>Meeting agenda updated. Marketing presentation (30 min) has been added to the schedule.</p>
-                                        </div>
-                                        <p class="text-xs text-gray-500 mt-1">Yesterday, 3:53 PM</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start mb-4">
-                                    <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3 flex-shrink-0">
                                         <span class="text-xs font-medium text-indigo-800">AS</span>
                                     </div>
                                     <div>
@@ -969,51 +851,13 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="mt-8 bg-white rounded-xl shadow-sm p-6">
-                    <h3 class="font-semibold mb-4">Communication Automation Rules</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div class="border border-gray-200 rounded-lg p-4">
-                            <div class="flex items-center mb-3">
-                                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mr-3">
-                                    <i data-lucide="bell" class="w-5 h-5 text-blue-600"></i>
-                                </div>
-                                <h4 class="font-medium">Smart Reminders</h4>
-                            </div>
-                            <p class="text-sm text-gray-600 mb-3">Automatically sends reminders for meetings, deadlines, and follow-ups</p>
-                            <div class="text-xs text-green-600 font-medium">Active • 98% success rate</div>
-                        </div>
-                        
-                        <div class="border border-gray-200 rounded-lg p-4">
-                            <div class="flex items-center mb-3">
-                                <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center mr-3">
-                                    <i data-lucide="file-text" class="w-5 h-5 text-purple-600"></i>
-                                </div>
-                                <h4 class="font-medium">Daily Summaries</h4>
-                            </div>
-                            <p class="text-sm text-gray-600 mb-3">Creates and sends daily summaries of team communications</p>
-                            <div class="text-xs text-green-600 font-medium">Active • Sent 24 times</div>
-                        </div>
-                        
-                        <div class="border border-gray-200 rounded-lg p-4">
-                            <div class="flex items-center mb-3">
-                                <div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mr-3">
-                                    <i data-lucide="user-check" class="w-5 h-5 text-green-600"></i>
-                                </div>
-                                <h4 class="font-medium">Priority Alerts</h4>
-                            </div>
-                            <p class="text-sm text-gray-600 mb-3">Escalates urgent messages to appropriate team members</p>
-                            <div class="text-xs text-green-600 font-medium">Active • 12 alerts this week</div>
-                        </div>
-                    </div>
-                </div>
             </div>
             
             <!-- Analytics Content -->
             <div id="analytics-content" class="dashboard-content hidden p-6">
                 <div class="mb-8">
-                    <h1 class="text-2xl font-bold mb-2">Analytics Automation Results</h1>
-                    <p class="text-gray-600">Your automated analytics and reporting are delivering these outcomes:</p>
+                    <h1 class="text-2xl font-bold mb-2">Analytics</h1>
+                    <p class="text-gray-600">Data insights and reports</p>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -1030,13 +874,6 @@
                         <div class="h-64">
                             <canvas id="revenueChart"></canvas>
                         </div>
-                        
-                        <div class="mt-4 pt-4 border-t border-gray-200">
-                            <div class="flex items-center text-green-600">
-                                <i data-lucide="trending-up" class="w-4 h-4 mr-2"></i>
-                                <span class="text-sm font-medium">24% revenue increase from automation</span>
-                            </div>
-                        </div>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-sm p-6">
@@ -1052,13 +889,6 @@
                         <div class="h-64">
                             <canvas id="acquisitionChart"></canvas>
                         </div>
-                        
-                        <div class="mt-4 pt-4 border-t border-gray-200">
-                            <div class="flex items-center text-green-600">
-                                <i data-lucide="trending-up" class="w-4 h-4 mr-2"></i>
-                                <span class="text-sm font-medium">15% more customers from automated campaigns</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 
@@ -1072,7 +902,6 @@
                         <div class="h-32">
                             <canvas id="conversionChart"></canvas>
                         </div>
-                        <div class="mt-4 text-sm text-gray-600">Automated follow-ups increased conversions</div>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-sm p-6">
@@ -1084,7 +913,6 @@
                         <div class="h-32">
                             <canvas id="retentionChart"></canvas>
                         </div>
-                        <div class="mt-4 text-sm text-gray-600">Automated engagement improved retention</div>
                     </div>
                     
                     <div class="bg-white rounded-xl shadow-sm p-6">
@@ -1096,37 +924,11 @@
                         <div class="h-32">
                             <canvas id="dealSizeChart"></canvas>
                         </div>
-                        <div class="mt-4 text-sm text-gray-600">More deals, slightly smaller average size</div>
                     </div>
                 </div>
                 
                 <div class="bg-white rounded-xl shadow-sm p-6">
-                    <h3 class="font-semibold mb-4">Automated Reports</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                        <div class="border border-gray-200 rounded-lg p-4">
-                            <div class="flex items-center mb-3">
-                                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mr-3">
-                                    <i data-lucide="file-bar-chart" class="w-5 h-5 text-blue-600"></i>
-                                </div>
-                                <h4 class="font-medium">Daily Sales Report</h4>
-                            </div>
-                            <p class="text-sm text-gray-600 mb-3">Automatically generated and sent to leadership team every morning</p>
-                            <div class="text-xs text-green-600 font-medium">Active • Sent 30 times</div>
-                        </div>
-                        
-                        <div class="border border-gray-200 rounded-lg p-4">
-                            <div class="flex items-center mb-3">
-                                <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center mr-3">
-                                    <i data-lucide="activity" class="w-5 h-5 text-purple-600"></i>
-                                </div>
-                                <h4 class="font-medium">Weekly Performance Summary</h4>
-                            </div>
-                            <p class="text-sm text-gray-600 mb-3">Comprehensive weekly performance report with insights and trends</p>
-                            <div class="text-xs text-green-600 font-medium">Active • Sent 4 times</div>
-                        </div>
-                    </div>
-                    
-                    <h4 class="font-medium mb-4">Top Performing Products</h4>
+                    <h3 class="font-semibold mb-4">Top Performing Products</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full">
                             <thead>
@@ -1172,61 +974,49 @@
             <div id="docs-content" class="dashboard-content hidden p-6">
                 <div class="mb-8 flex justify-between items-center">
                     <div>
-                        <h1 class="text-2xl font-bold mb-2">Document Automation Results</h1>
-                        <p class="text-gray-600">Your automated document management is delivering these outcomes:</p>
+                        <h1 class="text-2xl font-bold mb-2">Document Management</h1>
+                        <p class="text-gray-600">Create, collaborate, and organize your files</p>
                     </div>
                     <button class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition flex items-center">
                         <i data-lucide="plus" class="w-4 h-4 mr-2"></i>
-                        New Automation Rule
+                        New Document
                     </button>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
                     <div class="md:col-span-1 bg-white rounded-xl shadow-sm p-6">
-                        <h3 class="font-semibold mb-4">Automated Folders</h3>
+                        <h3 class="font-semibold mb-4">Folders</h3>
                         <div class="space-y-2">
                             <div class="flex items-center p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
                                 <i data-lucide="folder" class="w-5 h-5 text-blue-500 mr-3"></i>
                                 <span>Marketing</span>
-                                <span class="ml-auto text-xs text-green-600">Auto-organized</span>
                             </div>
                             <div class="flex items-center p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
                                 <i data-lucide="folder" class="w-5 h-5 text-blue-500 mr-3"></i>
                                 <span>Sales</span>
-                                <span class="ml-auto text-xs text-green-600">Auto-organized</span>
                             </div>
                             <div class="flex items-center p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
                                 <i data-lucide="folder" class="w-5 h-5 text-blue-500 mr-3"></i>
                                 <span>HR</span>
-                                <span class="ml-auto text-xs text-green-600">Auto-organized</span>
                             </div>
                             <div class="flex items-center p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
                                 <i data-lucide="folder" class="w-5 h-5 text-blue-500 mr-3"></i>
                                 <span>Development</span>
-                                <span class="ml-auto text-xs text-green-600">Auto-organized</span>
                             </div>
                             <div class="flex items-center p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
                                 <i data-lucide="folder" class="w-5 h-5 text-blue-500 mr-3"></i>
                                 <span>Finance</span>
-                                <span class="ml-auto text-xs text-green-600">Auto-organized</span>
                             </div>
                             <div class="flex items-center p-2 rounded-lg hover:bg-gray-50 cursor-pointer">
                                 <i data-lucide="folder-plus" class="w-5 h-5 text-gray-500 mr-3"></i>
                                 <span class="text-gray-500">New Folder</span>
                             </div>
                         </div>
-                        
-                        <div class="mt-6 pt-4 border-t border-gray-200">
-                            <div class="flex items-center text-green-600">
-                                <i data-lucide="check-circle" class="w-4 h-4 mr-2"></i>
-                                <span class="text-sm font-medium">100% organized</span>
-                            </div>
-                        </div>
                     </div>
                     
                     <div class="md:col-span-3 bg-white rounded-xl shadow-sm p-6">
                         <div class="flex justify-between items-center mb-6">
-                            <h3 class="font-semibold">Recently Processed Documents</h3>
+                            <h3 class="font-semibold">Recent Documents</h3>
                             <div class="flex space-x-2">
                                 <button class="p-2 rounded-lg hover:bg-gray-100">
                                     <i data-lucide="search" class="w-5 h-5 text-gray-600"></i>
@@ -1261,10 +1051,7 @@
                                             <span class="text-xs font-medium text-indigo-800">AS</span>
                                         </div>
                                     </div>
-                                    <div>
-                                        <span class="text-gray-500">2 hours ago</span>
-                                        <span class="ml-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Auto-tagged</span>
-                                    </div>
+                                    <span class="text-gray-500">2 hours ago</span>
                                 </div>
                             </div>
                             
@@ -1285,10 +1072,7 @@
                                             <span class="text-xs font-medium text-indigo-800">MR</span>
                                         </div>
                                     </div>
-                                    <div>
-                                        <span class="text-gray-500">Yesterday</span>
-                                        <span class="ml-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Auto-shared</span>
-                                    </div>
+                                    <span class="text-gray-500">Yesterday</span>
                                 </div>
                             </div>
                             
@@ -1312,10 +1096,7 @@
                                             <span class="text-xs font-medium text-indigo-800">LW</span>
                                         </div>
                                     </div>
-                                    <div>
-                                        <span class="text-gray-500">Jun 5</span>
-                                        <span class="ml-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Auto-archived</span>
-                                    </div>
+                                    <span class="text-gray-500">Jun 5</span>
                                 </div>
                             </div>
                             
@@ -1336,10 +1117,7 @@
                                             <span class="text-xs font-medium text-indigo-800">MK</span>
                                         </div>
                                     </div>
-                                    <div>
-                                        <span class="text-gray-500">Jun 3</span>
-                                        <span class="ml-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Auto-versioned</span>
-                                    </div>
+                                    <span class="text-gray-500">Jun 3</span>
                                 </div>
                             </div>
                         </div>
@@ -1347,43 +1125,7 @@
                 </div>
                 
                 <div class="bg-white rounded-xl shadow-sm p-6">
-                    <h3 class="font-semibold mb-4">Document Automation Rules</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div class="border border-gray-200 rounded-lg p-4">
-                            <div class="flex items-center mb-3">
-                                <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mr-3">
-                                    <i data-lucide="tag" class="w-5 h-5 text-blue-600"></i>
-                                </div>
-                                <h4 class="font-medium">Smart Tagging</h4>
-                            </div>
-                            <p class="text-sm text-gray-600 mb-3">Automatically tags documents based on content and metadata</p>
-                            <div class="text-xs text-green-600 font-medium">Active • 245 documents tagged</div>
-                        </div>
-                        
-                        <div class="border border-gray-200 rounded-lg p-4">
-                            <div class="flex items-center mb-3">
-                                <div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center mr-3">
-                                    <i data-lucide="folder-open" class="w-5 h-5 text-green-600"></i>
-                                </div>
-                                <h4 class="font-medium">Auto-Filing</h4>
-                            </div>
-                            <p class="text-sm text-gray-600 mb-3">Automatically files documents in appropriate folders</p>
-                            <div class="text-xs text-green-600 font-medium">Active • 100% accuracy</div>
-                        </div>
-                        
-                        <div class="border border-gray-200 rounded-lg p-4">
-                            <div class="flex items-center mb-3">
-                                <div class="w-10 h-10 rounded-lg bg-purple-100 flex items-center justify-center mr-3">
-                                    <i data-lucide="git-branch" class="w-5 h-5 text-purple-600"></i>
-                                </div>
-                                <h4 class="font-medium">Version Control</h4>
-                            </div>
-                            <p class="text-sm text-gray-600 mb-3">Automatically creates versions when documents are modified</p>
-                            <div class="text-xs text-green-600 font-medium">Active • 78 versions created</div>
-                        </div>
-                    </div>
-                    
-                    <h4 class="font-medium mt-6 mb-4">Shared with Me</h4>
+                    <h3 class="font-semibold mb-4">Shared with Me</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full">
                             <thead>
@@ -1392,7 +1134,7 @@
                                     <th class="pb-3">Owner</th>
                                     <th class="pb-3">Last Modified</th>
                                     <th class="pb-3">File Size</th>
-                                    <th class="pb-3">Automation Status</th>
+                                    <th class="pb-3"></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1408,7 +1150,11 @@
                                     <td class="py-3">Sarah Johnson</td>
                                     <td class="py-3">Jun 6, 2023</td>
                                     <td class="py-3">1.2 MB</td>
-                                    <td class="py-3"><span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Auto-tagged</span></td>
+                                    <td class="py-3">
+                                        <button class="p-1 rounded hover:bg-gray-100">
+                                            <i data-lucide="download" class="w-4 h-4 text-gray-600"></i>
+                                        </button>
+                                    </td>
                                 </tr>
                                 <tr class="border-b hover:bg-gray-50">
                                     <td class="py-3">
@@ -1422,7 +1168,11 @@
                                     <td class="py-3">Michael Rodriguez</td>
                                     <td class="py-3">Jun 4, 2023</td>
                                     <td class="py-3">856 KB</td>
-                                    <td class="py-3"><span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Auto-shared</span></td>
+                                    <td class="py-3">
+                                        <button class="p-1 rounded hover:bg-gray-100">
+                                            <i data-lucide="download" class="w-4 h-4 text-gray-600"></i>
+                                        </button>
+                                    </td>
                                 </tr>
                                 <tr class="hover:bg-gray-50">
                                     <td class="py-3">
@@ -1436,7 +1186,11 @@
                                     <td class="py-3">Alex Smith</td>
                                     <td class="py-3">May 30, 2023</td>
                                     <td class="py-3">4.7 MB</td>
-                                    <td class="py-3"><span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Auto-archived</span></td>
+                                    <td class="py-3">
+                                        <button class="p-1 rounded hover:bg-gray-100">
+                                            <i data-lucide="download" class="w-4 h-4 text-gray-600"></i>
+                                        </button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>

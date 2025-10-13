@@ -73,18 +73,18 @@
     </div>
 
     <script>
-        // Redirect to the homepage after 2 seconds
+        // Redirect to the homepage after 4 seconds
         setTimeout(function() {
-            window.location.href = 'pages/homepage_enterprise_automation_consultancy.html';
-        }, 2000);
+            window.location.href = 'index.html';
+        }, 3000);
         
         // Fallback redirect in case of any issues
         window.addEventListener('load', function() {
             setTimeout(function() {
                 if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/')) {
-                    window.location.replace('pages/homepage_enterprise_automation_consultancy.html');
+                    window.location.replace('index.html');
                 }
-            }, 2500);
+            }, 3500);
         });
     </script>
 <script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>

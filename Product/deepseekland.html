@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ABION NEXUS - Enterprise Automation Solutions. Done-For-You systems that free your team to focus on what matters most.">
+    <title>ABION NEXUS - Enterprise Automation Solutions</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Custom CSS -->
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --accent: #ff6b6b;
+            --dark: #2d3748;
+            --light: #f8f9fa;
+            --gray: #718096;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--gray);
+        }
+        
+        /* Header Styles */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--dark);
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 180px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+        
+        .hero-bullets {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+        }
+        
+        .bullet {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            transition: all 0.3s;
+        }
+        
+        .bullet:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+        
+        .bullet i {
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        /* Why DFY Section */
+        .why-dfy {
+            background: white;
+        }
+        
+        .why-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .benefit-box {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s;
+        }
+        
+        .benefit-box:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        /* Services Section */
+        .services {
+            background: white;
+        }
+        
+        .service-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .tab-btn {
+            padding: 15px 30px;
+            background: none;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--gray);
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .tab-btn:hover {
+            color: var(--primary);
+        }
+        
+        .tab-btn.active {
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .service-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .deliverables {
+            background: var(--light);
+            padding: 25px;
+            border-radius: 10px;
+        }
+        
+        .deliverables h4 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .deliverables ul {
+            list-style: none;
+        }
+        
+        .deliverables li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .deliverables li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        /* Process Section */
+        .process {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .process:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .process-step {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .process-step:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            background: var(--accent);
+            border-radius: 50%;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            background: var(--light);
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            position: relative;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: 0;
+            right: 20px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 0 0 10px 10px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .pricing-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .pricing-body {
+            padding: 30px;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .pricing-features li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .pricing-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            background: white;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .faq-item:hover {
+            border-color: var(--primary);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background: var(--light);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s, padding 0.3s;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #cbd5e0;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #4a5568;
+            color: #cbd5e0;
+            font-size: 0.9rem;
+        }
+        
+        /* Loading Animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .why-content, .service-details {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                transform: translateY(-150%);
+                transition: transform 0.3s;
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .pricing-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container mx-auto px-4 header-container">
+            <div class="logo">ABION NEXUS</div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#why">Why DFY</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact" class="btn btn-primary">Book a Call</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container mx-auto px-4">
+            <h1>Nexus Automation — Done-For-You Systems that free your team to do the work that matters</h1>
+            <p>From lead capture to invoicing, reporting to alerts — we design, build and run production-grade automation so your business runs faster, safer and with fewer people involved.</p>
+            
+            <div class="hero-bullets">
+                <div class="bullet">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Ship repeatable workflows in days, not months.</h3>
+                </div>
+                <div class="bullet">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Eliminate manual handoffs and expensive human error.</h3>
+                </div>
+                <div class="bullet">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Turn data into decisions with automated reports and alerts.</h3>
+                </div>
+                <div class="bullet">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h3>Integrate all your tools: CRM, finance, product, and ops — seamlessly.</h3>
+                </div>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary">Book a 20-minute scoping call</a>
+                <a href="#features" class="btn btn-secondary">See Sample Automations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why DFY Section -->
+    <section id="why" class="why-dfy">
+        <div class="container mx-auto px-4">
+            <div class="section-header">
+                <h2>Why DFY Automation?</h2>
+                <p>Most automation tools promise speed, but they rarely deliver real business outcomes. Nexus Automation does two things other vendors don't:</p>
+            </div>
+            
+            <div class="why-content">
+                <div>
+                    <div class="benefit-box">
+                        <h3>We execute end-to-end — not templates</h3>
+                        <p>We own discovery, design, integration, deployment and runbooks.</p>
+                    </div>
+                    <div class="benefit-box">
+                        <h3>We operationalize</h3>
+                        <p>Monitoring, error handling, observability and handover so your automation stays reliable at scale.</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Who benefits most</h3>
+                    <ul class="list-disc pl-5 mb-6 space-y-2">
+                        <li>Growing companies with repetitive cross-team processes (sales → onboarding → billing).</li>
+                        <li>Teams wasting hours on manual exports, reconciling or copy/paste work.</li>
+                        <li>Businesses that need predictable SLAs and secure integrations.</li>
+                    </ul>
+                    
+                    <div class="benefit-box">
+                        <h3>Quick proof point</h3>
+                        <p>Teams using DFY systems reduce repetitive manual work by 60% on average, and shave days off monthly close and reporting cycles.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <h3 class="text-2xl font-bold mb-4">Why now</h3>
+                <p class="max-w-3xl mx-auto text-gray-600">Automation is no longer nice-to-have — it's the operating model. When your systems talk to each other reliably, decisions become faster and margins improve.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Powerful Automation Modules</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Each module solves specific business challenges with measurable outcomes</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- CRM Automation -->
+                <div class="feature-card bg-gray-50 rounded-xl p-8 shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="users" class="w-7 h-7 text-indigo-600"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold">CRM Automation</h2>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-6">Transform your customer relationships with intelligent automation that works 24/7</p>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-semibold">Lead Capture</h3>
+                                <p class="text-gray-600 text-sm">Automatically capture leads from all channels in one centralized system</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-semibold">Intelligent Follow-ups</h3>
+                                <p class="text-gray-600 text-sm">Send personalized messages based on customer behavior and timeline</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-semibold">Deal Progression</h3>
+                                <p class="text-gray-600 text-sm">Move deals through pipeline stages without manual data entry</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-indigo-50 rounded-lg p-4 border-l-4 border-indigo-500">
+                        <h3 class="font-semibold text-indigo-800 mb-1">Business Outcome</h3>
+                        <p class="text-indigo-700">Close 30% more deals while reducing CRM management time by 70%</p>
+                    </div>
+                </div>
+                
+                <!-- Project & Task Automation -->
+                <div class="feature-card bg-gray-50 rounded-xl p-8 shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="clipboard-list" class="w-7 h-7 text-indigo-600"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold">Project Automation</h2>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-6">Streamline project execution with intelligent workflows that adapt to your team's needs</p>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-semibold">Smart Task Assignment</h3>
+                                <p class="text-gray-600 text-sm">Automatically assign tasks based on workload, skills, and availability</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-semibold">Progress Tracking</h3>
+                                <p class="text-gray-600 text-sm">Real-time status updates without manual check-ins or micromanagement</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-semibold">Automated Reporting</h3>
+                                <p class="text-gray-600 text-sm">Generate and deliver progress reports to stakeholders automatically</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-indigo-50 rounded-lg p-4 border-l-4 border-indigo-500">
+                        <h3 class="font-semibold text-indigo-800 mb-1">Business Outcome</h3>
+                        <p class="text-indigo-700">Complete projects 40% faster with 50% fewer status meetings</p>
+                    </div>
+                </div>
+                
+                <!-- Smart Communication & Alerts -->
+                <div class="feature-card bg-gray-50 rounded-xl p-8 shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="message-circle" class="w-7 h-7 text-indigo-600"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold">Communication Hub</h2>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-6">Keep teams aligned with intelligent communication that cuts through the noise</p>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-semibold">Unified Messaging</h3>
+                                <p class="text-gray-600 text-sm">Sync conversations across email, chat, and project tools</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-semibold">AI Summaries</h3>
+                                <p class="text-gray-600 text-sm">Automatically generate concise summaries of long discussions</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-semibold">Smart Alerts</h3>
+                                <p class="text-gray-600 text-sm">Get notified about deadlines, blockers, and important updates</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-indigo-50 rounded-lg p-4 border-l-4 border-indigo-500">
+                        <h3 class="font-semibold text-indigo-800 mb-1">Business Outcome</h3>
+                        <p class="text-indigo-700">Reduce communication overhead by 65% while improving team alignment</p>
+                    </div>
+                </div>
+                
+                <!-- Automated Analytics -->
+                <div class="feature-card bg-gray-50 rounded-xl p-8 shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="bar-chart-3" class="w-7 h-7 text-indigo-600"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold">Analytics Automation</h2>
+                    </div>
+                    
+                    <p class="text-gray-600 mb-6">Transform data into insights without the manual work of report building</p>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-semibold">Data Integration</h3>
+                                <p class="text-gray-600 text-sm">Automatically collect and unify data from all your business systems</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-semibold">Scheduled Reports</h3>
+                                <p class="text-gray-600 text-sm">Deliver customized reports to stakeholders on your preferred schedule</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"></i>
+                            <div>
+                                <h3 class="font-semibold">AI Insights</h3>
+                                <p class="text-gray-600 text-sm">Identify trends, anomalies, and opportunities automatically</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-indigo-50 rounded-lg p-4 border-l-4 border-indigo-500">
+                        <h3 class="font-semibold text-indigo-800 mb-1">Business Outcome</h3>
+                        <p class="text-indigo-700">Make data-driven decisions 3x faster with 80% less manual reporting</p>
+                    </div>
+                </div>
+                
+                <!-- Document & File Automation -->
+                <div class="feature-card bg-gray-50 rounded-xl p-8 shadow-sm md:col-span-2">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/3 mb-6 md:mb-0 md:pr-8">
+                            <div class="flex items-center mb-6">
+                                <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="file-text" class="w-7 h-7 text-indigo-600"></i>
+                                </div>
+                                <h2 class="text-2xl font-bold">Document Automation</h2>
+                            </div>
+                            <p class="text-gray-600 mb-6">Eliminate document chaos with intelligent file management that works how you work</p>
+                        </div>
+                        
+                        <div class="md:w-2/3">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"></i>
+                                        <div>
+                                            <h3 class="font-semibold">Smart Organization</h3>
+                                            <p class="text-gray-600 text-sm">Automatically name, tag, and file documents based on content</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"></i>
+                                        <div>
+                                            <h3 class="font-semibold">Approval Workflows</h3>
+                                            <p class="text-gray-600 text-sm">Streamline document reviews and approvals with automated routing</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"></i>
+                                        <div>
+                                            <h3 class="font-semibold">Version Control</h3>
+                                            <p class="text-gray-600 text-sm">Track changes and maintain document history automatically</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"></i>
+                                        <div>
+                                            <h3 class="font-semibold">Cloud Integration</h3>
+                                            <p class="text-gray-600 text-sm">Seamlessly connect with Google Drive, Dropbox, and other storage</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-indigo-50 rounded-lg p-4 border-l-4 border-indigo-500 mt-6">
+                                <h3 class="font-semibold text-indigo-800 mb-1">Business Outcome</h3>
+                                <p class="text-indigo-700">Find any document in seconds and reduce file management time by 75%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional Add-ons -->
+    <section class="py-16 bg-indigo-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Enhance Your Automation</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Optional add-ons to take your automation to the next level</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-xl p-8 shadow-sm border border-indigo-100 hover:shadow-md transition">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                                <i data-lucide="monitor" class="w-6 h-6 text-indigo-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Nexus Dashboard</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">A unified monitoring panel for all your automations with real-time insights and controls</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                                <span>Real-time automation status</span>
+                            </li>
+                            <li class="flex items-center text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                                <span>Performance analytics</span>
+                            </li>
+                            <li class="flex items-center text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                                <span>Manual override controls</span>
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <div class="text-indigo-600 font-bold text-lg">$19/month</div>
+                            <button class="px-4 py-2 bg-indigo-600 text-white text-sm rounded-lg hover:bg-indigo-700 transition">Add to Plan</button>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl p-8 shadow-sm border border-indigo-100 hover:shadow-md transition">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                                <i data-lucide="brain" class="w-6 h-6 text-indigo-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">AI Monitoring & Management</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Our AI team monitors, optimizes, and maintains your automations 24/7</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                                <span>Proactive issue detection</span>
+                            </li>
+                            <li class="flex items-center text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                                <span>Performance optimization</span>
+                            </li>
+                            <li class="flex items-center text-sm">
+                                <i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>
+                                <span>Monthly optimization reports</span>
+                            </li>
+                        </ul>
+                        <div class="flex items-center justify-between">
+                            <div class="text-indigo-600 font-bold text-lg">$99/month</div>
+                            <button class="px-4 py-2 bg-indigo-600 text-white text-sm rounded-lg hover:bg-indigo-700 transition">Add to Plan</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8 p-4 bg-indigo-100 rounded-lg">
+                    <p class="text-indigo-800">Add these anytime to your existing plan for a fully managed experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container mx-auto px-4">
+            <div class="section-header">
+                <h2>Services & Technical Approach</h2>
+                <p>What we build (DFY Packages) - Each DFY system is delivered as a production-ready solution with documentation, tests, and an agreed SLA.</p>
+            </div>
+            
+            <div class="service-tabs">
+                <button class="tab-btn active" data-tab="tab1">Workflow Automation</button>
+                <button class="tab-btn" data-tab="tab2">Data Pipelines & Analytics</button>
+                <button class="tab-btn" data-tab="tab3">ChatOps & Alerting</button>
+                <button class="tab-btn" data-tab="tab4">Docs & Compliance</button>
+            </div>
+            
+            <div class="tab-content active" id="tab1">
+                <div class="service-details">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Workflow Automation (Sales → Ops → Finance)</h3>
+                        <p class="mb-4">Automate lead routing, qualification flags, opportunity stage triggers, onboarding checklists, and invoice generation.</p>
+                        
+                        <h4 class="text-xl font-semibold mb-2">Integrations</h4>
+                        <p class="mb-4">CRMs (HubSpot, Pipedrive, Salesforce), Google Workspace, Mail providers, and accounting systems (QuickBooks, Xero).</p>
+                        
+                        <h4 class="text-xl font-semibold mb-2">Tech patterns</h4>
+                        <p>webhook listeners → orchestration service → transactional operations → audit log.</p>
+                    </div>
+                    
+                    <div class="deliverables">
+                        <h4 class="text-xl font-semibold mb-4">Deliverables</h4>
+                        <ul>
+                            <li>Fully functional automation flow</li>
+                            <li>Test suite</li>
+                            <li>Runbook</li>
+                            <li>Training session for your team</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="tab2">
+                <div class="service-details">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Data Pipelines & Analytics Automation</h3>
+                        <p class="mb-4">Reliable ETL pipelines from multiple sources into a single analytics store. Scheduled refresh or event-driven ingestion, then dashboards and scheduled reports.</p>
+                        
+                        <h4 class="text-xl font-semibold mb-2">Integrations</h4>
+                        <p class="mb-4">PostgreSQL, Google Sheets, Snowflake (optional), Chart exports, CSV exports.</p>
+                        
+                        <h4 class="text-xl font-semibold mb-2">Tech patterns</h4>
+                        <p>cron or event triggers, lightweight worker processes, incremental sync.</p>
+                    </div>
+                    
+                    <div class="deliverables">
+                        <h4 class="text-xl font-semibold mb-4">Deliverables</h4>
+                        <ul>
+                            <li>Seeded analytics dashboard (Chart.js/Looker Studio)</li>
+                            <li>Data mapping docs</li>
+                            <li>Monitoring dashboard</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="tab3">
+                <div class="service-details">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">ChatOps & Alerting</h3>
+                        <p class="mb-4">Channel-based alerts (Slack, MS Teams), automatic ticket creation, escalation rules, and on-call notifications.</p>
+                        
+                        <h4 class="text-xl font-semibold mb-2">Tech</h4>
+                        <p>Webhooks, Socket-based listeners, idempotent handlers, retry and backoff.</p>
+                    </div>
+                    
+                    <div class="deliverables">
+                        <h4 class="text-xl font-semibold mb-4">Deliverables</h4>
+                        <ul>
+                            <li>ChatOps workflow</li>
+                            <li>Health checks</li>
+                            <li>Incident playbook</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="tab4">
+                <div class="service-details">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Docs, Files & Compliance Automation</h3>
+                        <p class="mb-4">Auto-indexing of files, versioning rules, retention policies, and automated backups.</p>
+                        
+                        <h4 class="text-xl font-semibold mb-2">Integrations</h4>
+                        <p>Drive, S3, internal file stores. Includes preview generation and metadata extraction.</p>
+                    </div>
+                    
+                    <div class="deliverables">
+                        <h4 class="text-xl font-semibold mb-4">Deliverables</h4>
+                        <ul>
+                            <li>File lifecycle automation</li>
+                            <li>Access logs</li>
+                            <li>Audit trail suitable for compliance reviews</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-gray-50 p-8 rounded-xl">
+                <h3 class="text-2xl font-bold text-center mb-6">Tech & Security (what you get)</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-lg font-semibold mb-2">APIs & Integrations</h4>
+                        <p class="text-gray-600">Clean, documented endpoints and webhook receivers.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-lg font-semibold mb-2">Reliability</h4>
+                        <p class="text-gray-600">Retries, idempotency, dead-letter queues, and alerting.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-lg font-semibold mb-2">Observability</h4>
+                        <p class="text-gray-600">Logs, metrics, and simple dashboards so you can see what runs and when.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-lg font-semibold mb-2">Security</h4>
+                        <p class="text-gray-600">Encrypted secrets, role-based access, secure tokens, and least-privilege integrations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="container mx-auto px-4">
+            <div class="section-header">
+                <h2 class="text-white">Our Process — how DFY actually happens</h2>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 class="text-xl font-bold mb-2">Discovery (1–2 days)</h3>
+                    <p>Interview stakeholders, map systems, capture pain points, & define success metrics.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 class="text-xl font-bold mb-2">Design (2–5 days)</h3>
+                    <p>Wire flows, define data contracts, error paths and monitoring points.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 class="text-xl font-bold mb-2">Build (1–3 weeks)</h3>
+                    <p>Implement endpoints, webhooks, worker scripts, schedules, and dashboards. Write automated tests.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3 class="text-xl font-bold mb-2">Test & Harden (3–7 days)</h3>
+                    <p>Run staged tests, chaos/edge-case checks, and SLA verification.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <h3 class="text-xl font-bold mb-2">Launch & Handover (2 days)</h3>
+                    <p>Deploy to production, provide runbook, training, rollback plan, and 30 days of live monitoring.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <h3 class="text-2xl font-bold mb-4">Option: Managed Run (ongoing)</h3>
+                <p class="max-w-2xl mx-auto">We can run and maintain the automation for you with fast incident response and monthly health reviews.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container mx-auto px-4">
+            <div class="section-header">
+                <h2>Pricing, Timeline & Next Steps</h2>
+                <p>DFY, fixed engagements — transparent and predictable</p>
+            </div>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="text-2xl font-bold">Starter</h3>
+                        <p>Single workflow</p>
+                    </div>
+                    <div class="pricing-body">
+                        <p class="price">$500</p>
+                        <p class="mb-4">Best for: Automating one core process (e.g., lead → onboarding).</p>
+                        <p class="mb-6">Delivery: 2–3 weeks.</p>
+                        
+                        <ul class="pricing-features">
+                            <li>Discovery, Design, Build, Test, Launch</li>
+                            <li>30 days monitoring</li>
+                            <li>Runbook & documentation</li>
+                            <li>Training session</li>
+                        </ul>
+                        
+                        <a href="#contact" class="btn btn-primary w-full mt-6">Get Started</a>
+                    </div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="text-2xl font-bold">Growth</h3>
+                        <p>Multiple workflows + analytics</p>
+                    </div>
+                    <div class="pricing-body">
+                        <p class="price">$2,000</p>
+                        <p class="mb-4">Best for: 2–5 workflows, analytics pipeline and alerts.</p>
+                        <p class="mb-6">Delivery: 3–6 weeks.</p>
+                        
+                        <ul class="pricing-features">
+                            <li>Everything in Starter</li>
+                            <li>Data pipeline & dashboard</li>
+                            <li>60 days monitoring</li>
+                            <li>Optional $400/month for managed run</li>
+                            <li>Optional $99/month for Extra AI Cap and Analytics</li>
+                        </ul>
+                        
+                        <a href="#contact" class="btn btn-primary w-full mt-6">Get Started</a>
+                    </div>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="text-2xl font-bold">Enterprise</h3>
+                        <p>Full platform DFY + SLA</p>
+                    </div>
+                    <div class="pricing-body">
+                        <p class="price">Custom</p>
+                        <p class="mb-4">Best for: Company-wide automation, compliance needs, SSO and high reliability.</p>
+                        <p class="mb-6">Delivery: Phased delivery (6–12 weeks)</p>
+                        
+                        <ul class="pricing-features">
+                            <li>Dedicated project lead</li>
+                            <li>24/7 monitoring option</li>
+                            <li>Quarterly reviews</li>
+                            <li>Custom SLAs</li>
+                        </ul>
+                        
+                        <a href="#contact" class="btn btn-primary w-full mt-6">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-white p-8 rounded-xl shadow-sm">
+                <h3 class="text-2xl font-bold text-center mb-6">Case Study (brief)</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4">Retail Brand — Faster Invoicing & Cleaner Revenue Recognition</h4>
+                        <p class="mb-4"><strong>Problem:</strong> Manual invoicing took 3 days and often contained errors. Reporting lagged 7 days.</p>
+                        <p><strong>DFY delivered:</strong> Automated invoice generation, validation, and upload to accounting. Dashboard updated in near-real time.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4">Outcome</h4>
+                        <p class="mb-4">Time-to-invoice reduced from 72 hours to 4 hours; reporting lag reduced from 7 days to same-day. Lead to 18% faster cash collection.</p>
+                        
+                        <div class="mt-6 p-6 bg-gray-50 rounded-lg">
+                            <p class="italic">"They shipped a production automation in weeks — real ROI and zero drama on handover."</p>
+                            <p class="font-semibold mt-4">— Head of Ops, Mid-Market Retail Brand</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container mx-auto px-4">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-list max-w-3xl mx-auto">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Do you need admin access to our systems?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we need scoped access to APIs or service accounts. We follow least-privilege practices and provide a temporary access checklist.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What about outages or failed runs?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All DFY systems include retries, alerting to a Slack/Teams channel, and a dead-letter policy. Managed plans include incident response.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Will you document the work?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Every delivery includes a runbook, API docs for the flows, and a short training session for your team.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Can you integrate legacy systems?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes. Where APIs aren't available we use secure adapters, inbox processing, or scheduled ETL depending on the system.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to automate your business processes?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Book a 20-minute scoping call — we'll map the highest ROI automation in your business.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-secondary">Schedule Scoping Call</a>
+                <a href="#" class="btn btn-primary">Send an integration spec</a>
+            </div>
+            <p class="mt-6 text-sm">We deliver a clear scope & fixed price estimate within 48 hours.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container mx-auto px-4">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="text-xl font-bold mb-4">ABION NEXUS</h3>
+                    <p>Enterprise Automation Solutions that free your team to do the work that matters.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="text-xl font-bold mb-4">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#services">Workflow Automation</a></li>
+                        <li><a href="#services">Data Pipelines</a></li>
+                        <li><a href="#services">ChatOps & Alerting</a></li>
+                        <li><a href="#services">Compliance Automation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="text-xl font-bold mb-4">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#process">Our Process</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope mr-2"></i> hello@abionnexus.com</li>
+                        <li><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 ABION NEXUS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Service Tabs
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+                
+                // Rotate chevron icon
+                const icon = question.querySelector('i');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.querySelector('.nav-links').classList.remove('active');
+                    document.querySelector('.mobile-menu-btn i').classList.remove('fa-times');
+                    document.querySelector('.mobile-menu-btn i').classList.add('fa-bars');
+                }
+            });
+        });
+        
+        // Sticky header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            const backToTop = document.querySelector('.back-to-top');
+            
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+                backToTop.classList.add('show');
+            } else {
+                header.classList.remove('scrolled');
+                backToTop.classList.remove('show');
+            }
+        });
+        
+        // Back to top button
+        document.querySelector('.back-to-top').addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Initialize Lucide Icons
+        lucide.createIcons();
+        
+        // Form submission handling (placeholder)
+        document.querySelectorAll('a[href="#contact"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#contact') {
+                    e.preventDefault();
+                    // In a real implementation, this would open a modal or redirect to a contact form
+                    alert('Contact form would open here. This is a demo implementation.');
+                }
+            });
+        });
+        
+        // Add loading states to buttons
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#' || this.tagName === 'BUTTON') {
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '<span class="loading"></span> Processing...';
+                    
+                    setTimeout(() => {
+                        this.innerHTML = originalText;
+                    }, 2000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

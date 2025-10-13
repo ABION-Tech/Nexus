@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Nexus Automation</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .input-group {
+            position: relative;
+        }
+        .input-group input:focus + label,
+        .input-group input:not(:placeholder-shown) + label {
+            transform: translateY(-1.5rem) scale(0.85);
+            color: #4f46e5;
+        }
+        .input-group label {
+            position: absolute;
+            left: 1rem;
+            top: 0.75rem;
+            color: #6b7280;
+            transition: all 0.2s ease;
+            pointer-events: none;
+            background: white;
+            padding: 0 0.25rem;
+        }
+        .social-btn {
+            transition: all 0.3s ease;
+        }
+        .social-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(102, 126, 234, 0.4), 0 4px 6px -2px rgba(102, 126, 234, 0.2);
+        }
+        .form-card {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-['Inter'] bg-gray-50 text-gray-900">
+    <!-- Background Pattern -->
+    <div class="fixed inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-purple-50"></div>
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute top-0 left-0 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+            <div class="absolute top-0 right-0 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+            <div class="absolute bottom-0 left-0 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                    <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="font-bold text-xl">Nexus</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Home</a>
+                <a href="features.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Features</a>
+                <a href="pricing.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Pricing</a>
+                <a href="dashboard.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Dashboard</a>
+            </div>
+            
+            <div class="flex space-x-3">
+                <a href="login.html" class="px-4 py-2 text-gray-600 font-medium hover:text-indigo-600 transition">Log in</a>
+                <a href="signup.html" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Get Started</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Signup Form -->
+    <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-md w-full space-y-8">
+            <div class="form-card glass-effect rounded-2xl p-8">
+                <div class="text-center mb-8">
+                    <div class="mx-auto h-16 w-16 flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 mb-4">
+                        <i data-lucide="layers" class="h-8 w-8 text-white"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Create your Nexus account</h2>
+                    <p class="text-gray-600">Join thousands of businesses automating their workflows</p>
+                    <p class="mt-2 text-sm text-gray-500">
+                        Already have an account? 
+                        <a href="login.html" class="font-medium text-indigo-600 hover:text-indigo-500">Sign in</a>
+                    </p>
+                </div>
+                
+                <form class="space-y-6" action="#" method="POST">
+                    <div class="space-y-4">
+                        <div class="input-group">
+                            <input id="name" name="name" type="text" autocomplete="name" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 peer" placeholder=" ">
+                            <label for="name" class="peer-focus:text-indigo-600">Full Name</label>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input id="company" name="company" type="text" autocomplete="organization" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 peer" placeholder=" ">
+                            <label for="company" class="peer-focus:text-indigo-600">Company Name</label>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input id="email-address" name="email" type="email" autocomplete="email" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 peer" placeholder=" ">
+                            <label for="email-address" class="peer-focus:text-indigo-600">Email address</label>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 peer" placeholder=" ">
+                            <label for="password" class="peer-focus:text-indigo-600">Password</label>
+                        </div>
+                        
+                        <div class="input-group">
+                            <input id="confirm-password" name="confirm-password" type="password" autocomplete="current-password" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 peer" placeholder=" ">
+                            <label for="confirm-password" class="peer-focus:text-indigo-600">Confirm Password</label>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <input id="terms" name="terms" type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded transition">
+                        <label for="terms" class="ml-2 block text-sm text-gray-700">
+                            I agree to the <a href="#" class="text-indigo-600 hover:text-indigo-500 font-medium">Terms and Conditions</a>
+                        </label>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn-primary w-full py-3 px-4 rounded-lg text-white font-medium flex items-center justify-center">
+                            <i data-lucide="user-plus" class="h-5 w-5 mr-2"></i>
+                            Create Account
+                        </button>
+                    </div>
+                    
+                    <div class="relative">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-gray-300"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-4 bg-white text-gray-500">Or continue with</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-3">
+                        <button type="button" class="social-btn w-full inline-flex justify-center py-3 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                            <i data-lucide="github" class="h-5 w-5"></i>
+                        </button>
+                        <button type="button" class="social-btn w-full inline-flex justify-center py-3 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                            <i data-lucide="twitter" class="h-5 w-5"></i>
+                        </button>
+                        <button type="button" class="social-btn w-full inline-flex justify-center py-3 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                            <i data-lucide="linkedin" class="h-5 w-5"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="text-center text-sm text-gray-500">
+                <p>By signing up, you agree to our <a href="#" class="text-indigo-600 hover:text-indigo-500">Privacy Policy</a> and <a href="#" class="text-indigo-600 hover:text-indigo-500">Terms of Service</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
