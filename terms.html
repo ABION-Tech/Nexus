@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service - ABION NEXUS</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --dark: #1a202c;
+            --light: #f8f9fa;
+            --gray: #718096;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                    <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="font-bold text-xl">ABION NEXUS</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Home</a>
+                <a href="about.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">About</a>
+                <a href="pricing.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Pricing</a>
+                <a href="contact.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Contact</a>
+            </div>
+            
+            <div class="flex space-x-3">
+                <button class="px-4 py-2 text-gray-600 font-medium hover:text-indigo-600 transition">Log in</button>
+                <button class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Get Started</button>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- Header -->
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl font-bold mb-4">Terms of Service</h1>
+                    <p class="text-gray-600">Last updated: January 1, 2025</p>
+                </div>
+
+                <!-- Table of Contents -->
+                <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
+                    <h2 class="text-xl font-bold mb-4">Table of Contents</h2>
+                    <nav class="space-y-2">
+                        <a href="#acceptance" class="block text-indigo-600 hover:text-indigo-800 transition">1. Acceptance of Terms</a>
+                        <a href="#services" class="block text-indigo-600 hover:text-indigo-800 transition">2. Description of Services</a>
+                        <a href="#user-accounts" class="block text-indigo-600 hover:text-indigo-800 transition">3. User Accounts</a>
+                        <a href="#payment" class="block text-indigo-600 hover:text-indigo-800 transition">4. Payment Terms</a>
+                        <a href="#intellectual-property" class="block text-indigo-600 hover:text-indigo-800 transition">5. Intellectual Property</a>
+                        <a href="#prohibited" class="block text-indigo-600 hover:text-indigo-800 transition">6. Prohibited Activities</a>
+                        <a href="#termination" class="block text-indigo-600 hover:text-indigo-800 transition">7. Termination</a>
+                        <a href="#disclaimer" class="block text-indigo-600 hover:text-indigo-800 transition">8. Disclaimer</a>
+                        <a href="#limitation" class="block text-indigo-600 hover:text-indigo-800 transition">9. Limitation of Liability</a>
+                        <a href="#governing" class="block text-indigo-600 hover:text-indigo-800 transition">10. Governing Law</a>
+                    </nav>
+                </div>
+
+                <!-- Terms Content -->
+                <div class="bg-white rounded-xl shadow-sm p-8 space-y-8">
+                    <section id="acceptance">
+                        <h2 class="text-2xl font-bold mb-4">1. Acceptance of Terms</h2>
+                        <p>By accessing and using ABION NEXUS services, you accept and agree to be bound by the terms and provision of this Agreement. If you do not agree to abide by the above, please do not use our service.</p>
+                    </section>
+
+                    <section id="services">
+                        <h2 class="text-2xl font-bold mb-4">2. Description of Services</h2>
+                        <p>ABION NEXUS provides enterprise automation solutions including but not limited to:</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>CRM automation and workflow management</li>
+                            <li>Project and task automation</li>
+                            <li>Data analytics and reporting automation</li>
+                            <li>Document and file management automation</li>
+                            <li>Compliance and regulatory automation</li>
+                        </ul>
+                        <p class="mt-4">We reserve the right to modify, suspend, or discontinue any part of the service at any time.</p>
+                    </section>
+
+                    <section id="user-accounts">
+                        <h2 class="text-2xl font-bold mb-4">3. User Accounts</h2>
+                        <p>To use certain features of the service, you must register for an account. You agree to provide accurate, current, and complete information during registration. You are responsible for:</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>Maintaining the confidentiality of your account password</li>
+                            <li>All activities that occur under your account</li>
+                            <li>Notifying us immediately of any unauthorized use of your account</li>
+                        </ul>
+                    </section>
+
+                    <section id="payment">
+                        <h2 class="text-2xl font-bold mb-4">4. Payment Terms</h2>
+                        <p>Our services are available on a subscription basis. By subscribing, you agree to pay all fees at the then-current rates. All fees are quoted in U.S. Dollars.</p>
+                        <h3 class="text-xl font-semibold mt-4 mb-2">Refund Policy</h3>
+                        <p>You may cancel your subscription at any time. We offer a 30-day money-back guarantee for new customers. If you're not satisfied with our service, contact us within 30 days for a full refund.</p>
+                    </section>
+
+                    <section id="intellectual-property">
+                        <h2 class="text-2xl font-bold mb-4">5. Intellectual Property</h2>
+                        <p>The service and its original content, features, and functionality are and will remain the exclusive property of ABION NEXUS. Our trademarks and trade dress may not be used in connection with any product or service without our prior written consent.</p>
+                    </section>
+
+                    <section id="prohibited">
+                        <h2 class="text-2xl font-bold mb-4">6. Prohibited Activities</h2>
+                        <p>You may not access or use the service for any purpose other than that for which we make the service available. The service may not be used:</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>In any way that violates any applicable federal, state, local, or international law or regulation</li>
+                            <li>To transmit, or procure the sending of, any advertising or promotional material</li>
+                            <li>To engage in any automated use of the system, such as using scripts to send comments or messages</li>
+                            <li>To interfere with or disrupt the service or servers or networks connected to the service</li>
+                        </ul>
+                    </section>
+
+                    <section id="termination">
+                        <h2 class="text-2xl font-bold mb-4">7. Termination</h2>
+                        <p>We may terminate or suspend access to our service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the terms.</p>
+                        <p>Upon termination, your right to use the service will cease immediately. If you wish to terminate your account, you may simply discontinue using the service.</p>
+                    </section>
+
+                    <section id="disclaimer">
+                        <h2 class="text-2xl font-bold mb-4">8. Disclaimer</h2>
+                        <p>THE SERVICE IS PROVIDED ON AN AS-IS AND AS-AVAILABLE BASIS. WE MAKE NO WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.</p>
+                    </section>
+
+                    <section id="limitation">
+                        <h2 class="text-2xl font-bold mb-4">9. Limitation of Liability</h2>
+                        <p>IN NO EVENT SHALL ABION NEXUS, ITS DIRECTORS, EMPLOYEES, PARTNERS, SUPPLIERS, OR AFFILIATES BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES, INCLUDING BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA, OR OTHER INTANGIBLE LOSSES.</p>
+                    </section>
+
+                    <section id="governing">
+                        <h2 class="text-2xl font-bold mb-4">10. Governing Law</h2>
+                        <p>These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States, without regard to its conflict of law provisions.</p>
+                        <p class="mt-4">Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is found to be unenforceable by a court, the remaining provisions of these Terms will remain in full force and effect.</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 text-gray-400">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+                <!-- Branding -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                            <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="font-bold text-xl text-white">ABION NEXUS</span>
+                    </div>
+                    <p class="text-sm">Enterprise Automation Solutions that free your team to do the work that matters.</p>
+                </div>
+                
+                <!-- Product/Services -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Product/Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="features.html" class="hover:text-white transition">Features</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="integrations.html" class="hover:text-white transition">Integrations</a></li>
+                        <li><a href="#" class="hover:text-white transition">Roadmap</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="help.html" class="hover:text-white transition">Help Center</a></li>
+                        <li><a href="community.html" class="hover:text-white transition">Community</a></li>
+                        <li><a href="documentation.html" class="hover:text-white transition">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="partners.html" class="hover:text-white transition">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Connect -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Connect</h3>
+                    <div class="mb-4">
+                        <p class="text-sm mb-2">Subscribe to our newsletter</p>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="px-3 py-2 bg-gray-800 text-white rounded-l-lg w-full focus:outline-none">
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-r-lg hover:bg-indigo-700 transition">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex space-x-3">
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center text-sm">
+                <p>&copy; 2025 ABION NEXUS. All Rights Reserved.</p>
+                <div class="mt-2">
+                    <a href="privacy.html" class="hover:text-white transition mr-4">Privacy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

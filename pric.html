@@ -38,9 +38,9 @@
         
         /* Styling for Most Popular badge */
         .popular-badge {
-            top: 0.9rem !important;
-            padding: 0.3rem 0.9rem !important;
-            margin-top: 0.9rem !important;
+            top: 0.95 rem !important;
+            padding: 0.5rem 1rem !important;
+            margin-top: 1.5rem !important;
         }
         
         /* Styling for Add Ons notice */
@@ -60,105 +60,20 @@
             transition: all 0.3s ease-in-out;
         }
         
-/*hero section*/
-.hero{
-    margin-top: 2rem; /* Reduced from 10rem to 2rem */
-    padding-top: 5rem  !important;/* Added some padding for better spacing */
-}
-        /*outcome styling*/
-        .outcome {
-            font-size: 0.95rem;
-            color: #374151;
-            margin-top: 0.8rem;
-        }
-
         /* Hide region notice completely */
         .hidden-region {
             display: none;
         }
-        
-        /* Billing period styling */
-        .billing-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        
-        .billing-price {
-            display: flex;
-            align-items: baseline;
-        }
-        
-        .billing-period {
-            font-size: 0.875rem;
-            line-height: 1.25rem;
-            color: #6b7280;
-            margin-left: 0.25rem;
-        }
-        
-        .billing-annual {
-            font-size: 0.75rem;
-            color: #6b7280;
-            margin-top: 0.25rem;
-        }
-        /* Footer */
-        .footer-column h3 {
-            position: relative;
-            padding-bottom: 12px;
-        }
-        
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background: var(--primary);
-        }
     </style>
 </head>
-  <!-- Header -->
-    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <!-- Logo -->
-                <div class="flex items-center space-x-2">
-                    <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center">
-                        <i data-lucide="layers" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <span class="font-bold text-xl">ABION NEXUS</span>
-                </div>
-                
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex space-x-8">
-                    <a href="/index.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Home</a>
-                    <a href="/features.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Features</a>
-                    <a href="/pricing.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Pricing</a>
-                    <a href="/signup.html" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Get Started</a>
-                </nav>
-                
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
-            
-            <!-- Mobile Navigation -->
-            <nav id="mobile-menu" class="mobile-menu hidden absolute top-full left-0 w-full bg-white shadow-lg md:hidden">
-                <div class="flex flex-col p-4 space-y-3">
-                    <a href="/index.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Home</a>
-                    <a href="/features.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Features</a>
-                    <a href="/pricing.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Pricing</a>
-                    <a href="/signup.html" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition text-center">Get Started</a>
-                </div>
-            </nav>
-        </div>
-    </header>
+<body class="bg-gray-50 text-gray-900">
+ 
     
 
+
+
     <!-- Hero -->
-    <section class="py-16 bg-gradient-to-br from-indigo-50 to-white hero">
+    <section class="py-16 bg-gradient-to-br from-indigo-50 to-white">
         <div class="container mx-auto px-4 text-center">
             <h1 class="text-4xl font-bold mb-4">Simple, Transparent Automation Pricing</h1>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">Choose a plan that fits your business goals — not your tech skills. Every plan includes a <strong>custom automation setup</strong> and lifetime access to your built automations.</p>
@@ -183,21 +98,18 @@
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
                     <div class="p-8">
                         <h3 class="text-2xl font-bold mb-2">Starter Automation</h3>
-<p class="text-sm text-gray-600 mb-6">For solo founders or startups automating their first workflows</p>
+                        <p class="text-gray-600 mb-6">For solo founders or startups automating their first workflows</p>
                         
                         <div class="mb-6">
                             <div class="setup-fee text-lg text-gray-700 mb-1"></div>
-                            <div class="billing-container">
-                                <div class="billing-price">
-                                    <span class="text-3xl font-bold monthly-price price-transition">$49</span>
-                                    <span class="text-3xl font-bold annual-price hidden">$39</span>
-                                    <span class="billing-period monthly-period">/month</span>
-                                </div>
-                                <div class="billing-annual annual-period hidden">/month (billed annually)</div>
+                            <div class="flex items-baseline">
+                                <span class="text-4xl font-bold monthly-price price-transition">$49</span>
+                                <span class="text-4xl font-bold annual-price hidden">$39</span>
+                                <span class="billing-period text-gray-600 ml-2">/month</span>
                             </div>
                         </div>
                         
-                        <div class="bg-indigo-50 rounded-lg p-4 mb-6 outcome">
+                        <div class="bg-indigo-50 rounded-lg p-4 mb-6">
                             <h4 class="font-semibold text-indigo-800 mb-1">Outcome:</h4>
                             <p class="text-indigo-700">Launch your first automation system and start running your business hands-free.</p>
                         </div>
@@ -236,25 +148,20 @@
                     </div>
                     <div class="p-8 pt-12">
                         <h3 class="text-2xl font-bold mb-2">Growth Automation</h3>
-<p class="text-sm text-gray-600 mb-6">For small and growing businesses ready to scale their automation</p>
+                        <p class="text-gray-600 mb-6">For small and growing businesses ready to scale their automation</p>
                         
                         <div class="mb-6">
                             <div class="setup-fee text-lg text-gray-700 mb-1"></div>
-                            <div class="billing-container">
-                                <div class="billing-price">
-                                    <span class="text-3xl font-bold monthly-price price-transition">$149</span>
-                                    <span class="text-3xl font-bold annual-price hidden">$119</span>
-                                    <span class="billing-period monthly-period">/month</span>
-                                </div>
-                                <div class="billing-annual annual-period hidden">/month (billed annually)</div>
+                            <div class="flex items-baseline">
+                                <span class="text-4xl font-bold monthly-price price-transition">$149</span>
+                                <span class="text-4xl font-bold annual-price hidden">$119</span>
+                                <span class="billing-period text-gray-600 ml-2">/month</span>
                             </div>
                         </div>
                         
-                        <div class="bg-indigo-50 rounded-lg p-4 mb-6 outcome">
-
+                        <div class="bg-indigo-50 rounded-lg p-4 mb-6">
                             <h4 class="font-semibold text-indigo-800 mb-1">Outcome:</h4>
                             <p class="text-indigo-700">Build an automated backbone for your business operations with measurable ROI.</p>
-                       
                         </div>
                         
                         <ul class="space-y-4 mb-8">
@@ -287,14 +194,15 @@
                 <!-- Enterprise Plan -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
                     <div class="p-8">
-                        <h3 class="text-xl font-bold mb-2">Enterprise DFY Suite</h3>
-<p class="text-sm text-gray-600 mb-6">For organizations that want full-scale, custom-built automation infrastructure</p>
+                        <h3 class="text-2xl font-bold mb-2">Enterprise DFY Suite</h3>
+                        <p class="text-gray-600 mb-6">For organizations that want full-scale, custom-built automation infrastructure</p>
+                        
                         <div class="mb-6">
-                            <span class="text-3xl font-bold">Custom Quote</span>
+                            <span class="text-4xl font-bold">Custom Quote</span>
                             <div class="enterprise-note text-gray-600 mt-1"></div>
                         </div>
                         
-                        <div class="bg-indigo-50 rounded-lg p-4 mb-6 outcome">
+                        <div class="bg-indigo-50 rounded-lg p-4 mb-6">
                             <h4 class="font-semibold text-indigo-800 mb-1">Outcome:</h4>
                             <p class="text-indigo-700">Your entire backend — automated, monitored, and managed 24/7.</p>
                         </div>
@@ -430,7 +338,7 @@
             <h2 class="text-3xl font-bold text-white mb-4">Ready to Start Automating?</h2>
             <p class="text-indigo-100 max-w-2xl mx-auto mb-8">Cut your repetitive work in half and focus on what really matters — growth. Join hundreds of businesses already automating with Nexus.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="signup.html" class="px-8 py-3 bg-white text-indigo-600 font-medium rounded-lg hover:bg-gray-100 transition">Get Started</a>
+                <a href="index.html" class="px-8 py-3 bg-white text-indigo-600 font-medium rounded-lg hover:bg-gray-100 transition">Get Started</a>
                 <a href="features.html" class="px-8 py-3 bg-indigo-700 text-white font-medium rounded-lg hover:bg-indigo-800 transition">See Features</a>
             </div>
         </div>
@@ -528,16 +436,6 @@
 
     <!-- Custom JavaScript -->
     <script>
-// Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        
-
         // Region mapping and pricing data
         const regionMapping = {
             nigeria: ["Nigeria"],
@@ -624,6 +522,7 @@
         const growthMonthly = document.querySelectorAll('.monthly-price')[1];
         const growthAnnual = document.querySelectorAll('.annual-price')[1];
         const enterpriseNote = document.querySelector('.enterprise-note');
+        const billingPeriods = document.querySelectorAll('.billing-period');
 
         // Check for cached region
         function getCachedRegion() {
@@ -753,21 +652,21 @@
         pricingToggle.addEventListener('change', function() {
             const monthlyPrices = document.querySelectorAll('.monthly-price');
             const annualPrices = document.querySelectorAll('.annual-price');
-            const monthlyPeriods = document.querySelectorAll('.monthly-period');
-            const annualPeriods = document.querySelectorAll('.annual-period');
             
             if (this.checked) {
                 // Annual selected - show annual prices and update billing period text
                 monthlyPrices.forEach(price => price.classList.add('hidden'));
                 annualPrices.forEach(price => price.classList.remove('hidden'));
-                monthlyPeriods.forEach(period => period.classList.add('hidden'));
-                annualPeriods.forEach(period => period.classList.remove('hidden'));
+                billingPeriods.forEach(period => {
+                    period.textContent = '/month after trial ends, billed annually';
+                });
             } else {
                 // Monthly selected - show monthly prices and update billing period text
                 monthlyPrices.forEach(price => price.classList.remove('hidden'));
                 annualPrices.forEach(price => price.classList.add('hidden'));
-                monthlyPeriods.forEach(period => period.classList.remove('hidden'));
-                annualPeriods.forEach(period => period.classList.add('hidden'));
+                billingPeriods.forEach(period => {
+                    period.textContent = '/month';
+                });
             }
         });
 

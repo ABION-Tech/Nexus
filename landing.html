@@ -95,7 +95,11 @@
             background-color: #f9fafb;
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23667eea' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
-        
+        /*hero section*/
+.hero{
+    margin-top: 2rem; /* Reduced from 10rem to 2rem */
+    padding-top: 4rem  !important;/* Added some padding for better spacing */
+}
         .section-padding {
             padding: 100px 0;
         }
@@ -185,7 +189,8 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
+  
+      <!-- Header -->
     <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
@@ -199,10 +204,10 @@
                 
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex space-x-8">
-                    <a href="#home" class="font-medium text-gray-900 hover:text-indigo-600 transition">Home</a>
-                    <a href="features.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Features</a>
-                    <a href="pricing.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Pricing</a>
-                    <a href="#contact" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Get Started</a>
+                    <a href="/index.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Home</a>
+                    <a href="/features.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Features</a>
+                    <a href="/pricing.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Pricing</a>
+                    <a href="/signup.html" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Get Started</a>
                 </nav>
                 
                 <!-- Mobile Menu Button -->
@@ -214,17 +219,18 @@
             <!-- Mobile Navigation -->
             <nav id="mobile-menu" class="mobile-menu hidden absolute top-full left-0 w-full bg-white shadow-lg md:hidden">
                 <div class="flex flex-col p-4 space-y-3">
-                    <a href="#home" class="font-medium text-gray-900 hover:text-indigo-600 transition">Home</a>
-                    <a href="features.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Features</a>
-                    <a href="pricing.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Pricing</a>
-                    <a href="#contact" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition text-center">Get Started</a>
+                    <a href="/index.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Home</a>
+                    <a href="/features.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Features</a>
+                    <a href="/pricing.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Pricing</a>
+                    <a href="/signup.html" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition text-center">Get Started</a>
                 </div>
             </nav>
         </div>
     </header>
+    
 
     <!-- Hero Section -->
-    <section id="home" class="hero-pattern pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden">
+    <section id="home" class="hero-pattern pt-32 pb-20 md:pt-40 md:pb-28 relative overflow-hidden hero">
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Business consultation meeting" class="w-full h-full object-cover opacity-10">
@@ -681,7 +687,7 @@
 </div>      </div>
     </section>
 
-    <<!-- Process Section -->
+    <!-- Process Section -->
 <section id="process" class="py-20 bg-gray-900 text-white relative overflow-hidden">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-10">
@@ -929,6 +935,8 @@
         </div>
     </section>
 
+
+    
     <!-- Footer -->
     <footer class="py-12 bg-gray-900 text-gray-400">
         <div class="container mx-auto px-4">
@@ -948,10 +956,10 @@
                 <div>
                     <h3 class="text-white font-semibold mb-4">Product/Services</h3>
                     <ul class="space-y-2">
-                        <li><a href="#features" class="hover:text-white transition">Features</a></li>
-                        <li><a href="#pricing" class="hover:text-white transition">Pricing</a></li>
-                        <li><a href="#" class="hover:text-white transition">Integrations</a></li>
-                        <li><a href="#" class="hover:text-white transition">Roadmap</a></li>
+                        <li><a href="features.html" class="hover:text-white transition">Features</a></li>
+                        <li><a href="/pricing.html" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="/Integrations" class="hover:text-white transition">Integrations</a></li>
+                        <li><a href="/roadmap" class="hover:text-white transition">Roadmap</a></li>
                     </ul>
                 </div>
                 
@@ -959,10 +967,10 @@
                 <div>
                     <h3 class="text-white font-semibold mb-4">Resources</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="#" class="hover:text-white transition">Help Center</a></li>
-                        <li><a href="#" class="hover:text-white transition">Community</a></li>
-                        <li><a href="#" class="hover:text-white transition">Documentation</a></li>
+                        <li><a href="/blog.html" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="/help.html" class="hover:text-white transition">Help Center</a></li>
+                        <li><a href="/community.html" class="hover:text-white transition">Community</a></li>
+                        <li><a href="/documentation.html" class="hover:text-white transition">Documentation</a></li>
                     </ul>
                 </div>
                 
@@ -970,10 +978,10 @@
                 <div>
                     <h3 class="text-white font-semibold mb-4">Company</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
-                        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
-                        <li><a href="#" class="hover:text-white transition">Partners</a></li>
+                        <li><a href="/about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="/careers.html" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="/contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="/partner.html" class="hover:text-white transition">Partners</a></li>
                     </ul>
                 </div>
                 
@@ -1012,19 +1020,24 @@
             <div class="pt-8 border-t border-gray-800 text-center text-sm">
                 <p>&copy; 2025 ABION Industries Ltd. All Rights Reserved.</p>
                 <div class="mt-2">
-                    <a href="#" class="hover:text-white transition mr-4">Privacy</a>
-                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                    <a href="/privacy.html" class="hover:text-white transition mr-4">Privacy</a>
+                    <a href="/terms.html" class="hover:text-white transition">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
+
+
     <script>
-        // Mobile Menu Toggle
-        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
+// Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
         
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

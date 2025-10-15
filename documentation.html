@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation - ABION NEXUS</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --dark: #1a202c;
+            --light: #f8f9fa;
+            --gray: #718096;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                    <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="font-bold text-xl">ABION NEXUS</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Home</a>
+                <a href="about.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">About</a>
+                <a href="pricing.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Pricing</a>
+                <a href="contact.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Contact</a>
+            </div>
+            
+            <div class="flex space-x-3">
+                <button class="px-4 py-2 text-gray-600 font-medium hover:text-indigo-600 transition">Log in</button>
+                <button class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Get Started</button>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <!-- Hero Section -->
+            <section class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Documentation</h1>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+                    Comprehensive guides and API documentation for ABION NEXUS automation platform.
+                </p>
+                
+                <!-- Search Bar -->
+                <div class="max-w-2xl mx-auto">
+                    <div class="relative">
+                        <i data-lucide="search" class="absolute left-3 top-3 w-5 h-5 text-gray-400"></i>
+                        <input type="text" placeholder="Search documentation..." 
+                               class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Documentation Categories -->
+            <section class="mb-16">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="text-2xl font-bold mb-8">Browse Documentation</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Getting Started -->
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="book-open" class="w-6 h-6 text-green-600"></i>
+                                </div>
+                                <h3 class="font-bold">Getting Started</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Quick start guides and installation instructions</p>
+                            <div class="space-y-2">
+                                <a href="#" class="block text-sm text-indigo-600 hover:text-indigo-800">Installation Guide</a>
+                                <a href="#" class="block text-sm text-indigo-600 hover:text-indigo-800">First Automation</a>
+                                <a href="#" class="block text-sm text-indigo-600 hover:text-indigo-800">Configuration</a>
+                            </div>
+                        </div>
+
+                        <!-- API Reference -->
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="code" class="w-6 h-6 text-blue-600"></i>
+                                </div>
+                                <h3 class="font-bold">API Reference</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Complete API documentation for developers</p>
+                            <div class="space-y-2">
+                                <a href="#" class="block text-sm text-indigo-600 hover:text-indigo-800">Authentication</a>
+                                <a href="#" class="block text-sm text-indigo-600 hover:text-indigo-800">Endpoints</a>
+                                <a href="#" class="block text-sm text-indigo-600 hover:text-indigo-800">Webhooks</a>
+                            </div>
+                        </div>
+
+                        <!-- Integration Guides -->
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="link" class="w-6 h-6 text-purple-600"></i>
+                                </div>
+                                <h3 class="font-bold">Integration Guides</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Step-by-step integration with third-party services</p>
+                            <div class="space-y-2">
+                                <a href="#" class="block text-sm text-indigo-600 hover:text-indigo-800">CRM Integration</a>
+                                <a href="#" class="block text-sm text-indigo-600 hover:text-indigo-800">Project Management</a>
+                                <a href="#" class="block text-sm text-indigo-600 hover:text-indigo-800">Accounting Software</a>
+                            </div>
+                        </div>
+
+                        <!-- Troubleshooting -->
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="alert-triangle" class="w-6 h-6 text-red-600"></i>
+                                </div>
+                                <h3 class="font-bold">Troubleshooting</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Solutions to common problems and error resolution</p>
+                            <div class="space-y-2">
+                                <a href="#" class="block text-sm text-indigo-600 hover:text-indigo-800">Common Errors</a>
+                                <a href="#" class="block text-sm text-indigo-600 hover:text-indigo-800">Debugging Tips</a>
+                                <a href="#" class="block text-sm text-indigo-600 hover:text-indigo-800">Performance Issues</a>
+                            </div>
+                        </div>
+
+                        <!-- Best Practices -->
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="star" class="w-6 h-6 text-yellow-600"></i>
+                                </div>
+                                <h3 class="font-bold">Best Practices</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Recommended practices for optimal automation implementation</p>
+                            <div class="space-y-2">
+                                <a href="#" class="block text-sm text-indigo-600 hover:text-indigo-800">Security Guidelines</a>
+                                <a href="#" class="block text-sm text-indigo-600 hover:text-indigo-800">Performance Tips</a>
+                                <a href="#" class="block text-sm text-indigo-600 hover:text-indigo-800">Maintenance</a>
+                            </div>
+                        </div>
+
+                        <!-- Release Notes -->
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="git-branch" class="w-6 h-6 text-indigo-600"></i>
+                                </div>
+                                <h3 class="font-bold">Release Notes</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Latest updates and version history</p>
+                            <div class="space-y-2">
+                                <a href="#" class="block text-sm text-indigo-600 hover:text-indigo-800">Version 2.1.0</a>
+                                <a href="#" class="block text-sm text-indigo-600 hover:text-indigo-800">Version 2.0.0</a>
+                                <a href="#" class="block text-sm text-indigo-600 hover:text-indigo-800">Version 1.9.0</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- API Section -->
+            <section class="mb-16">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-8 text-white">
+                        <div class="md:flex items-center justify-between">
+                            <div class="mb-6 md:mb-0">
+                                <h2 class="text-2xl font-bold mb-4">Developer API</h2>
+                                <p class="mb-4">Access our RESTful API to integrate ABION NEXUS with your custom applications and workflows.</p>
+                                <div class="space-y-3">
+                                    <div class="flex items-center">
+                                        <i data-lucide="check" class="w-5 h-5 mr-2"></i>
+                                        <span>Comprehensive REST API documentation</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i data-lucide="check" class="w-5 h-5 mr-2"></i>
+                                        <span>SDKs for popular programming languages</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i data-lucide="check" class="w-5 h-5 mr-2"></i>
+                                        <span>Webhook support for real-time updates</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <i data-lucide="check" class="w-5 h-5 mr-2"></i>
+                                        <span>Sandbox environment for testing</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center md:text-right">
+                                <a href="#" class="inline-block bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">
+                                    View API Docs
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Links -->
+            <section>
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-2xl font-bold text-center mb-8">Quick Links</h2>
+                    
+                    <div class="bg-white rounded-xl shadow-sm p-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="font-bold mb-4">For Developers</h3>
+                                <ul class="space-y-3">
+                                    <li><a href="#" class="text-indigo-600 hover:text-indigo-800">API Documentation</a></li>
+                                    <li><a href="#" class="text-indigo-600 hover:text-indigo-800">SDKs and Libraries</a></li>
+                                    <li><a href="#" class="text-indigo-600 hover:text-indigo-800">Authentication</a></li>
+                                    <li><a href="#" class="text-indigo-600 hover:text-indigo-800">Rate Limits</a></li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h3 class="font-bold mb-4">For Users</h3>
+                                <ul class="space-y-3">
+                                    <li><a href="#" class="text-indigo-600 hover:text-indigo-800">User Guide</a></li>
+                                    <li><a href="#" class="text-indigo-600 hover:text-indigo-800">Feature Overview</a></li>
+                                    <li><a href="#" class="text-indigo-600 hover:text-indigo-800">Tutorials</a></li>
+                                    <li><a href="#" class="text-indigo-600 hover:text-indigo-800">FAQs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 text-gray-400">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+                <!-- Branding -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                            <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="font-bold text-xl text-white">ABION NEXUS</span>
+                    </div>
+                    <p class="text-sm">Enterprise Automation Solutions that free your team to do the work that matters.</p>
+                </div>
+                
+                <!-- Product/Services -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Product/Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="features.html" class="hover:text-white transition">Features</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="integrations.html" class="hover:text-white transition">Integrations</a></li>
+                        <li><

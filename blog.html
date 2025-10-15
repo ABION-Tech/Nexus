@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - ABION NEXUS</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --dark: #1a202c;
+            --light: #f8f9fa;
+            --gray: #718096;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                    <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="font-bold text-xl">ABION NEXUS</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Home</a>
+                <a href="about.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">About</a>
+                <a href="pricing.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Pricing</a>
+                <a href="contact.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Contact</a>
+            </div>
+            
+            <div class="flex space-x-3">
+                <button class="px-4 py-2 text-gray-600 font-medium hover:text-indigo-600 transition">Log in</button>
+                <button class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Get Started</button>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <!-- Hero Section -->
+            <section class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Blog</h1>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+                    Insights, tips, and trends in enterprise automation. 
+                    Stay updated with the latest from ABION NEXUS.
+                </p>
+                
+                <!-- Coming Soon Badge -->
+                <div class="inline-flex items-center bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium mb-8">
+                    <i data-lucide="clock" class="w-4 h-4 mr-2"></i>
+                    Coming Soon - Subscribe for Updates
+                </div>
+            </section>
+
+            <!-- Newsletter Signup Section -->
+            <section class="mb-16">
+                <div class="max-w-2xl mx-auto">
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <div class="text-center mb-6">
+                            <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="mail" class="w-8 h-8 text-indigo-600"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold mb-2">Get Notified When We Launch</h2>
+                            <p class="text-gray-600 mb-6">
+                                Be the first to know when we publish new articles about automation, 
+                                business efficiency, and technology trends.
+                            </p>
+                        </div>
+                        
+                        <form id="newsletter-form" class="space-y-4">
+                            <div>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    placeholder="Enter your email address" 
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                >
+                            </div>
+                            <div>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    placeholder="Your name (optional)" 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                                >
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="consent" required class="mr-2">
+                                <label for="consent" class="text-sm text-gray-600">
+                                    I agree to receive email updates from ABION NEXUS
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full">
+                                Subscribe to Newsletter
+                            </button>
+                        </form>
+                        
+                        <div id="form-message" class="mt-4 hidden p-4 rounded-lg"></div>
+                        
+                        <!-- What You'll Get -->
+                        <div class="mt-8 pt-8 border-t border-gray-200">
+                            <h3 class="font-bold text-lg mb-4">What You'll Get:</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                <div class="flex items-start">
+                                    <i data-lucide="file-text" class="w-5 h-5 text-indigo-600 mr-3 mt-0.5"></i>
+                                    <div>
+                                        <h4 class="font-medium">Industry Insights</h4>
+                                        <p class="text-sm text-gray-600">Deep dives into automation trends and best practices</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-lucide="lightbulb" class="w-5 h-5 text-indigo-600 mr-3 mt-0.5"></i>
+                                    <div>
+                                        <h4 class="font-medium">Expert Tips</h4>
+                                        <p class="text-sm text-gray-600">Practical advice from automation experts</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i data-lucide="trending-up" class="w-5 h-5 text-indigo-600 mr-3 mt-0.5"></i>
+                                    <div>
+                                        <h4 class="font-medium">Product Updates</h4>
+                                        <p class="text-sm text-gray-600">First to know about new features and releases</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sample Topics -->
+            <section>
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-8">Topics We'll Cover</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="settings" class="w-6 h-6 text-blue-600"></i>
+                                </div>
+                                <h3 class="font-bold">Automation Strategies</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">
+                                Learn how to implement effective automation strategies that save time and reduce errors in your business processes.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="trending-up" class="w-6 h-6 text-green-600"></i>
+                                </div>
+                                <h3 class="font-bold">Business Growth</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">
+                                Discover how automation can scale your business operations and support rapid growth without increasing overhead.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="shield-check" class="w-6 h-6 text-purple-600"></i>
+                                </div>
+                                <h3 class="font-bold">Security & Compliance</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">
+                                Understand the importance of security and compliance in automated systems and how to maintain them effectively.
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="users" class="w-6 h-6 text-yellow-600"></i>
+                                </div>
+                                <h3 class="font-bold">Team Productivity</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">
+                                Explore ways automation can free up your team to focus on high-value work that drives innovation and growth.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 text-gray-400">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+                <!-- Branding -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                            <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="font-bold text-xl text-white">ABION NEXUS</span>
+                    </div>
+                    <p class="text-sm">Enterprise Automation Solutions that free your team to do the work that matters.</p>
+                </div>
+                
+                <!-- Product/Services -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Product/Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="features.html" class="hover:text-white transition">Features</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="integrations.html" class="hover:text-white transition">Integrations</a></li>
+                        <li><a href="#" class="hover:text-white transition">Roadmap</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="help.html" class="hover:text-white transition">Help Center</a></li>
+                        <li><a href="community.html" class="hover:text-white transition">Community</a></li>
+                        <li><a href="documentation.html" class="hover:text-white transition">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="partners.html" class="hover:text-white transition">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Connect -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Connect</h3>
+                    <div class="mb-4">
+                        <p class="text-sm mb-2">Subscribe to our newsletter</p>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="px-3 py-2 bg-gray-800 text-white rounded-l-lg w-full focus:outline-none">
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-r-lg hover:bg-indigo-700 transition">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex space-x-3">
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center text-sm">
+                <p>&copy; 2025 ABION NEXUS. All Rights Reserved.</p>
+                <div class="mt-2">
+                    <a href="privacy.html" class="hover:text-white transition mr-4">Privacy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Newsletter form handling
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formMessage = document.getElementById('form-message');
+            const email = document.getElementById('email').value;
+            const name = document.getElementById('name').value;
+            const consent = document.getElementById('consent').checked;
+            
+            if (!consent) {
+                formMessage.className = 'mt-4 p-4 bg-red-100 text-red-700 rounded-lg';
+                formMessage.textContent = 'Please agree to receive email updates.';
+                formMessage.classList.remove('hidden');
+                return;
+            }
+            
+            // Show success message
+            formMessage.className = 'mt-4 p-4 bg-green-100 text-green-700 rounded-lg';
+            formMessage.innerHTML = `
+                <div class="flex items-center">
+                    <i data-lucide="check-circle" class="w-5 h-5 mr-2"></i>
+                    <div>
+                        <p class="font-medium">Thank you for subscribing!</p>
+                        <p class="text-sm">We'll notify you when our blog launches. Check your email for confirmation.</p>
+                    </div>
+                </div>
+            `;
+            formMessage.classList.remove('hidden');
+            
+            // Reset form
+            this.reset();
+        });
+        
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community - ABION NEXUS</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --dark: #1a202c;
+            --light: #f8f9fa;
+            --gray: #718096;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                    <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="font-bold text-xl">ABION NEXUS</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Home</a>
+                <a href="about.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">About</a>
+                <a href="pricing.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Pricing</a>
+                <a href="contact.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Contact</a>
+            </div>
+            
+            <div class="flex space-x-3">
+                <button class="px-4 py-2 text-gray-600 font-medium hover:text-indigo-600 transition">Log in</button>
+                <button class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Get Started</button>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <!-- Hero Section -->
+            <section class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Join Our Community</h1>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+                    Connect with other automation professionals, share experiences, and get help from fellow ABION NEXUS users.
+                </p>
+                
+                <!-- Community Platforms -->
+                <div class="inline-flex items-center bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium mb-8">
+                    <i data-lucide="users" class="w-4 h-4 mr-2"></i>
+                    Active Community Members: 2,500+
+                </div>
+            </section>
+
+            <!-- Community Platforms -->
+            <section class="mb-16">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-2xl font-bold mb-8">Where We Connect</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- LinkedIn -->
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="linkedin" class="w-6 h-6 text-blue-600"></i>
+                                </div>
+                                <h3 class="font-bold">LinkedIn</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Professional networking and company updates</p>
+                            <div class="space-y-2">
+                                <p class="text-sm text-gray-600">Follow our company page for official announcements</p>
+                                <p class="text-sm text-gray-600">Join industry discussions in our groups</p>
+                                <p class="text-sm text-gray-600">Connect with our team and other professionals</p>
+                            </div>
+                            <a href="https://linkedin.com/company/abion-nexus" target="_blank" class="inline-flex items-center text-sm text-indigo-600 hover:text-indigo-800 mt-4">
+                                Visit LinkedIn
+                                <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+
+                        <!-- Discord -->
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="message-circle" class="w-6 h-6 text-indigo-600"></i>
+                                </div>
+                                <h3 class="font-bold">Discord Server</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Real-time chat with users and support team</p>
+                            <div class="space-y-2">
+                                <p class="text-sm text-gray-600">Get help with technical questions</p>
+                                <p class="text-sm text-gray-600">Share automation tips and tricks</p>
+                                <p class="text-sm text-gray-600">Participate in community events</p>
+                            </div>
+                            <a href="https://discord.gg/abion-nexus" target="_blank" class="inline-flex items-center text-sm text-indigo-600 hover:text-indigo-800 mt-4">
+                                Join Discord
+                                <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+
+                        <!-- GitHub -->
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="github" class="w-6 h-6 text-gray-600"></i>
+                                </div>
+                                <h3 class="font-bold">GitHub</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Open source projects and developer community</p>
+                            <div class="space-y-2">
+                                <p class="text-sm text-gray-600">Contribute to our open-source tools</p>
+                                <p class="text-sm text-gray-600">Report bugs and request features</p>
+                                <p class="text-sm text-gray-600">Explore our code and documentation</p>
+                            </div>
+                            <a href="https://github.com/abion-nexus" target="_blank" class="inline-flex items-center text-sm text-indigo-600 hover:text-indigo-800 mt-4">
+                                Visit GitHub
+                                <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+
+                        <!-- Twitter/X -->
+                        <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="twitter" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <h3 class="font-bold">Twitter/X</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4">Real-time updates and community discussions</p>
+                            <div class="space-y-2">
+                                <p class="text-sm text-gray-600">Follow for product updates and news</p>
+                                <p class="text-sm text-gray-600">Join conversations with #Automation</p>
+                                <p class="text-sm text-gray-600">Connect with our team and community</p>
+                            </div>
+                            <a href="https://twitter.com/abion-nexus" target="_blank" class="inline-flex items-center text-sm text-indigo-600 hover:text-indigo-800 mt-4">
+                                Follow on Twitter
+                                <i data-lucide="external-link" class="w-4 h-4 ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Community Benefits -->
+            <section class="mb-16">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-2xl font-bold text-center mb-8">Community Benefits</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white rounded-xl shadow-sm p-6 text-center">
+                            <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="users" class="w-8 h-8 text-indigo-600"></i>
+                            </div>
+                            <h3 class="font-bold mb-2">Network</h3>
+                            <p class="text-gray-600 text-sm">Connect with automation professionals and industry experts</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl shadow-sm p-6 text-center">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="lightbulb" class="w-8 h-8 text-green-600"></i>
+                            </div>
+                            <h3 class="font-bold mb-2">Learn</h3>
+                            <p class="text-gray-600 text-sm">Share knowledge and learn from community experiences</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-xl shadow-sm p-6 text-center">
+                            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i data-lucide="shield-check" class="w-8 h-8 text-purple-600"></i>
+                            </div>
+                            <h3 class="font-bold mb-2">Support</h3>
+                            <p class="text-gray-600 text-sm">Get help from both peers and our support team</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Upcoming Events -->
+            <section>
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-2xl font-bold text-center mb-8">Upcoming Community Events</h2>
+                    
+                    <div class="bg-white rounded-xl shadow-sm p-8">
+                        <div class="text-center mb-6">
+                            <div class="inline-flex items-center bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                                <i data-lucide="calendar" class="w-4 h-4 mr-2"></i>
+                                Next Event: Monthly Automation Meetup
+                            </div>
+                            <p class="text-gray-600 mb-2">Join us for our monthly community meetup to discuss the latest in automation technology and best practices.</p>
+                            <div class="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
+                                <div class="flex items-center">
+                                    <i data-lucide="calendar" class="w-4 h-4 mr-1"></i>
+                                    <span>January 15, 2025</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i data-lucide="clock" class="w-4 h-4 mr-1"></i>
+                                    <span>2:00 PM EST</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i data-lucide="monitor" class="w-4 h-4 mr-1"></i>
+                                    <span>Virtual Event</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button class="btn btn-primary">
+                                RSVP for Event
+                            </button>
+                            <p class="text-sm text-gray-600 mt-4">
+                                Can't make this time? 
+                                <a href="#" class="text-indigo-600 hover:text-indigo-800">View all events</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 text-gray-400">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+                <!-- Branding -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                            <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="font-bold text-xl text-white">ABION NEXUS</span>
+                    </div>
+                    <p class="text-sm">Enterprise Automation Solutions that free your team to do the work that matters.</p>
+                </div>
+                
+                <!-- Product/Services -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Product/Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="features.html" class="hover:text-white transition">Features</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="integrations.html" class="hover:text-white transition">Integrations</a></li>
+                        <li><a href="#" class="hover:text-white transition">Roadmap</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="help.html" class="hover:text-white transition">Help Center</a></li>
+                        <li><a href="community.html" class="hover:text-white transition">Community</a></li>
+                        <li><a href="documentation.html" class="hover:text-white transition">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="partners.html" class="hover:text-white transition">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Connect -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Connect</h3>
+                    <div class="mb-4">
+                        <p class="text-sm mb-2">Subscribe to our newsletter</p>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="px-3 py-2 bg-gray-800 text-white rounded-l-lg w-full focus:outline-none">
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-r-lg hover:bg-indigo-700 transition">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex space-x-3">
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center text-sm">
+                <p>&copy; 2025 ABION NEXUS. All Rights Reserved.</p>
+                <div class="mt-2">
+                    <a href="privacy.html" class="hover:text-white transition mr-4">Privacy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

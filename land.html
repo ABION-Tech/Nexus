@@ -559,24 +559,43 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">ABION NEXUS</div>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center">
+                        <i data-lucide="layers" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <span class="font-bold text-xl">ABION NEXUS</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="font-medium text-gray-900 hover:text-indigo-600 transition">Home</a>
+                    <a href="/features.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Features</a>
+                    <a href="/pricing.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Pricing</a>
+                    <a href="/signup.html" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Get Started</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#why">Why DFY</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact" class="btn btn-primary">Book a Call</a></li>
-            </ul>
+            
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="mobile-menu hidden absolute top-full left-0 w-full bg-white shadow-lg md:hidden">
+                <div class="flex flex-col p-4 space-y-3">
+                    <a href="#home" class="font-medium text-gray-900 hover:text-indigo-600 transition">Home</a>
+                    <a href="/features.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Features</a>
+                    <a href="/pricing.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Pricing</a>
+                    <a href="/signup.html" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition text-center">Get Started</a>
+                </div>
+            </nav>
         </div>
     </header>
+    
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -1342,9 +1361,12 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
+// Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
         
         // Service Tabs
