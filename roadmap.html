@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roadmap - ABION NEXUS</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --dark: #1a202c;
+            --light: #f8f9fa;
+            --gray: #718096;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: #e2e8f0;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 3px #e2e8f0;
+        }
+        
+        .timeline-item.completed::before {
+            background: #10b981;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                    <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="font-bold text-xl">ABION NEXUS</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Home</a>
+                <a href="about.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">About</a>
+                <a href="pricing.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Pricing</a>
+                <a href="contact.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Contact</a>
+            </div>
+            
+            <div class="flex space-x-3">
+                <button class="px-4 py-2 text-gray-600 font-medium hover:text-indigo-600 transition">Log in</button>
+                <button class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Get Started</button>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- Header -->
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl font-bold mb-4">Product Roadmap</h1>
+                    <p class="text-gray-600">Our journey to build the ultimate automation platform</p>
+                </div>
+
+                <!-- Current Features -->
+                <div class="bg-white rounded-xl shadow-sm p-8 mb-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-600"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold">Current Features (v1 - Core Launch)</h2>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="border border-gray-200 rounded-lg p-4 flex items-start">
+                            <i data-lucide="user-check" class="w-5 h-5 text-indigo-600 mt-1 mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold">CRM Automation</h3>
+                                <p class="text-gray-600 text-sm mt-1">Streamline customer relationship management</p>
+                            </div>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-4 flex items-start">
+                            <i data-lucide="workflow" class="w-5 h-5 text-indigo-600 mt-1 mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold">Project Workflow Automation</h3>
+                                <p class="text-gray-600 text-sm mt-1">Automate project and task management</p>
+                            </div>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-4 flex items-start">
+                            <i data-lucide="bar-chart-3" class="w-5 h-5 text-indigo-600 mt-1 mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold">Analytics Automation</h3>
+                                <p class="text-gray-600 text-sm mt-1">Automate data collection and reporting</p>
+                            </div>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-4 flex items-start">
+                            <i data-lucide="file-text" class="w-5 h-5 text-indigo-600 mt-1 mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold">Document Automation</h3>
+                                <p class="text-gray-600 text-sm mt-1">Streamline document creation and management</p>
+                            </div>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-4 flex items-start">
+                            <i data-lucide="shield-check" class="w-5 h-5 text-indigo-600 mt-1 mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold">Compliance Automation</h3>
+                                <p class="text-gray-600 text-sm mt-1">Ensure regulatory compliance automatically</p>
+                            </div>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-4 flex items-start">
+                            <i data-lucide="cpu" class="w-5 h-5 text-indigo-600 mt-1 mr-3"></i>
+                            <div>
+                                <h3 class="font-semibold">AI-Enhanced Task Flows</h3>
+                                <p class="text-gray-600 text-sm mt-1">Powered by OpenAI API</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Near Future -->
+                <div class="bg-white rounded-xl shadow-sm p-8 mb-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mr-3">
+                            <i data-lucide="clock" class="w-5 h-5 text-indigo-600"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold">Near Future (Next 3–6 Months)</h2>
+                    </div>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h3 class="font-semibold text-lg mb-1">Advanced Dashboard UI</h3>
+                            <p class="text-gray-600">Enhanced user interface with improved data visualization and customization options</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3 class="font-semibold text-lg mb-1">Custom Automation Builder</h3>
+                            <p class="text-gray-600">Drag-and-drop interface with API integration capabilities for building custom workflows</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3 class="font-semibold text-lg mb-1">Client Portal for DFY Automation Clients</h3>
+                            <p class="text-gray-600">Dedicated portal for clients to access and manage their automation services</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3 class="font-semibold text-lg mb-1">Partner Portal for Affiliates</h3>
+                            <p class="text-gray-600">Comprehensive portal for partners to manage referrals and collaborations</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h3 class="font-semibold text-lg mb-1">Reporting & Insight Visualizer</h3>
+                            <p class="text-gray-600">Advanced tools for visualizing data and gaining actionable insights</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Long-Term Vision -->
+                <div class="bg-white rounded-xl shadow-sm p-8 mb-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+                            <i data-lucide="telescope" class="w-5 h-5 text-purple-600"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold">Long-Term Vision</h2>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-6 mb-6">
+                        <p class="text-gray-700 mb-4">Our vision is to evolve Nexus from a DFY automation product into a <span class="font-semibold text-indigo-700">smart, AI-powered business operating system</span> that connects every tool a business uses — from marketing to finance — into one self-running hub.</p>
+                        <p class="text-gray-700">This system will intelligently manage business processes, make data-driven decisions, and continuously optimize operations without human intervention.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="border border-gray-200 rounded-lg p-5">
+                            <div class="flex items-center mb-3">
+                                <i data-lucide="brain" class="w-5 h-5 text-indigo-600 mr-2"></i>
+                                <h3 class="font-semibold">Intelligent Automation</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">AI-driven decision making and adaptive workflows</p>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-5">
+                            <div class="flex items-center mb-3">
+                                <i data-lucide="plug-zap" class="w-5 h-5 text-indigo-600 mr-2"></i>
+                                <h3 class="font-semibold">Universal Integration</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Connect any tool or service in your business stack</p>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-5">
+                            <div class="flex items-center mb-3">
+                                <i data-lucide="trending-up" class="w-5 h-5 text-indigo-600 mr-2"></i>
+                                <h3 class="font-semibold">Predictive Analytics</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Forecast business trends and opportunities</p>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-5">
+                            <div class="flex items-center mb-3">
+                                <i data-lucide="users" class="w-5 h-5 text-indigo-600 mr-2"></i>
+                                <h3 class="font-semibold">Collaborative Intelligence</h3>
+                            </div>
+                            <p class="text-gray-600 text-sm">Human-AI collaboration for optimal results</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature Requests -->
+                <div class="bg-gradient-to-r from-indigo-600 to-purple-700 rounded-xl shadow-sm p-8 text-white">
+                    <h2 class="text-2xl font-bold mb-4">Have an Idea for a Feature?</h2>
+                    <p class="mb-6">We're always looking for feedback and ideas to improve ABION NEXUS. If there's an automation or feature you'd love to see, let us know!</p>
+                    <a href="mailto:feedback@abionindustries.com" class="btn bg-white text-indigo-600 hover:bg-gray-100">Send Feedback</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 text-gray-400">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+                <!-- Branding -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                            <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="font-bold text-xl text-white">ABION NEXUS</span>
+                    </div>
+                    <p class="text-sm">Enterprise Automation Solutions that free your team to do the work that matters.</p>
+                </div>
+                
+                <!-- Product/Services -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Product/Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="features.html" class="hover:text-white transition">Features</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="integrations.html" class="hover:text-white transition">Integrations</a></li>
+                        <li><a href="roadmap.html" class="hover:text-white transition">Roadmap</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="help.html" class="hover:text-white transition">Help Center</a></li>
+                        <li><a href="community.html" class="hover:text-white transition">Community</a></li>
+                        <li><a href="documentation.html" class="hover:text-white transition">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="partners.html" class="hover:text-white transition">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Connect -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Connect</h3>
+                    <div class="mb-4">
+                        <p class="text-sm mb-2">Subscribe to our newsletter</p>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="px-3 py-2 bg-gray-800 text-white rounded-l-lg w-full focus:outline-none">
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-r-lg hover:bg-indigo-700 transition">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex space-x-3">
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center text-sm">
+                <p>&copy; 2025 ABION NEXUS. All Rights Reserved.</p>
+                <div class="mt-2">
+                    <a href="privacy.html" class="hover:text-white transition mr-4">Privacy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

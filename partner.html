@@ -1,0 +1,365 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Partners - ABION NEXUS</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --dark: #1a202c;
+            --light: #f8f9fa;
+            --gray: #718096;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                    <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+                </div>
+                <span class="font-bold text-xl">ABION NEXUS</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Home</a>
+                <a href="about.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">About</a>
+                <a href="pricing.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Pricing</a>
+                <a href="contact.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Contact</a>
+            </div>
+            
+            <div class="flex space-x-3">
+                <button class="px-4 py-2 text-gray-600 font-medium hover:text-indigo-600 transition">Log in</button>
+                <button class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Get Started</button>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="md:hidden">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- Header -->
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl font-bold mb-4">Partner with ABION NEXUS</h1>
+                    <p class="text-gray-600">Join our ecosystem of automation innovators</p>
+                </div>
+
+                <!-- Partnership Types -->
+                <div class="bg-white rounded-xl shadow-sm p-8 mb-8">
+                    <h2 class="text-2xl font-bold mb-6">Partnership Types</h2>
+                    <p class="text-gray-600 mb-6">We're seeking strategic partners who align with our automation-first philosophy:</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="border border-gray-200 rounded-lg p-6 hover:border-indigo-300 transition">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="git-merge" class="w-6 h-6 text-indigo-600"></i>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-2">Technology Integrations</h3>
+                            <p class="text-gray-600 text-sm">n8n, OpenAI, Google Workspace, Notion, Slack, Airtable</p>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-6 hover:border-indigo-300 transition">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="handshake" class="w-6 h-6 text-indigo-600"></i>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-2">Resellers & Agencies</h3>
+                            <p class="text-gray-600 text-sm">White-label or DFY automation setups for clients</p>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-6 hover:border-indigo-300 transition">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                                <i data-lucide="target" class="w-6 h-6 text-indigo-600"></i>
+                            </div>
+                            <h3 class="font-semibold text-lg mb-2">Strategic Alliances</h3>
+                            <p class="text-gray-600 text-sm">SaaS platforms or consultants serving growing businesses</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ideal Partners -->
+                <div class="bg-white rounded-xl shadow-sm p-8 mb-8">
+                    <h2 class="text-2xl font-bold mb-6">Ideal Partners</h2>
+                    <p class="text-gray-600 mb-6">We're looking for partners who share our vision for automation:</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="rocket" class="w-6 h-6 text-indigo-600 mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold">Startups</h3>
+                                <p class="text-gray-600 text-sm mt-1">Early-stage companies building innovative solutions</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="settings" class="w-6 h-6 text-indigo-600 mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold">Automation Builders</h3>
+                                <p class="text-gray-600 text-sm mt-1">Experts in workflow automation and integration</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="megaphone" class="w-6 h-6 text-indigo-600 mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold">Marketing Agencies</h3>
+                                <p class="text-gray-600 text-sm mt-1">Agencies looking to enhance client services with automation</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="graduation-cap" class="w-6 h-6 text-indigo-600 mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold">Tech Educators</h3>
+                                <p class="text-gray-600 text-sm mt-1">Training providers teaching automation and SaaS tools</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="globe" class="w-6 h-6 text-indigo-600 mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold">Ecosystem Players</h3>
+                                <p class="text-gray-600 text-sm mt-1">Platforms and services that complement automation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partner Benefits -->
+                <div class="bg-white rounded-xl shadow-sm p-8 mb-8">
+                    <h2 class="text-2xl font-bold mb-6">Partner Benefits</h2>
+                    <p class="text-gray-600 mb-6">Partnering with ABION NEXUS comes with valuable benefits:</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="package" class="w-6 h-6 text-indigo-600 mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold">Access to Nexus Templates & Modules</h3>
+                                <p class="text-gray-600 text-sm mt-1">Utilize our pre-built automation templates and modules</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="badge" class="w-6 h-6 text-indigo-600 mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold">Co-branding and Affiliate Opportunities</h3>
+                                <p class="text-gray-600 text-sm mt-1">Leverage our brand and earn through referrals</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="code" class="w-6 h-6 text-indigo-600 mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold">API Access (Future Phase)</h3>
+                                <p class="text-gray-600 text-sm mt-1">Build custom integrations with our API</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="users" class="w-6 h-6 text-indigo-600 mt-1"></i>
+                            <div>
+                                <h3 class="font-semibold">Joint Marketing & Feature Collaborations</h3>
+                                <p class="text-gray-600 text-sm mt-1">Co-develop features and market together</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partner Tiers -->
+                <div class="bg-white rounded-xl shadow-sm p-8 mb-8">
+                    <h2 class="text-2xl font-bold mb-6">Partner Tiers (Future Plan)</h2>
+                    <p class="text-gray-600 mb-6">Our partnership program will feature multiple tiers:</p>
+                    
+                    <div class="space-y-6">
+                        <div class="border border-gray-200 rounded-lg p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="font-semibold text-lg">Integration Partner</h3>
+                                <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">API-based</span>
+                            </div>
+                            <p class="text-gray-600">For technology platforms that integrate with ABION NEXUS through our API</p>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="font-semibold text-lg">Affiliate Partner</h3>
+                                <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Commission-based</span>
+                            </div>
+                            <p class="text-gray-600">For marketers, agencies, and individuals who refer customers to ABION NEXUS</p>
+                        </div>
+                        
+                        <div class="border border-gray-200 rounded-lg p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="font-semibold text-lg">Strategic Partner</h3>
+                                <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Long-term collaboration</span>
+                            </div>
+                            <p class="text-gray-600">For companies seeking deep integration and co-development opportunities</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="bg-gradient-to-r from-indigo-600 to-purple-700 rounded-xl shadow-sm p-8 text-white text-center">
+                    <h2 class="text-2xl font-bold mb-4">Ready to Partner With Us?</h2>
+                    <p class="mb-6 max-w-2xl mx-auto">If you're interested in becoming a partner, reach out to discuss how we can work together.</p>
+                    <a href="mailto:contact@abionindustries.com" class="btn bg-white text-indigo-600 hover:bg-gray-100">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 text-gray-400">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+                <!-- Branding -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+                            <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+                        </div>
+                        <span class="font-bold text-xl text-white">ABION NEXUS</span>
+                    </div>
+                    <p class="text-sm">Enterprise Automation Solutions that free your team to do the work that matters.</p>
+                </div>
+                
+                <!-- Product/Services -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Product/Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="features.html" class="hover:text-white transition">Features</a></li>
+                        <li><a href="pricing.html" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="integrations.html" class="hover:text-white transition">Integrations</a></li>
+                        <li><a href="roadmap.html" class="hover:text-white transition">Roadmap</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="help.html" class="hover:text-white transition">Help Center</a></li>
+                        <li><a href="community.html" class="hover:text-white transition">Community</a></li>
+                        <li><a href="documentation.html" class="hover:text-white transition">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="careers.html" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="partners.html" class="hover:text-white transition">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Connect -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Connect</h3>
+                    <div class="mb-4">
+                        <p class="text-sm mb-2">Subscribe to our newsletter</p>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="px-3 py-2 bg-gray-800 text-white rounded-l-lg w-full focus:outline-none">
+                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-r-lg hover:bg-indigo-700 transition">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex space-x-3">
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="hover:text-white transition">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center text-sm">
+                <p>&copy; 2025 ABION NEXUS. All Rights Reserved.</p>
+                <div class="mt-2">
+                    <a href="privacy.html" class="hover:text-white transition mr-4">Privacy</a>
+                    <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
