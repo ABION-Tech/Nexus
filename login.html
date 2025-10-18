@@ -86,15 +86,15 @@
             </div>
             
             <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Home</a>
-                <a href="features.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Features</a>
-                <a href="pricing.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Pricing</a>
+                <a href="./index.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Home</a>
+                <a href="./features.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Features</a>
+                <a href="./pricing.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Pricing</a>
                 <!-- <a href="dashboard.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Dashboard</a>
              -->
             </div>
             <div class="flex space-x-3">
-                <a href="login.html" class="px-4 py-2 text-gray-600 font-medium hover:text-indigo-600 transition">Log in</a>
-                <a href="signup.html" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Get Started</a>
+                <a href="./login.html" class="px-4 py-2 text-gray-600 font-medium hover:text-indigo-600 transition">Log in</a>
+                <a href="./signup.html" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Get Started</a>
             </div>
             
             <!-- Mobile menu button -->
@@ -189,6 +189,15 @@
     <!-- Initialize Lucide Icons -->
     <script>
         lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
     </script>
 </body>
 </html>

@@ -54,7 +54,33 @@
             transition: all 0.3s;
             border: none;
         }
+           /* Footer */
+        .footer-column h3 {
+            position: relative;
+            padding-bottom: 12px;
+        }
         
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--primary);
+        }
+         /* Mobile menu */
+        .mobile-menu {
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu.hidden {
+            transform: translateY(-100%);
+        }
+        
+        .mobile-menu.visible {
+            transform: translateY(0);
+        }
         .btn-primary {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
@@ -67,32 +93,45 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="sticky top-0 z-50 bg-white shadow-sm">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
-                    <i data-lucide="layers" class="w-5 h-5 text-white"></i>
+         <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+ 
+                
+                <!-- Logo Section -->
+<div class="flex items-center space-x-2">
+    <!-- Logo Icon -->
+    <div class="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center overflow-hidden">
+        <img src="./logo.png" alt="ABION NEXUS Logo" class="w-full h-full object-cover" />
+    </div>
+    <!-- Logo Text -->
+    <span class="font-bold text-xl text-gray-900 dark:text-white">ABION NEXUS</span>
+</div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="./index.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Home</a>
+                    <a href="./features.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Features</a>
+                    <a href="./pricing.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Pricing</a>
+                    <a href="./signup.html" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Get Started</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="mobile-menu hidden absolute top-full left-0 w-full bg-white shadow-lg md:hidden">
+                <div class="flex flex-col p-4 space-y-3">
+                    <a href="./index.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Home</a>
+                    <a href="./features.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Features</a>
+                    <a href="./pricing.html" class="font-medium text-gray-900 hover:text-indigo-600 transition">Pricing</a>
+                    <a href="./signup.html" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition text-center">Get Started</a>
                 </div>
-                <span class="font-bold text-xl">ABION NEXUS</span>
-            </div>
-            
-            <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Home</a>
-                <a href="about.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">About</a>
-                <a href="pricing.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Pricing</a>
-                <a href="contact.html" class="font-medium text-gray-600 hover:text-indigo-600 transition">Contact</a>
-            </div>
-            
-            <div class="flex space-x-3">
-                <button class="px-4 py-2 text-gray-600 font-medium hover:text-indigo-600 transition">Log in</button>
-                <button class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition">Get Started</button>
-            </div>
-            
-            <!-- Mobile menu button -->
-            <button class="md:hidden">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
+            </nav>
         </div>
     </header>
 
@@ -269,97 +308,107 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-12 bg-gray-900 text-gray-400">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
-                <!-- Branding -->
-                <div class="lg:col-span-1">
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
-                            <i data-lucide="layers" class="w-5 h-5 text-white"></i>
-                        </div>
-                        <span class="font-bold text-xl text-white">ABION NEXUS</span>
+<footer class="py-12 bg-gray-900 text-gray-400">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+            <!-- Branding -->
+            <div class="lg:col-span-1">
+                <div class="flex items-center space-x-2 mb-4">
+                    <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center border border-white border-opacity-30 overflow-hidden">
+                        <img src="./logo1.png" alt="ABION NEXUS Logo" class="w-full h-full object-cover" />
                     </div>
-                    <p class="text-sm">Enterprise Automation Solutions that free your team to do the work that matters.</p>
+                    <span class="font-bold text-xl text-white">ABION NEXUS</span>
                 </div>
-                
-                <!-- Product/Services -->
-                <div>
-                    <h3 class="text-white font-semibold mb-4">Product/Services</h3>
-                    <ul class="space-y-2">
-                        <li><a href="features.html" class="hover:text-white transition">Features</a></li>
-                        <li><a href="pricing.html" class="hover:text-white transition">Pricing</a></li>
-                        <li><a href="integrations.html" class="hover:text-white transition">Integrations</a></li>
-                        <li><a href="roadmap.html" class="hover:text-white transition">Roadmap</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Resources -->
-                <div>
-                    <h3 class="text-white font-semibold mb-4">Resources</h3>
-                    <ul class="space-y-2">
-                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="help.html" class="hover:text-white transition">Help Center</a></li>
-                        <li><a href="community.html" class="hover:text-white transition">Community</a></li>
-                        <li><a href="documentation.html" class="hover:text-white transition">Documentation</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Company -->
-                <div>
-                    <h3 class="text-white font-semibold mb-4">Company</h3>
-                    <ul class="space-y-2">
-                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="careers.html" class="hover:text-white transition">Careers</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
-                        <li><a href="partners.html" class="hover:text-white transition">Partners</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Connect -->
-                <div>
-                    <h3 class="text-white font-semibold mb-4">Connect</h3>
-                    <div class="mb-4">
-                        <p class="text-sm mb-2">Subscribe to our newsletter</p>
-                        <div class="flex">
-                            <input type="email" placeholder="Your email" class="px-3 py-2 bg-gray-800 text-white rounded-l-lg w-full focus:outline-none">
-                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-r-lg hover:bg-indigo-700 transition">
-                                <i data-lucide="send" class="w-4 h-4"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="flex space-x-3">
-                        <a href="#" class="hover:text-white transition">
-                            <i data-lucide="twitter" class="w-5 h-5"></i>
-                        </a>
-                        <a href="#" class="hover:text-white transition">
-                            <i data-lucide="linkedin" class="w-5 h-5"></i>
-                        </a>
-                        <a href="#" class="hover:text-white transition">
-                            <i data-lucide="instagram" class="w-5 h-5"></i>
-                        </a>
-                        <a href="#" class="hover:text-white transition">
-                            <i data-lucide="facebook" class="w-5 h-5"></i>
-                        </a>
-                        <a href="#" class="hover:text-white transition">
-                            <i data-lucide="mail" class="w-5 h-5"></i>
-                        </a>
-                    </div>
-                </div>
+     
+                <p class="text-sm">Enterprise Automation Solutions that free your team to do the work that matters.</p>
             </div>
             
-            <div class="pt-8 border-t border-gray-800 text-center text-sm">
-                <p>&copy; 2025 ABION NEXUS. All Rights Reserved.</p>
-                <div class="mt-2">
-                    <a href="privacy.html" class="hover:text-white transition mr-4">Privacy</a>
-                    <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+            <!-- Product/Services -->
+            <div>
+                <h3 class="text-white font-semibold mb-4">Product/Services</h3>
+                <ul class="space-y-2">
+                    <li><a href="./features.html" class="hover:text-white transition">Features</a></li>
+                    <li><a href="./pricing.html" class="hover:text-white transition">Pricing</a></li>
+                    <li><a href="./integrations.html" class="hover:text-white transition">Integrations</a></li>
+                    <li><a href="./roadmap.html" class="hover:text-white transition">Roadmap</a></li>
+                </ul>
+            </div>
+            
+            <!-- Resources -->
+            <div>
+                <h3 class="text-white font-semibold mb-4">Resources</h3>
+                <ul class="space-y-2">
+                    <li><a href="./blog.html" class="hover:text-white transition">Blog</a></li>
+                    <li><a href="./help.html" class="hover:text-white transition">Help Center</a></li>
+                    <li><a href="./community.html" class="hover:text-white transition">Community</a></li>
+                    <li><a href="./documentation.html" class="hover:text-white transition">Documentation</a></li>
+                </ul>
+            </div>
+            
+            <!-- Company -->
+            <div>
+                <h3 class="text-white font-semibold mb-4">Company</h3>
+                <ul class="space-y-2">
+                    <li><a href="./about.html" class="hover:text-white transition">About Us</a></li>
+                    <li><a href="./careers.html" class="hover:text-white transition">Careers</a></li>
+                    <li><a href="./contact.html" class="hover:text-white transition">Contact</a></li>
+                    <li><a href="./partner.html" class="hover:text-white transition">Partners</a></li>
+                </ul>
+            </div>
+            
+            <!-- Connect -->
+            <div>
+                <h3 class="text-white font-semibold mb-4">Connect</h3>
+                <div class="mb-4">
+                    <p class="text-sm mb-2">Subscribe to our newsletter</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-3 py-2 bg-gray-800 text-white rounded-l-lg w-full focus:outline-none">
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-r-lg hover:bg-indigo-700 transition">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex space-x-3">
+                    <a href="#" class="hover:text-white transition">
+                        <i data-lucide="twitter" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition">
+                        <i data-lucide="facebook" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </a>
                 </div>
             </div>
         </div>
-    </footer>
-
+        
+        <div class="pt-8 border-t border-gray-800 text-center text-sm">
+            <p>&copy; 2025 ABION Industries Ltd. All Rights Reserved.</p>
+            <div class="mt-2">
+                <a href="./privacy.html" class="hover:text-white transition mr-4">Privacy</a>
+                <a href="./terms.html" class="hover:text-white transition">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    
     <script>
         lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
     </script>
 </body>
 </html>
