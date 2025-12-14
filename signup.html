@@ -31,6 +31,7 @@
         }
         .glass-effect {
             background: rgba(255, 255, 255, 0.95);
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.18);
         }
@@ -107,115 +108,165 @@
             </div>
             
             <!-- Mobile menu button -->
-            <button class="md:hidden">
+            <button type="button" aria-label="Toggle mobile menu" class="md:hidden">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
     </nav>
 
-    <!-- Signup Form -->
-    <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="max-w-md w-full space-y-8">
-            <div class="form-card glass-effect rounded-2xl p-8">
-                <div class="text-center mb-8">
-                   <div class="mx-auto h-16 w-16 flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 mb-4 overflow-hidden">
-    <img src="./logo.png" alt="ABION NEXUS Logo" class="w-full h-full object-cover" />
-</div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Create your Nexus account</h2>
-                    <p class="text-gray-600">Join thousands of businesses automating their workflows</p>
-                    <p class="mt-2 text-sm text-gray-500">
-                        Already have an account? 
-                        <a href="login.html" class="font-medium text-indigo-600 hover:text-indigo-500">Sign in</a>
-                    </p>
+  <!-- Signup Form -->
+<div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-md w-full space-y-8">
+        <div class="form-card glass-effect rounded-2xl p-8">
+            <div class="text-center mb-8">
+                <div class="mx-auto h-16 w-16 flex items-center justify-center rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 mb-4 overflow-hidden">
+                    <img src="./logo.png" alt="ABION NEXUS Logo" class="w-full h-full object-cover" />
                 </div>
-                
-                <form class="space-y-6" action="#" method="POST">
-                    <div class="space-y-4">
-                        <div class="input-group">
-                            <input id="name" name="name" type="text" autocomplete="name" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 peer" placeholder=" ">
-                            <label for="name" class="peer-focus:text-indigo-600">Full Name</label>
-                        </div>
-                        
-                        <div class="input-group">
-                            <input id="company" name="company" type="text" autocomplete="organization" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 peer" placeholder=" ">
-                            <label for="company" class="peer-focus:text-indigo-600">Company Name</label>
-                        </div>
-                        
-<div class="input-group">
-                            <input id="role" name="role" type="text" autocomplete="organization" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 peer" placeholder=" ">
-                            <label for="company" class="peer-focus:text-indigo-600">Role in Company</label>
-                        </div>
-
-                        <div class="input-group">
-                            <input id="email-address" name="email" type="email" autocomplete="email" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 peer" placeholder=" ">
-                            <label for="email-address" class="peer-focus:text-indigo-600">Email address</label>
-                        </div>
-                        
-                        <div class="input-group">
-                            <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 peer" placeholder=" ">
-                            <label for="password" class="peer-focus:text-indigo-600">Password</label>
-                        </div>
-                        
-                        <div class="input-group">
-                            <input id="confirm-password" name="confirm-password" type="password" autocomplete="current-password" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 peer" placeholder=" ">
-                            <label for="confirm-password" class="peer-focus:text-indigo-600">Confirm Password</label>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center">
-                        <input id="terms" name="terms" type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded transition">
-                        <label for="terms" class="ml-2 block text-sm text-gray-700">
-                            I agree to the <a href="#" class="text-indigo-600 hover:text-indigo-500 font-medium">Terms and Conditions</a>
-                        </label>
-                    </div>
-
-                    <div>
-                        <button type="submit" class="btn-primary w-full py-3 px-4 rounded-lg text-white font-medium flex items-center justify-center">
-                            <i data-lucide="user-plus" class="h-5 w-5 mr-2"></i>
-                            Create Account
-                        </button>
-                    </div>
-                    
-                    <div class="relative">
-                        <div class="absolute inset-0 flex items-center">
-                            <div class="w-full border-t border-gray-300"></div>
-                        </div>
-                        <div class="relative flex justify-center text-sm">
-                            <span class="px-4 bg-white text-gray-500">Or continue with</span>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-3 gap-3">
-                        <button type="button" class="social-btn w-full inline-flex justify-center py-3 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
-                            <i data-lucide="github" class="h-5 w-5"></i>
-                        </button>
-                        <button type="button" class="social-btn w-full inline-flex justify-center py-3 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
-                            <i data-lucide="twitter" class="h-5 w-5"></i>
-                        </button>
-                        <button type="button" class="social-btn w-full inline-flex justify-center py-3 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
-                            <i data-lucide="linkedin" class="h-5 w-5"></i>
-                        </button>
-                    </div>
-                </form>
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Create your Nexus account</h2>
+                <p class="text-gray-600">Join thousands of businesses automating their workflows</p>
+                <p class="mt-2 text-sm text-gray-500">
+                    Already have an account? 
+                    <a href="login.html" class="font-medium text-indigo-600 hover:text-indigo-500">Sign in</a>
+                </p>
             </div>
             
-            <div class="text-center text-sm text-gray-500">
-                <p>By signing up, you agree to our <a href="#" class="text-indigo-600 hover:text-indigo-500">Privacy Policy</a> and <a href="#" class="text-indigo-600 hover:text-indigo-500">Terms of Service</a></p>
-            </div>
+            <!-- Updated form with Google Form integration -->
+            <form id="signupForm" class="space-y-6" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScAPN3D2BjrWxddfSd5Zijs3J0npqZUVttGM2WVK0rKzjNg1g/formResponse" method="POST" target="_blank">
+                <div class="space-y-4">
+                    <div class="input-group">
+                        <input id="name" name="entry.1115326711" type="text" autocomplete="name" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 peer" placeholder=" ">
+                        <label for="name" class="peer-focus:text-indigo-600">Full Name</label>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input id="company" name="entry.652163913" type="text" autocomplete="organization" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 peer" placeholder=" ">
+                        <label for="company" class="peer-focus:text-indigo-600">Company Name</label>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input id="role" name="entry.1844502278" type="text" autocomplete="organization" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 peer" placeholder=" ">
+                        <label for="role" class="peer-focus:text-indigo-600">Role in Company</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input id="email-address" name="entry.458357963" type="email" autocomplete="email" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 peer" placeholder=" ">
+                        <label for="email-address" class="peer-focus:text-indigo-600">Email address</label>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 peer" placeholder=" ">
+                        <label for="password" class="peer-focus:text-indigo-600">Password</label>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input id="confirm-password" name="confirm-password" type="password" autocomplete="current-password" required class="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200 peer" placeholder=" ">
+                        <label for="confirm-password" class="peer-focus:text-indigo-600">Confirm Password</label>
+                    </div>
+                </div>
+
+                <div class="flex items-center">
+                    <input id="terms" name="terms" type="checkbox" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded transition">
+                    <label for="terms" class="ml-2 block text-sm text-gray-700">
+                        I agree to the <a href="#" class="text-indigo-600 hover:text-indigo-500 font-medium">Terms and Conditions</a>
+                    </label>
+                </div>
+
+                <div>
+                    <button type="submit" class="btn-primary w-full py-3 px-4 rounded-lg text-white font-medium flex items-center justify-center">
+                        <i data-lucide="user-plus" class="h-5 w-5 mr-2"></i>
+                        Create Account
+                    </button>
+                </div>
+                
+                <div class="relative">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-gray-300"></div>
+                    </div>
+                    <div class="relative flex justify-center text-sm">
+                        <span class="px-4 bg-white text-gray-500">Or continue with</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-3">
+                    <button type="button" aria-label="Sign up with GitHub" class="social-btn w-full inline-flex justify-center py-3 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                        <i data-lucide="github" class="h-5 w-5"></i>
+                    </button>
+                    <button type="button" aria-label="Sign up with Twitter" class="social-btn w-full inline-flex justify-center py-3 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                        <i data-lucide="twitter" class="h-5 w-5"></i>
+                    </button>
+                    <button type="button" aria-label="Sign up with LinkedIn" class="social-btn w-full inline-flex justify-center py-3 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-700 hover:bg-gray-50">
+                        <i data-lucide="linkedin" class="h-5 w-5"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+        
+        <div class="text-center text-sm text-gray-500">
+            <p>By signing up, you agree to our <a href="#" class="text-indigo-600 hover:text-indigo-500">Privacy Policy</a> and <a href="#" class="text-indigo-600 hover:text-indigo-500">Terms of Service</a></p>
         </div>
     </div>
+</div>
 
-    <!-- Initialize Lucide Icons -->
-    <script>
-        lucide.createIcons();
+<!-- Initialize Lucide Icons -->
+<script>
+    lucide.createIcons();
 
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-    </script>
+    }
+
+    // Signup form handling
+    document.getElementById('signupForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Validate passwords match
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+        
+        if (password !== confirmPassword) {
+            alert('Passwords do not match. Please try again.');
+            return;
+        }
+        
+        // Validate terms checkbox
+        const termsChecked = document.getElementById('terms').checked;
+        if (!termsChecked) {
+            alert('Please agree to the Terms and Conditions to continue.');
+            return;
+        }
+        
+        // Collect form data (excluding passwords and terms)
+        const formData = new FormData();
+        formData.append('entry.1115326711', document.getElementById('name').value);
+        formData.append('entry.652163913', document.getElementById('company').value);
+        formData.append('entry.1844502278', document.getElementById('role').value);
+        formData.append('entry.458357963', document.getElementById('email-address').value);
+        
+        // Google Form URL
+        const formURL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLScAPN3D2BjrWxddfSd5Zijs3J0npqZUVttGM2WVK0rKzjNg1g/formResponse';
+        
+        // Submit to Google Form
+        fetch(formURL, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: formData
+        })
+        .then(() => {
+            // Show success message and redirect
+            alert('Account created successfully! We will contact you soon.');
+            window.location.href = './thank-you.html';
+        })
+        .catch(error => {
+            console.error('Error submitting form:', error);
+            alert('There was an error creating your account. Please try again.');
+        });
+    });
+</script>
 </body>
 </html>

@@ -49,6 +49,7 @@
         .gradient-text {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         
@@ -126,8 +127,9 @@
                 </nav>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
+                <button id="mobile-menu-btn" class="md:hidden" title="Toggle mobile menu">
+                    <i data-lucide="menu" class="w-6 h-6" aria-hidden="true"></i>
+                    <span class="sr-only">Toggle mobile menu</span>
                 </button>
             </div>
             
@@ -309,7 +311,7 @@
                             </div> -->
                         </div>
                     </div>
-                </div>
+                </div> 
             </section>
         </div>
     </main>
@@ -370,26 +372,27 @@
                     <p class="text-sm mb-2">Subscribe to our newsletter</p>
                     <div class="flex">
                         <input type="email" placeholder="Your email" class="px-3 py-2 bg-gray-800 text-white rounded-l-lg w-full focus:outline-none">
-                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-r-lg hover:bg-indigo-700 transition">
-                            <i data-lucide="send" class="w-4 h-4"></i>
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-r-lg hover:bg-indigo-700 transition" title="Subscribe to newsletter">
+                            <i data-lucide="send" class="w-4 h-4" aria-hidden="true"></i>
+                            <span class="sr-only">Subscribe to newsletter</span>
                         </button>
                     </div>
                 </div>
                 <div class="flex space-x-3">
-                    <a href="#" class="hover:text-white transition">
-                        <i data-lucide="twitter" class="w-5 h-5"></i>
+                    <a href="#" class="hover:text-white transition" title="Follow us on Twitter" aria-label="Follow us on Twitter">
+                        <i data-lucide="twitter" class="w-5 h-5" aria-hidden="true"></i>
                     </a>
-                    <a href="#" class="hover:text-white transition">
-                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    <a href="#" class="hover:text-white transition" title="Connect with us on LinkedIn" aria-label="Connect with us on LinkedIn">
+                        <i data-lucide="linkedin" class="w-5 h-5" aria-hidden="true"></i>
                     </a>
-                    <a href="#" class="hover:text-white transition">
-                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    <a href="#" class="hover:text-white transition" title="Follow us on Instagram" aria-label="Follow us on Instagram">
+                        <i data-lucide="instagram" class="w-5 h-5" aria-hidden="true"></i>
                     </a>
-                    <a href="#" class="hover:text-white transition">
-                        <i data-lucide="facebook" class="w-5 h-5"></i>
+                    <a href="#" class="hover:text-white transition" title="Follow us on Facebook" aria-label="Follow us on Facebook">
+                        <i data-lucide="facebook" class="w-5 h-5" aria-hidden="true"></i>
                     </a>
-                    <a href="#" class="hover:text-white transition">
-                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    <a href="#" class="hover:text-white transition" title="Contact us via email" aria-label="Contact us via email">
+                        <i data-lucide="mail" class="w-5 h-5" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
@@ -408,17 +411,62 @@
 
     <script>
         // Contact form handling
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
+        // document.getElementById('contact-form').addEventListener('submit', function(e) {
+        //     e.preventDefault();
             
-            const formMessage = document.getElementById('form-message');
-            formMessage.classList.remove('hidden');
-            formMessage.className = 'mt-4 p-4 bg-green-100 text-green-700 rounded-lg';
-            formMessage.textContent = 'Thank you for your message! We\'ll get back to you within 24 hours.';
+        //     const formMessage = document.getElementById('form-message');
+        //     formMessage.classList.remove('hidden');
+        //     formMessage.className = 'mt-4 p-4 bg-green-100 text-green-700 rounded-lg';
+        //     formMessage.textContent = 'Thank you for your message! We\'ll get back to you within 24 hours.';
             
+// Contact form handling
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Collect form data
+    const formData = {
+        'entry.1234567890': document.getElementById('first-name').value, // Replace with actual entry ID
+        'entry.0987654321': document.getElementById('last-name').value,   // Replace with actual entry ID
+        'entry.1122334455': document.getElementById('email').value,      // Replace with actual entry ID
+        'entry.5566778899': document.getElementById('company').value,    // Replace with actual entry ID
+        'entry.6677889900': document.getElementById('subject').value,    // Replace with actual entry ID
+        'entry.7788990011': document.getElementById('message').value     // Replace with actual entry ID
+    };
+    
+    // Google Form URL - replace with your actual form URL
+    const formURL = 'https://docs.google.com/forms/d/e/[YOUR_CONTACT_FORM_ID]/formResponse';
+    
+    // Submit to Google Form
+    fetch(formURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: new URLSearchParams(formData)
+    })
+    .then(() => {
+        // Show success message
+        const formMessage = document.getElementById('form-message');
+        formMessage.classList.remove('hidden');
+        formMessage.className = 'mt-4 p-4 bg-green-100 text-green-700 rounded-lg';
+        formMessage.textContent = 'Thank you for your message! We\'ll get back to you within 24 hours.';
+        
+        // Reset form
+        this.reset();
+    })
+    .catch(error => {
+        console.error('Error submitting form:', error);
+        const formMessage = document.getElementById('form-message');
+        formMessage.classList.remove('hidden');
+        formMessage.className = 'mt-4 p-4 bg-red-100 text-red-700 rounded-lg';
+        formMessage.textContent = 'There was an error submitting your message. Please try again.';
+    });
+});
+
             // Reset form
             this.reset();
-        });
+       ;
         
         // FAQ accordion
         document.querySelectorAll('.bg-white.rounded-lg.shadow-sm button').forEach(button => {
