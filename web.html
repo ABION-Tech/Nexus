@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Test Form</title>
+</head>
+
+<body>
+
+  <h1>Contact Form</h1>
+
+  <form id="contactForm">
+
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      required
+    />
+
+    <br><br>
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      required
+    />
+
+    <br><br>
+
+    <textarea
+      name="message"
+      placeholder="Your Message"
+    ></textarea>
+
+    <br><br>
+
+    <button type="submit">
+      Send
+    </button>
+
+  </form>
+
+  <p id="status"></p>
+
+<script>
+
+const scriptURL =
+"https://script.google.com/macros/s/AKfycby3u9Vix6v67s3JTmwz2y1nqJQ6O1xODnIa86og3PdkrHtWkYnJBh6DQ_axqdfxem4xUA/exec";
+
+document
+.getElementById("contactForm")
+.addEventListener("submit", async (e) => {
+
+  e.preventDefault();
+
+  const form = e.target;
+
+  const payload = {
+    name: form.name.value,
+    email: form.email.value,
+    message: form.message.value
+  };
+
+  document.getElementById("status").innerText =
+    "Sending...";
+
+  try {
+
+    const response = await fetch(scriptURL, {
+      method: "POST",
+      headers: {
+        "Content-Type":
+        "text/plain;charset=utf-8"
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await response.json();
+
+    if(data.success){
+
+      document.getElementById("status").innerText =
+      "Message Sent ✅";
+
+      form.reset();
+
+    } else {
+
+      document.getElementById("status").innerText =
+      "Error sending form";
+
+    }
+
+  } catch(err){
+
+    document.getElementById("status").innerText =
+    "Network Error";
+
+  }
+
+});
+
+</script>
+
+</body>
+</html>
