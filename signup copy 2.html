@@ -186,116 +186,62 @@
             <div class="text-center text-sm text-gray-500">
                 <p>By signing up, you agree to our <a href="#" class="text-indigo-600 hover:text-indigo-500">Privacy Policy</a> and <a href="#" class="text-indigo-600 hover:text-indigo-500">Terms of Service</a></p>
             </div>
-   
+    <!-- Hidden Google Form for Submission -->
+    <form id="hiddenGoogleForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScAPN3D2BjrWxddfSd5Zijs3J0npqZUVttGM2WVK0rKzjNg1g/formResponse" method="POST" target="_blank">
+
+    <!-- Hidden Google Form for Submission -->
+    <form id="hiddenGoogleForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScAPN3D2BjrWxddfSd5Zijs3J0npqZUVttGM2WVK0rKzjNg1g/formResponse" method="POST" target="_blank" style="display: none;">
+        <input type="hidden" name="entry.1115326711" id="hidden_name">
+        <input type="hidden" name="entry.652163913" id="hidden_company">
+        <input type="hidden" name="entry.1844502278" id="hidden_role">
+        <input type="hidden" name="entry.458357963" id="hidden_email">
+        
+        <!-- Required hidden fields for Google Forms -->
+        <input type="hidden" name="fvv" value="1">
+        <input type="hidden" name="partialResponse" value='[null,null,"6965133275148061318"]'>
+        <input type="hidden" name="pageHistory" value="0">
+        <input type="hidden" name="fbzx" value="6965133275148061318">
+    </form>
 
     <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
 
-lucide.createIcons();
-
-// YOUR APPS SCRIPT URL
-const scriptURL =
-"https://script.google.com/macros/s/AKfycby8hCOHoW01hLCJYAYglMqE9lbgxNgP1WXaGagUF5bgkVkyrW4oZJJR-6LzNn2CLOO24g/exec";
-
-document
-.getElementById('visibleForm')
-.addEventListener('submit', async function(e) {
-
-    e.preventDefault();
-
-    // Terms validation
-    const termsChecked =
-    document.getElementById('terms').checked;
-
-    if (!termsChecked) {
-
-        alert(
-          'Please agree to the Terms and Conditions.'
-        );
-
-        return;
-    }
-
-    // Button loading state
-    const button =
-    document.querySelector('button[type="submit"]');
-
-    const originalButtonText =
-    button.innerHTML;
-
-    button.innerHTML =
-    'Creating Account...';
-
-    button.disabled = true;
-
-    // Payload
-    const payload = {
-
-        name:
-        document.getElementById('name').value,
-
-        company:
-        document.getElementById('company').value,
-
-        role:
-        document.getElementById('role').value,
-
-        email:
-        document.getElementById('email-address').value
-
-    };
-
-    try {
-
-        const response = await fetch(
-          scriptURL,
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type':
-              'text/plain;charset=utf-8'
-            },
-            body: JSON.stringify(payload)
-          }
-        );
-
-        const data =
-        await response.json();
-
-        if(data.success){
-
-            alert(
-              'Account created successfully!'
-            );
-
-            window.location.href =
-            './thank-you.html';
-
-        } else {
-
-            alert(
-              'Something went wrong.'
-            );
-
-        }
-
-    } catch(error){
-
-        console.error(error);
-
-        alert(
-          'Network error. Try again.'
-        );
-
-    }
-
-    // Reset button
-    button.innerHTML =
-    originalButtonText;
-
-    button.disabled = false;
-
-});
-
-</script>
+        // Form submission handler
+        document.getElementById('visibleForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate passwords match
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match. Please try again.');
+                return;
+            }
+            
+            // Validate terms checkbox
+            const termsChecked = document.getElementById('terms').checked;
+            if (!termsChecked) {
+                alert('Please agree to the Terms and Conditions to continue.');
+                return;
+            }
+            
+            // Copy values to hidden form
+            document.getElementById('hidden_name').value = document.getElementById('name').value;
+            document.getElementById('hidden_company').value = document.getElementById('company').value;
+            document.getElementById('hidden_role').value = document.getElementById('role').value;
+            document.getElementById('hidden_email').value = document.getElementById('email-address').value;
+            
+            // Submit the hidden form
+            document.getElementById('hiddenGoogleForm').submit();
+            
+            // Show success message and redirect
+            setTimeout(() => {
+                alert('Account created successfully! We will contact you soon.');
+                window.location.href = './thank-you.html';
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
